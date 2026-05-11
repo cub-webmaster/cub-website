@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+@plugin "daisyui";
+@plugin "daisyui/theme" {
+  name: "cub";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+
+  --color-base-100: #FDFCF7;
+  --color-base-200: #FCFAF2;
+  --color-base-300: #F6EFD6;
+  --color-base-content: #2E282A;
+  --color-primary: #CAE3D2;
+  --color-primary-content: #2E282A;
+  --color-secondary: #85B09A;
+  --color-secondary-content: #FDFCF7;
+  --color-accent: #DD3025;
+  --color-accent-content: #FCFAF2;
+  --color-neutral: #2E282A;
+  --color-neutral-content: #FCFAF2;
+  --color-info: #594236;;
+  --color-info-content: #FCFAF2;
+  --color-success: oklch(96% 0.067 122.328);
+  --color-success-content: #2E282A;
+  --color-warning: oklch(96% 0.059 95.617);
+  --color-warning-content: #2E282A;
+  --color-error: oklch(88% 0.062 18.334);
+  --color-error-content: #2E282A;
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
+}
