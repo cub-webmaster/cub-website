@@ -6,11 +6,16 @@
 	import { ChevronLeft, ChevronRight, Circle } from '@lucide/svelte';
 	import type { EmblaCarouselType } from 'embla-carousel';
 	import Autoplay from 'embla-carousel-autoplay';
+	import type { Snippet } from 'svelte';
 
 	const {
-		images
+		images,
+		controlButtons = false,
+		overlay
 	}: {
 		images: CarouselImage[];
+		controlButtons?: boolean;
+		overlay?: Snippet;
 	} = $props();
 	const trimmedImages = $derived(
 		images.length > carouselMaxCount ? images.splice(carouselMaxCount - 1) : images
@@ -65,6 +70,7 @@
 </script>
 
 <div class="w-full relative pt-[56.25%]" bind:clientWidth={w}>
+	{@render overlay?.()}
 	<div class="embla top-0 bottom-0 right-0 left-0 absolute">
 		<div
 			class="h-full overflow-hidden"
@@ -84,16 +90,18 @@
 		</div>
 	</div>
 
-	<button
-		class={`embla__prev left-0 ${carouselControlClasses}`}
-		onclick={scrollPrev}
-		aria-label="Previous"><ChevronLeft {...iconProps} /></button
-	>
-	<button
-		class={`embla__next right-0 ${carouselControlClasses}`}
-		onclick={scrollNext}
-		aria-label="Next"><ChevronRight {...iconProps} /></button
-	>
+	{#if controlButtons}
+		<button
+			class={`embla__prev left-0 ${carouselControlClasses}`}
+			onclick={scrollPrev}
+			aria-label="Previous"><ChevronLeft {...iconProps} /></button
+		>
+		<button
+			class={`embla__next right-0 ${carouselControlClasses}`}
+			onclick={scrollNext}
+			aria-label="Next"><ChevronRight {...iconProps} /></button
+		>
+	{/if}
 
 	<div
 		class="absolute left-1/2 flex xl:p-1 p-0.75 xl:bottom-8 md:bottom-4 bottom-2 rounded-full -translate-x-1/2 xl:gap-2 gap-1.5 bg-neutral/60"
@@ -105,7 +113,7 @@
 				onclick={() => scrollTo(index)}
 			>
 				<Circle
-					size={w > iconsBreakpoint ? '1rem' : '0.5rem'}
+					size={w > iconsBreakpoint ? '0.8rem' : '0.5rem'}
 					fill="white"
 					class="circle-icon"
 					strokeWidth={0}
