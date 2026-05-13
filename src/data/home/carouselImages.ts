@@ -1,16 +1,19 @@
 import type { CarouselImage } from "$lib/carousel";
+import image1 from '$lib/assets/img/2019Team.jpg'
+import image2 from '$lib/assets/img/BUTTSChamps2020.jpg'
+import image3 from '$lib/assets/img/CameronPodium.jpg'
 
 export const homeImages: CarouselImage[] = [
       {
-         path: "/img/2019Team.jpg",
+         path: image1,
          alt:  "Varsity 2019 team photo"
       },
       {
-         path: "/img/BUTTSChamps2020.jpg",
+         path: image2,
          alt:  "BUTTS Championship 2020"
       },
       {
-         path: "/img/CameronPodium.jpg",
+         path: image3,
          alt:  "Cameron Krulewski's Gold (Ladies Barebow) BUCS 2020"
       },
    ]

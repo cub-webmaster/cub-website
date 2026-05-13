@@ -1,11 +1,12 @@
 <script lang="ts">
 	import type { ResolvedPathname } from '$app/types';
 	import { resolve } from '$app/paths';
-	import { generateClassString } from '$lib/util';
+	import { colorTransitionClasses, generateClassString } from '$lib/util';
 	import { ChevronDown } from '@lucide/svelte';
 	import { page } from '$app/state';
-	import { navItems } from '$data/navigation';
+	import { navItems } from '$data/navigation.svelte';
 	import { onMount } from 'svelte';
+	import logo from '$lib/assets/img/logo.png';
 
 	let { headerHeight, showBrand = true }: { headerHeight?: number; showBrand?: boolean } = $props();
 	let scrollY = $state(0);
@@ -21,7 +22,7 @@
 	);
 
 	// style vars
-	const colorTransition = ['transition-colors', 'duration-300', 'ease-in-out'];
+
 	const navbarZindex = 'z-100';
 
 	const hoverState = [
@@ -29,7 +30,7 @@
 		'hover:text-base-200',
 		'focus:bg-accent',
 		'focus:text-base-200',
-		...colorTransition
+		...colorTransitionClasses
 	];
 
 	const dropdownItem = ['py-2', 'px-4', 'w-full'];
@@ -54,15 +55,15 @@
 <svelte:window bind:scrollY />
 
 <div
-	class={`navbar h-8 py-0 md:px-8 px-0 flex items-center justify-between sticky top-0 ${generateClassString(...colors(undefined, false, true), ...colorTransition, navbarZindex)}`}
+	class={`navbar h-8 py-0 md:px-8 px-0 flex items-center justify-between sticky top-0 ${generateClassString(...colors(undefined, false, true), ...colorTransitionClasses, navbarZindex)}`}
 	class:shadow-sm={!transparentMode}
 	bind:clientHeight={navbarHeight}
 >
 	{#if showBrand || !transparentMode}
-		<a href={resolve('/')} class="flex justify-center items-center lg:gap-4 gap-2 px-4 h-full"
-			><img src="img/logo.png" alt="CUB logo" class="h-8" />
-			<span class="lg:text-l text-sm uppercase font-semibold">Cambridge University Bowmen</span></a
-		>
+		<a href={resolve('/')} class="flex justify-center items-center lg:gap-4 gap-2 px-4 h-full">
+			<img src={logo} alt="CUB logo" class="h-8" />
+			<span class="lg:text-l text-sm uppercase font-semibold">Cambridge University Bowmen</span>
+		</a>
 	{/if}
 	<div class="h-full flex items-center justify-end grow-1">
 		<ul class="menu menu-horizontal px-4 h-full hidden lg:flex py-0">
