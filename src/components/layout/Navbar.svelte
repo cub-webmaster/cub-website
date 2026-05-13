@@ -41,7 +41,7 @@
 				: ['bg-base-100', 'text-neutral'];
 
 		const active = route && page.route.id?.startsWith(route, 0);
-		if (transparentMode) return ['bg-transparent', active ? 'text-secondary' : 'text-base-300'];
+		if (transparentMode) return ['bg-transparent', active ? 'text-info' : 'text-base-300'];
 
 		return active
 			? ['bg-info', 'text-base-200']

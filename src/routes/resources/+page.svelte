@@ -3,3 +3,5 @@
 </script>
 
 <Header title="Resources" />
+
+<div class="h-screen"></div>
