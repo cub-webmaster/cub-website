@@ -1,39 +1,22 @@
 <script lang="ts">
-	import Link from './common/Link.svelte';
-	import { beginnerRecruitmentOngoing } from '$data/general';
-	import { resolve } from '$app/paths';
-	import { onMount } from 'svelte';
+
+	import { onMount, type Snippet } from 'svelte';
 	import { Info } from '@lucide/svelte';
+	import type { ResolvedPathname } from '$app/types';
 
 	let smallAlertOpen = $state(false);
+    const { mainText, callToActionLink, callToActionText }: { mainText: Snippet, callToActionLink: ResolvedPathname, callToActionText: string } = $props();
 
 	onMount(() => (smallAlertOpen = true));
 </script>
 
-{#snippet mainText()}
-	{#if beginnerRecruitmentOngoing}
-		The <b>Beginner's Course</b> is now OPEN! Click <b>Read More</b> for more details and how to
-		sign up. Please contact the
-		<Link href="mailto:secretary@cubowmen.com" label="Secretary" />
-		or the
-		<Link href="mailto:novice@cubowmen.com" label="Novice Officer" />
-		for any inquiries about the course.
-	{:else}
-		The club has reached capacity for beginner archers this academic year, please stay tuned for our
-		beginner's course next year! <b>Experienced archers</b> can still join the club directly,
-		<b>click Read More</b> to see how. For other enquiries please contact the
-		<Link href="mailto:secretary@cubowmen.com" label="Secretary" />
-		or the
-		<Link href="mailto:novice@cubowmen.com" label="Novice Officer" />
-		for anything related to beginners.
-	{/if}
-{/snippet}
+
 
 {#snippet button()}
 	<a
 		class="btn btn-primary flex sm:btn-sm btn-xs"
-		href={beginnerRecruitmentOngoing ? resolve('/join/beginners') : resolve('/join/experienced')}
-		>Read More</a
+		href={callToActionLink}
+		>{ callToActionText }</a
 	>
 {/snippet}
 
