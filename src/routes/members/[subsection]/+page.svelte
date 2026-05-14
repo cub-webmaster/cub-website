@@ -1,10 +1,10 @@
 <script>
 	import ContentPage from '$components/layout/ContentPage.svelte';
-	import { joinSection } from '$data/navigation.svelte';
+	import { membersSection } from '$data/navigation.svelte';
 
 	const { data } = $props();
 </script>
 
-<ContentPage section={joinSection} pageHeadings={[]} pageData={data}>
+<ContentPage section={membersSection} pageHeadings={[]} pageData={data}>
 	<div></div>
 </ContentPage>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SocialIcon from './layout/SocialIcon.svelte';
+	import SocialIcon from './common/SocialIcon.svelte';
 	import links from '$data/links';
 
 	let { height = $bindable(0) }: { height: number } = $props();

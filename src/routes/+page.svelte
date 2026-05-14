@@ -17,7 +17,7 @@
 			<Carousel images={homeImages}>
 				{#snippet overlay()}
 					<div
-						class="absolute h-full w-full top-0 bg-linear-to-b from-secondary/80 via-20% via-secondary/30 to-transparent left-0 bottom-0 right-0 z-2 flex justify-center items-center pointer-events-none"
+						class="absolute h-full w-full top-0 bg-linear-to-b from-secondary/95 via-15% sm:via-secondary/80 via-secondary/70 to-35% to-transparent left-0 bottom-0 right-0 z-2 flex justify-center items-center pointer-events-none"
 					>
 						<img src={logo} alt="CUB logo" class="w-1/5 opacity-90" />
 						<Title
@@ -32,7 +32,12 @@
 </Header>
 
 <!-- Landing page joining alert -->
-<Alert callToActionLink={beginnerRecruitmentOngoing ? resolve('/join/beginners') : resolve('/join/experienced')} callToActionText="Read More">
+<Alert
+	callToActionLink={beginnerRecruitmentOngoing
+		? resolve('/join/beginners')
+		: resolve('/join/experienced')}
+	callToActionText="Read More"
+>
 	{#snippet mainText()}
 		{#if beginnerRecruitmentOngoing}
 			The <b>Beginner's Course</b> is now OPEN! Click <b>Read More</b> for more details and how to
@@ -42,8 +47,8 @@
 			<Link href="mailto:novice@cubowmen.com" label="Novice Officer" />
 			for any inquiries about the course.
 		{:else}
-			The club has reached capacity for beginner archers this academic year, please stay tuned for our
-			beginner's course next year! <b>Experienced archers</b> can still join the club directly,
+			The club has reached capacity for beginner archers this academic year, please stay tuned for
+			our beginner's course next year! <b>Experienced archers</b> can still join the club directly,
 			<b>click Read More</b> to see how. For other enquiries please contact the
 			<Link href="mailto:secretary@cubowmen.com" label="Secretary" />
 			or the

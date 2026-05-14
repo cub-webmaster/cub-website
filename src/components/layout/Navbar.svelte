@@ -50,6 +50,15 @@
 	};
 
 	let activeDropdown: number | null = $state(null);
+
+	let mobileMenuItemDropped: Record<string, boolean> = $state(
+		Object.fromEntries(
+			navItems
+				.filter((item) => !item.external)
+				.filter((item) => item.children?.length)
+				.map(({ route }) => [route, true])
+		)
+	);
 </script>
 
 <svelte:window bind:scrollY />
@@ -65,14 +74,16 @@
 			<span class="lg:text-l text-sm uppercase font-semibold">Cambridge University Bowmen</span>
 		</a>
 	{/if}
-	<div class="h-full flex items-center justify-end grow-1">
+	<div class="h-full flex items-center justify-end grow">
 		<ul class="menu menu-horizontal px-4 h-full hidden lg:flex py-0">
-			{#each navItems as item, i (item.route)}
+			{#each navItems as item, i (i)}
 				<li class="h-full">
 					<div
 						class={generateClassString(
 							...hoverState,
-							...(activeDropdown === i ? ['bg-accent', 'text-base-200'] : colors(item.route)),
+							...(activeDropdown === i
+								? ['bg-accent', 'text-base-200']
+								: colors(item.external ? undefined : item.route)),
 							'h-full',
 							'flex',
 							'items-center',
@@ -81,39 +92,43 @@
 							'py-0'
 						)}
 					>
-						<a href={item.route} target={item.external ? '_blank' : ''} class="font-semibold"
-							>{item.label}</a
-						>
-						{#if item.children?.length}
-							<div class="dropdown h-full dropdown-end">
-								<div
-									tabindex="0"
-									role="button"
-									class={generateClassString('h-full', 'flex', 'items-center')}
-									onfocus={() => (activeDropdown = i)}
-									onblur={() => (activeDropdown = null)}
-								>
-									<ChevronDown size="1rem" strokeWidth={2} />
+						{#if item.external}
+							<a href={item.link} rel="external" target="_blank" class="font-semibold"
+								>{item.label}</a
+							>
+						{:else}
+							<a href={item.route} class="font-semibold">{item.label}</a>
+							{#if item.children?.length}
+								<div class="dropdown h-full dropdown-end">
+									<div
+										tabindex="0"
+										role="button"
+										class={generateClassString('h-full', 'flex', 'items-center')}
+										onfocus={() => (activeDropdown = i)}
+										onblur={() => (activeDropdown = null)}
+									>
+										<ChevronDown size="1rem" strokeWidth={2} />
+									</div>
+									<ul
+										tabindex="-1"
+										class={`menu menu-sm dropdown-content bg-base-100 w-52 p-0 shadow [&_li>*]:rounded-none translate-x-3 -translate-y-2 ${navbarZindex}`}
+									>
+										{#each item.children as child (child.route)}
+											<li>
+												<a
+													class={generateClassString(
+														...dropdownItem,
+														...hoverState,
+														...colors(child.route, true),
+														'text-neutral'
+													)}
+													href={child.route}>{child.label}</a
+												>
+											</li>
+										{/each}
+									</ul>
 								</div>
-								<ul
-									tabindex="-1"
-									class={`menu menu-sm dropdown-content bg-base-100 w-52 p-0 shadow [&_li>*]:rounded-none translate-x-3 -translate-y-2 ${navbarZindex}`}
-								>
-									{#each item.children as child (child.route)}
-										<li>
-											<a
-												class={generateClassString(
-													...dropdownItem,
-													...hoverState,
-													...colors(child.route, true),
-													'text-neutral'
-												)}
-												href={child.route}>{child.label}</a
-											>
-										</li>
-									{/each}
-								</ul>
-							</div>
+							{/if}
 						{/if}
 					</div>
 				</li>
@@ -151,18 +166,35 @@
 				tabindex="-1"
 				class={`${navbarZindex} menu menu-sm dropdown-content bg-base-100 w-52 p-0 shadow [&_li>*]:rounded-none`}
 			>
-				{#each navItems as item (item.route)}
+				{#each navItems as item, i (i)}
 					<li>
-						<a
+						<button
 							class={generateClassString(
 								...dropdownItem,
-								...colors(item.route, true),
-								...hoverState
+								...colors(item.external ? undefined : item.route, true),
+								...hoverState,
+								'auto-cols-[auto_max-content]',
+								!item.external && item.children?.length ? 'menu-dropdown-toggle' : ''
 							)}
-							href={item.route}>{item.label}</a
+							class:menu-dropdown-show={!item.external && mobileMenuItemDropped[item.route]}
+							onclick={() => {
+								if (!item.external && item.children?.length) {
+									mobileMenuItemDropped[item.route] = !mobileMenuItemDropped[item.route];
+								}
+							}}
 						>
-						{#if item.children?.length}
-							<ul class={`pl-2 bg-base-100 py-0 pr-0 ${navbarZindex}`}>
+							{#if item.external}
+								<a href={item.link} rel="external" target="_blank" class="mr-4">{item.label}</a>
+							{:else}
+								<a href={item.route} class="mr-4">{item.label}</a>
+							{/if}
+						</button>
+
+						{#if !item.external && item.children?.length}
+							<ul
+								class={`pl-2 bg-base-100 py-0 pr-0 ${navbarZindex} menu-dropdown`}
+								class:menu-dropdown-show={mobileMenuItemDropped[item.route]}
+							>
 								{#each item.children as child (child.route)}
 									<li>
 										<a
