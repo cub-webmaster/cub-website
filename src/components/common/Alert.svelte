@@ -1,30 +1,33 @@
 <script lang="ts">
-
 	import { onMount, type Snippet } from 'svelte';
 	import { Info } from '@lucide/svelte';
 	import type { ResolvedPathname } from '$app/types';
 
 	let smallAlertOpen = $state(false);
-    const { mainText, callToActionLink, callToActionText }: { mainText: Snippet, callToActionLink: ResolvedPathname, callToActionText: string } = $props();
+	const {
+		title,
+		mainText,
+		callToActionLink,
+		callToActionText
+	}: {
+		mainText: Snippet;
+		callToActionLink: ResolvedPathname;
+		callToActionText: string;
+		title: string;
+	} = $props();
 
 	onMount(() => (smallAlertOpen = true));
 </script>
 
-
-
 {#snippet button()}
-	<a
-		class="btn btn-primary flex sm:btn-sm btn-xs"
-		href={callToActionLink}
-		>{ callToActionText }</a
-	>
+	<a class="btn btn-primary flex sm:btn-sm btn-sm" href={callToActionLink}>{callToActionText}</a>
 {/snippet}
 
 <div role="alert" class="alert alert-horizontal hidden sm:grid">
 	<Info class="text-info" />
 	<div>
-		<h3 class="font-bold">Interested in joining us?</h3>
-		<div class="text-xs text-justify">
+		<h3 class="font-bold lg:text-lg text-base">{title}</h3>
+		<div class="text-sm text-justify lg:text-base">
 			{@render mainText()}
 		</div>
 	</div>
@@ -35,10 +38,10 @@
 	<input type="checkbox" bind:checked={smallAlertOpen} />
 	<div class="flex items-center gap-2 collapse-title">
 		<Info class="text-info" />
-		<h3 class="font-bold">Interested in joining us?</h3>
+		<h3 class="font-bold">{title}</h3>
 	</div>
 
-	<div class="text-xs text-justify col-span-2 flex flex-col gap-4 items-end collapse-content">
+	<div class="text-sm text-justify col-span-2 flex flex-col gap-4 items-end collapse-content">
 		<div class="w-full">{@render mainText()}</div>
 		<div>{@render button()}</div>
 	</div>

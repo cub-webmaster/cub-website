@@ -71,7 +71,7 @@
 	{#if showBrand || !transparentMode}
 		<a href={resolve('/')} class="flex justify-center items-center lg:gap-4 gap-2 px-4 h-full">
 			<img src={logo} alt="CUB logo" class="h-8" />
-			<span class="lg:text-l text-sm uppercase font-semibold">Cambridge University Bowmen</span>
+			<span class="md:text-l text-sm uppercase font-semibold">Cambridge University Bowmen</span>
 		</a>
 	{/if}
 	<div class="h-full flex items-center justify-end grow">

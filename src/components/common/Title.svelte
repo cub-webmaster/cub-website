@@ -6,13 +6,15 @@
 		sizes,
 		softShadow = false,
 		position = 'center',
-		color = 'text-base-200'
+		color = 'text-base-200',
+		animate = true
 	}: {
 		text: string;
 		sizes: string[];
 		softShadow?: boolean;
 		position?: 'center' | 'left';
 		color?: 'text-base-100' | 'text-base-200' | 'text-base-300';
+		animate?: boolean;
 	} = $props();
 
 	// style stuff
@@ -24,7 +26,6 @@
 		'absolute',
 		'text-center',
 		'text-nowrap',
-		'slide-in',
 		...(softShadow
 			? ['md:text-shadow-neutral/50', 'text-shadow-neutral/20']
 			: ['text-shadow-neutral']),
@@ -34,7 +35,9 @@
 	]);
 </script>
 
-<span class={generateClassString(...titleTextClasses, ...sizes)}> {text} </span>
+<span class={generateClassString(...titleTextClasses, ...sizes)} class:slide-in={animate}>
+	{text}
+</span>
 
 <style>
 	@keyframes slideInUp {

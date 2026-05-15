@@ -15,7 +15,7 @@
 </svelte:head>
 
 <!-- Note that we're only using style tag here bc tailwind does not recognise constructed strings -->
-<div class="relative min-h-screen" style={`padding-bottom: ${footerHeight}px`}>
+<div class="relative min-h-screen" style:padding-bottom={`${footerHeight}px`}>
 	{@render children()}
 
 	<Footer bind:height={footerHeight} />

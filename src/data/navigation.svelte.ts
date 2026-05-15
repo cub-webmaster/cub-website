@@ -13,6 +13,7 @@ import {
 	Award,
 	Flag
 } from '@lucide/svelte';
+import links from './links';
 
 export interface InternalNav {
 	route: ResolvedPathname;
@@ -63,7 +64,7 @@ export const joinSection: Section = {
 		{
 			slug: 'staff-alum',
 			label: 'Staff & Alumni',
-			desc: 'We accept staff members of the university and allow our members to stay affiliated beyond graduation, though the process is slightly different from our student members. See the detaiils here.',
+			desc: 'We accept staff members of the university and allow our members to stay affiliated beyond graduation, though the process is slightly different from our student members. See the details here.',
 			icon: GraduationCap
 		}
 	]
@@ -146,7 +147,7 @@ export const navItems: NavbarItem[] = [
 		external: false
 	},
 	{
-		link: 'https://www.philanthropy.cam.ac.uk/give-to-cambridge/cambridge-university-bowmen-club',
+		link: links.donate.url,
 		label: 'Donate',
 		external: true
 	}

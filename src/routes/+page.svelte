@@ -9,6 +9,12 @@
 	import Link from '$components/common/Link.svelte';
 	import { beginnerRecruitmentOngoing } from '$data/general';
 	import { resolve } from '$app/paths';
+	import Card from '$components/common/Card.svelte';
+	import landingCardsContent from '$data/home/jtcCards';
+	import { CircleChevronRight, Hand, MessageCircleQuestionMark } from '@lucide/svelte';
+	import PageHeading from '$components/layout/PageHeading.svelte';
+	import { landingPageFaqs } from '$data/home/faq';
+	import Ticker from '$components/common/Ticker.svelte';
 </script>
 
 <Header title="Home" showBrand={false}>
@@ -33,6 +39,7 @@
 
 <!-- Landing page joining alert -->
 <Alert
+	title="Interested in joining us?"
 	callToActionLink={beginnerRecruitmentOngoing
 		? resolve('/join/beginners')
 		: resolve('/join/experienced')}
@@ -57,3 +64,105 @@
 		{/if}
 	{/snippet}
 </Alert>
+
+<div class="md:px-12 px-8 py-8 w-full flex justify-center">
+	<!-- welcome text section -->
+	<div class="max-w-250 w-full">
+		<PageHeading text="Welcome to Cambridge University Bowmen!" id="welcome" icon={Hand} />
+
+		<div class="flex gap-4 flex-col text-neutral/80 md:text-base text-justify">
+			<p>
+				We are a friendly and enthusiastic club catering for all levels, from the complete beginner
+				up to the highly experienced athlete. Anyone is welcome, whether they wish to shoot purely
+				for fun or desire to compete in any of the many competitions we attend. Cambridge University
+				Bowmen have an excellent record over the years in both the experienced and novice levels of
+				competition on the university stage as well as at county, regional and national level. If
+				any of that interests you, do explore our section on how to join the club or contact the <Link
+					href="mailto:committee@cubowmen.com"
+					label="committee"
+				/>
+				if you have any other enquiries.
+			</p>
+		</div>
+	</div>
+</div>
+
+<!-- join train compete section -->
+<div class="flex flex-col items-center w-full bg-info relative">
+	<Ticker
+		items={['Join', 'Train', 'Compete', 'Join', 'Train', 'Compete']}
+		backgroundColor="bg-primary"
+	/>
+
+	<div class="max-w-250 w-full">
+		<div class="grid md:grid-cols-3 md:grid-rows-1 grid-rows-3 gap-4 py-6 px-4">
+			{#each landingCardsContent as c (c.title)}
+				<div class="bg-base-100">
+					<Card title={c.title} icon={c.icon}>
+						<ul class="menu menu-sm w-full p-0 [&_li>*]:rounded-none pr-4">
+							{#each c.items as item (item.text)}
+								<li
+									class="hover:bg-accent/80 hover:text-base-200 py-1 md:py-2 px-2 hover:[&_.red-text]:text-base-200"
+								>
+									<a class="text-base p-0 hover:bg-transparent" href={item.href}
+										><CircleChevronRight
+											size="1rem"
+											class="text-accent/80 red-text"
+										/>{item.text}</a
+									>
+								</li>
+							{/each}
+						</ul>
+					</Card>
+				</div>
+			{/each}
+		</div>
+	</div>
+	<div class="top-shadow"></div>
+	<Ticker
+		items={['Join', 'Train', 'Compete', 'Join', 'Train', 'Compete']}
+		backgroundColor="bg-primary"
+		direction="right"
+	/>
+</div>
+
+<!-- FAQ section -->
+<div class="md:px-12 px-8 py-8 w-full flex justify-center">
+	<!-- welcome text section -->
+	<div class="max-w-250 w-full">
+		<PageHeading text="Frequently Asked Questions" id="faq" icon={MessageCircleQuestionMark} />
+
+		<div class="flex flex-col gap-2">
+			{#each landingPageFaqs as faq, i (i)}
+				<div class="collapse collapse-plus bg-base-200 border border-primary">
+					<input type="radio" name="landing-faq" checked={i == 0} />
+					<div class="collapse-title font-semibold">{faq.question}</div>
+					<div class="collapse-content">
+						<p class="text-neutral/80">
+							{faq.answer}
+						</p>
+						{#if faq.related}
+							<div class="pt-8 flex flex-wrap gap-y-2 gap-x-8">
+								{#each faq.related as { link, label }, i (i)}
+									<div class="flex gap-2 items-center">
+										<div class="bg-primary font-semibold py-1 px-2 shrink-0">Related link</div>
+										<CircleChevronRight size="1rem" class="text-secondary" />
+										<a href={link} class="link link-info link-hover font-semibold">{label}</a>
+									</div>
+								{/each}
+							</div>
+						{/if}
+					</div>
+				</div>
+			{/each}
+		</div>
+	</div>
+</div>
+
+<style>
+	.top-shadow {
+		box-shadow:
+			0 -20px 25px -5px rgb(0 0 0 / 0.1),
+			0 -8px 10px -6px rgb(0 0 0 / 0.1);
+	}
+</style>
