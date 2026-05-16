@@ -5,7 +5,7 @@
 </script>
 
 <h2
-	class="xl:text-3xl flex gap-4 items-center md:text-3xl sm:text-2xl text-xl font-semibold heading"
+	class="xl:text-3xl text-neutral flex gap-4 items-center md:text-3xl sm:text-2xl text-xl font-semibold heading"
 	{id}
 >
 	{#if HeadingIcon}

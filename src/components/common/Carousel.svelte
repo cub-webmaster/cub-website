@@ -2,7 +2,7 @@
 	import type { CarouselImage } from '$lib/carousel';
 	import type { EmblaOptionsType } from 'embla-carousel';
 	import useEmblaCarousel from 'embla-carousel-svelte';
-	import { carouselMaxCount } from '../data/general';
+	import { carouselMaxCount } from '../../data/general';
 	import { ChevronLeft, ChevronRight, Circle } from '@lucide/svelte';
 	import type { EmblaCarouselType } from 'embla-carousel';
 	import Autoplay from 'embla-carousel-autoplay';

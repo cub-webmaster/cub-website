@@ -22,7 +22,7 @@ export interface InternalNav {
 	external: false;
 }
 
-interface ExternalNav {
+export interface ExternalNav {
 	link: string;
 	label: string;
 	external: true;

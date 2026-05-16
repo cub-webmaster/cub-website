@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Footer from '$components/Footer.svelte';
+	import Footer from '$components/layout/Footer.svelte';
 	import favicon from '$lib/assets/favicon.svg';
 
 	let { children } = $props();
@@ -26,5 +26,10 @@
 		margin: 0;
 		font-family: 'Lato', sans-serif;
 		background-color: var(--color-base-100);
+	}
+
+	:global(html) {
+		scroll-behavior: smooth;
+		scroll-padding-top: 5rem;
 	}
 </style>

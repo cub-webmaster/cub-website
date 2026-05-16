@@ -5,6 +5,6 @@
 	const { data } = $props();
 </script>
 
-<ContentPage section={membersSection} pageHeadings={[]} pageData={data}>
+<ContentPage section={membersSection} pageData={data}>
 	<div></div>
 </ContentPage>

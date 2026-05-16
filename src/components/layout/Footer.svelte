@@ -1,14 +1,30 @@
 <script lang="ts">
-	import SocialIcon from './common/SocialIcon.svelte';
+	import SocialIcon from '../common/SocialIcon.svelte';
 	import links from '$data/links';
+	import quickLinks from '$data/quickLinks';
+	import { CircleChevronRight } from '@lucide/svelte';
 
 	let { height = $bindable(0) }: { height: number } = $props();
 	const year = new Date().getFullYear();
 </script>
 
 <div bind:clientHeight={height} class="absolute bottom-0 w-full">
+	<div class="bg-base-300 sm:px-8 px-4 py-4">
+		<div class="flex flex-wrap gap-x-4 sm:gap-x-8 gap-y-2">
+			<div class="font-semibold bg-accent/80 text-base-200 px-2 py-1">Quick links</div>
+			{#each quickLinks as { link, label }, i (i)}
+				<a
+					href={link}
+					rel="external"
+					target="_blank"
+					class="flex sm:gap-2 gap-1 items-center link-hover link-info font-semibold sm:text-base text-sm"
+					><CircleChevronRight size="1rem" class="text-accent/80" />{label}</a
+				>
+			{/each}
+		</div>
+	</div>
 	<!-- quick links section -->
-	<div class="bg-info md:px-8 px-2 py-4 flex md:justify-between justify-center gap-8 items-center">
+	<div class="bg-info sm:px-8 px-4 py-4 flex justify-between gap-8 items-center">
 		<span class="text-base-200 text-xs">
 			&#169; {year} Cambridge University Bowmen. Website by Rachel Tam.
 		</span>
