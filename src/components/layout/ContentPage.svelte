@@ -68,7 +68,7 @@
 			pageLabel={pageData.label}
 		/>
 
-		<div class="collapse collapse-arrow md:hidden sticky top-24">
+		<div class="collapse collapse-arrow md:hidden sticky top-24 z-10">
 			<input type="checkbox" class="peer" />
 			<div
 				class="collapse-title btn btn-info mt-2 drawer-button w-fit shadow-none peer-checked:rounded-b-none border-0"
