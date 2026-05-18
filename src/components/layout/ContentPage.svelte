@@ -4,7 +4,7 @@
 	import Header from '$components/layout/Header.svelte';
 	import { generateClassString } from '$lib/util';
 	import { Map, TableOfContents } from '@lucide/svelte';
-	import { onMount, type Snippet } from 'svelte';
+	import { type Snippet } from 'svelte';
 	import type { Section } from '$data/navigation.svelte.js';
 	import Container from './Container.svelte';
 	import { sideNavItemBaseClasses } from '$data/general';
@@ -22,13 +22,15 @@
 	let headings: { label: string; id: string }[] = $state([]);
 	let floatingNavBtnWidth = $state(0);
 
-	onMount(() => {
-		headings = [...document.querySelectorAll('.heading')].map((node) => {
-			return {
-				id: node.id,
-				label: node.textContent
-			};
-		});
+	$effect(() => {
+		if (pageData) {
+			headings = [...document.querySelectorAll('.heading')].map((node) => {
+				return {
+					id: node.id,
+					label: node.textContent
+				};
+			});
+		}
 	});
 
 	// style stuff
