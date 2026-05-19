@@ -1,7 +1,7 @@
 <script lang="ts">
 	import PageSection from '$components/layout/PageSection.svelte';
 	import { committee, committeeTypeLabels, type CommitteeType } from '$data/about/committee';
-	import CommitteeCard from './CommitteeCard.svelte';
+	import CommitteeCard from '$components/about/CommitteeCard.svelte';
 </script>
 
 {#each Object.entries(committeeTypeLabels) as [type, label], i (i)}

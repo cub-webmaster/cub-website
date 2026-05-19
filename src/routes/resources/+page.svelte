@@ -7,10 +7,11 @@
 	import { Search } from '@lucide/svelte';
 	import PageHeading from '$components/layout/PageHeading.svelte';
 	import type { ResourceCategory } from '$data/resources/types';
-	import ResourceCard from './ResourceCard.svelte';
-	import SideMenuDropdown from './SideMenuDropdown.svelte';
+	import ResourceCard from '$components/resources/ResourceCard.svelte';
+	import SideMenuDropdown from '$components/resources/SideMenuDropdown.svelte';
+	import { page } from '$app/state';
 
-	let searchString = $state('');
+	let searchString = $state(page.url.searchParams.get('search') ?? '');
 
 	function searchResource(searchString: string, resources: ResourceCategory[]): ResourceCategory[] {
 		const search = searchString.toLowerCase();
