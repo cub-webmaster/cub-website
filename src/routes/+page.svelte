@@ -5,7 +5,7 @@
 	import Header from '$components/layout/Header.svelte';
 	import Title from '$components/common/Title.svelte';
 	import logo from '$lib/assets/img/logo.png';
-	import Alert from '$components/common/Alert.svelte';
+	import ResponsiveAlert from '$components/common/ResponsiveAlert.svelte';
 	import Link from '$components/common/Link.svelte';
 	import { beginnerRecruitmentOngoing, containerMaxWidth } from '$data/general';
 	import { resolve } from '$app/paths';
@@ -16,6 +16,7 @@
 	import { landingPageFaqs } from '$data/home/faq';
 	import Ticker from '$components/common/Ticker.svelte';
 	import Container from '$components/layout/Container.svelte';
+	import links from '$data/links';
 </script>
 
 <Header title="Home" showBrand={false}>
@@ -39,7 +40,7 @@
 </Header>
 
 <!-- Landing page joining alert -->
-<Alert
+<ResponsiveAlert
 	title="Interested in joining us?"
 	callToActionLink={beginnerRecruitmentOngoing
 		? resolve('/join/beginners')
@@ -50,21 +51,21 @@
 		{#if beginnerRecruitmentOngoing}
 			The <b>Beginner's Course</b> is now OPEN! Click <b>Read More</b> for more details and how to
 			sign up. Please contact the
-			<Link href="mailto:secretary@cubowmen.com" label="Secretary" external />
+			<Link href={`mailto:${links.secretary_email.url}`} label="Secretary" external />
 			or the
-			<Link href="mailto:novice@cubowmen.com" label="Novice Officer" external />
+			<Link href={`mailto:${links.novice_email.url}`} label="Novice Officer" external />
 			for any inquiries about the course.
 		{:else}
 			The club has reached capacity for beginner archers this academic year, please stay tuned for
 			our beginner's course next year! <b>Experienced archers</b> can still join the club directly,
 			<b>click Read More</b> to see how. For other enquiries please contact the
-			<Link href="mailto:secretary@cubowmen.com" label="Secretary" external />
+			<Link href={`mailto:${links.secretary_email.url}`} label="Secretary" external />
 			or the
-			<Link href="mailto:novice@cubowmen.com" label="Novice Officer" external />
+			<Link href={`mailto:${links.novice_email.url}`} label="Novice Officer" external />
 			for anything related to beginners.
 		{/if}
 	{/snippet}
-</Alert>
+</ResponsiveAlert>
 
 <!-- welcome text section -->
 <Container verticalPadding>
@@ -78,7 +79,7 @@
 			Bowmen have an excellent record over the years in both the experienced and novice levels of
 			competition on the university stage as well as at county, regional and national level. If any
 			of that interests you, do explore our section on how to join the club or contact the <Link
-				href="mailto:committee@cubowmen.com"
+				href={`mailto:${links.committee_email.url}`}
 				label="committee"
 				external
 			/>

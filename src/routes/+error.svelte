@@ -1,28 +1,35 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
+	import Link from '$components/common/Link.svelte';
 	import Header from '$components/layout/Header.svelte';
 	import { CircleX } from '@lucide/svelte';
 </script>
 
-<Header title="Error">
-	{#snippet override()}
-		<div></div>
-	{/snippet}
-</Header>
+<Header title="Error" />
 
-<div class="w-full h-full flex flex-col gap-4 justify-center items-center absolute top-0 bottom-0">
-	<div role="alert" class="alert alert-vertical bg-base-300 p-10">
-		<div class="flex text-2xl text-bold text-accent/80 items-center gap-2">
-			<CircleX />Error!
-		</div>
+<div class="top-0 bottom-0 w-full flex justify-center items-center px-12 absolute">
+	<div role="alert" class="alert border-accent alert-vertical bg-base-200">
+		<CircleX class="text-accent shrink-0" size="3rem" />
 		<div>
-			{#if page.status === 404}
-				<div class="text-7xl sm:text-9xl text-semibold">404</div>
-				<div class="text-lg">Sorry, we couldn't find that page.</div>
-			{:else}
-				<div class="text-7xl sm:text-9xl text-semibold">500</div>
-				<div class="text-lg">Sorry, something went wrong.</div>
-			{/if}
+			<h3 class="font-bold text-lg">
+				Oops! {page.status === 404 ? "Where's that page gone?" : 'Something went wrong.'}
+			</h3>
+			<div class="text-sm text-justify lg:text-base">
+				{#if page.status === 404}
+					Sorry we couldn't find what you were looking for. Go <Link
+						href={resolve('/')}
+						label="home"
+						external={false}
+					/> instead?
+				{:else}
+					Sorry, we're struggling to do that at the moment. Go <Link
+						href={resolve('/')}
+						label="home"
+						external={false}
+					/> ?
+				{/if}
+			</div>
 		</div>
 	</div>
 </div>

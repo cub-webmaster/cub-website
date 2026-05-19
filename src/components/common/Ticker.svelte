@@ -58,7 +58,7 @@
 	</div>
 	<div
 		class={generateClassString(...scrollerClasses, backgroundColor)}
-		style:animation-delay="8s"
+		style:animation-delay="10s"
 		style:transform={`translateX(${direction === 'left' ? '' : '-'}100%)`}
 	>
 		{#each items as str, i (i)}
@@ -69,7 +69,7 @@
 
 <style>
 	.scroll-left {
-		animation: loop-to-left 16s linear infinite;
+		animation: loop-to-left 20s linear infinite;
 	}
 
 	@keyframes loop-to-left {
@@ -82,7 +82,7 @@
 	}
 
 	.scroll-right {
-		animation: loop-to-right 16s linear infinite;
+		animation: loop-to-right 20s linear infinite;
 	}
 
 	@keyframes loop-to-right {

@@ -1,3 +1,5 @@
+import links from "$data/links";
+
 export type CommitteeType = "core" | "welfare" | "comms" | "shooting";
 
 export interface CommitteeMember {
@@ -20,19 +22,19 @@ export const committee: Record<CommitteeType, CommitteeMember[]> = {
     "core": [
         {
             position: "Captain",
-            email: "captain@cubowmen.com",
+            email: links.captain_email.url,
             name: "Amber Holt",
             college: "Queen's"
         },
         {
             position: "Secretary",
-            email: "secretary@cubowmen.com",
+            email: links.secretary_email.url,
             name: "Emily Naden",
             college: "Peterhouse"
         },
         {
             position: "Treasurer",
-            email: "treasurer@cubowmen.com",
+            email: links.treasurer_email.url,
             name: "Luke Vogt",
             college: "St. Edmund's"
         }
@@ -40,13 +42,13 @@ export const committee: Record<CommitteeType, CommitteeMember[]> = {
     "welfare": [
         {
             position: "Welfare Officer",
-            email: "welfare@cubowmen.com",
+            email: links.welfare_email.url,
             name: "Alex Germain",
             college: "Pembroke"
         },
         {
             position: "Safety Officer",
-            email: "safety@cubowmen.com",
+            email: links.safety_email.url,
             name: "Diana Galvan Sosa",
             college: "N/A (staff)"
         },
@@ -57,19 +59,19 @@ export const committee: Record<CommitteeType, CommitteeMember[]> = {
         //equipment
         {
             position: "Tournaments Officer",
-            email: "tournaments@cubowmen.com",
+            email: links.tournaments_email.url,
             name: "Alex Mappleback",
             college: "Churchill"
         },
         {
             position: "Novice Officer",
-            email: "novice@cubowmen.com",
+            email: links.novice_email.url,
             name: "Sriyashas Mohan-Kalluri",
             college: "King's"
         },
         {
             position: "Development Officer",
-            email: "development@cubowmen.com",
+            email: links.development_email.url,
             name: "Pegah Abyaneh",
             college: "Gonville and Caius"
         }
@@ -79,13 +81,13 @@ export const committee: Record<CommitteeType, CommitteeMember[]> = {
         //publicity
         {
             position: "Alumni Officer",
-            email: "alumni@cubowmen.com",
+            email: links.alumni_email.url,
             name: "Rachel Tam",
             college: "Christ's (alumni)"
         },
         {
             position: "Webmaster",
-            email: "webmaster@cubowmen.com",
+            email: links.webmaster_email.url,
             name: "Rachel Tam",
             college: "Christ's (alumni)"
         }

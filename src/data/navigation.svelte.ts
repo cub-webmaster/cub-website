@@ -11,7 +11,8 @@ import {
 	Dumbbell,
 	PartyPopper,
 	Award,
-	Flag
+	Flag,
+	Transgender
 } from '@lucide/svelte';
 import links from './links';
 
@@ -66,6 +67,12 @@ export const joinSection: Section = {
 			label: 'Staff & Alumni',
 			desc: 'We accept staff members of the university and allow our members to stay affiliated beyond graduation, though the process is slightly different from our student members. See the details here.',
 			icon: GraduationCap
+		},
+		{
+			slug: 'trans',
+			label: 'Trans & Non-binary Archers',
+			desc: 'CUB welcomes everyone regardless of gender and/or sexuality. However, our governing bodies still have many issues regarding the inclusion of trans and non-binary archers. Learn what this might mean for you before starting the sport.',
+			icon: Transgender
 		}
 	]
 };
