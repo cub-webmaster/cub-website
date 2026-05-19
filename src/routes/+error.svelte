@@ -15,7 +15,7 @@
 			<h3 class="font-bold text-lg">
 				Oops! {page.status === 404 ? "Where's that page gone?" : 'Something went wrong.'}
 			</h3>
-			<div class="text-sm text-justify lg:text-base">
+			<div class="text-sm text-center lg:text-base">
 				{#if page.status === 404}
 					Sorry we couldn't find what you were looking for. Go <Link
 						href={resolve('/')}
