@@ -1,6 +1,6 @@
 <script>
 	import ContentPage from '$components/layout/ContentPage.svelte';
-	import { membersSection } from '$data/navigation.svelte';
+	import { membersSection } from '$data/navigation.js';
 
 	const { data } = $props();
 </script>

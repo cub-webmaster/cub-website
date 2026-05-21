@@ -77,7 +77,7 @@
 			to the highly experienced athlete. Anyone is welcome, whether they wish to shoot purely for
 			fun or desire to compete in any of the many competitions we attend. Cambridge University
 			Bowmen have an excellent record over the years in both the experienced and novice levels of
-			competition on the university stage as well as at county, regional and national level. If any
+			competition, on the university stage as well as at county, regional and national level. If any
 			of that interests you, do explore our section on how to join the club or contact the <Link
 				href={`mailto:${links.committee_email.url}`}
 				label="committee"

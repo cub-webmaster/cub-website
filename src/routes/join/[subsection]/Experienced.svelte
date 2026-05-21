@@ -65,7 +65,7 @@
 <PageSection headingId="agb" headingText="AGB Affiliation">
 	<p>
 		If you have shot with another UK-based club before, it is likely that you are already registered
-		with AGB. In this case, you will have to manually change your club in your agb account. Detailed
+		with AGB. In this case, you will have to manually change your club in your AGB account. Detailed
 		instructions on how to do this can be found in our comprehensive <Link
 			external
 			href={links.agb_guide.url}

@@ -1,6 +1,5 @@
-import type { Section } from '$data/navigation.svelte';
+import type { Section } from '$data/navigation';
 import { error } from '@sveltejs/kit';
-
 
 export function generateClassString(...classes: string[]) {
 	return classes.join(' ');

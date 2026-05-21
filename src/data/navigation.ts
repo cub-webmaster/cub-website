@@ -59,7 +59,7 @@ export const joinSection: Section = {
 		{
 			slug: 'experienced',
 			label: 'Experienced Archers',
-			desc: 'Are you a long time archer that just arrived at Cambridge? Or maybe looking to dust off your old archery kit? Read more on how to join as an experienced archer.',
+			desc: 'Are you a long time archer that just arrived at Cambridge? Or maybe looking to dust off your old archery kit and start again? Read more on how to join as an experienced archer.',
 			icon: BicepsFlexed
 		},
 		{
@@ -71,7 +71,7 @@ export const joinSection: Section = {
 		{
 			slug: 'trans',
 			label: 'Trans & Non-binary Archers',
-			desc: 'CUB welcomes everyone regardless of gender and/or sexuality. However, our governing bodies still have many issues regarding the inclusion of trans and non-binary archers. Learn what this might mean for you before starting the sport.',
+			desc: 'CUB welcomes everyone regardless of gender and/or sexuality. However, the sport still has many issues regarding the inclusion of trans and non-binary archers. Learn what this might mean for you before starting the sport.',
 			icon: Transgender
 		}
 	]
@@ -84,7 +84,7 @@ export const aboutSection: Section = {
 		{
 			slug: 'us',
 			label: 'Who We Are',
-			desc: "Cambridge University Bowmen has been is the university's archery club that has been around for well over 70 years. Learn more about the club and its history here.",
+			desc: "Cambridge University Bowmen has been the university's archery club for well over 70 years. Learn more about the club and its history here.",
 			icon: BowArrow
 		},
 		{

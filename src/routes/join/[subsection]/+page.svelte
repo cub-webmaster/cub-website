@@ -1,6 +1,6 @@
 <script lang="ts">
 	import ContentPage from '$components/layout/ContentPage.svelte';
-	import { joinSection } from '$data/navigation.svelte';
+	import { joinSection } from '$data/navigation.js';
 	import Beginners from './Beginners.svelte';
 	import Experienced from './Experienced.svelte';
 	import Staff from './Staff.svelte';

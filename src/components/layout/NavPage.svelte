@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import type { Section } from '$data/navigation.svelte';
+	import type { Section } from '$data/navigation';
 	import Header from './Header.svelte';
 	import Card from '$components/common/Card.svelte';
 

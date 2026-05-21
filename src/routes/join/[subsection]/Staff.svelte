@@ -8,8 +8,7 @@
 <PageSection>
 	While non-students are welcomed at our club, there are additional steps required for membership
 	registration, and we'll be covering them here. Note that you should still read the beginners or
-	experienced archers page (whichever is relevant) for other relevant instructions to joining our
-	club.
+	experienced archers page (whichever applies) for other relevant instructions to joining our club.
 </PageSection>
 
 <PageSection headingText="External Affiliations" headingId="affiliations">
@@ -17,12 +16,12 @@
 		Members of CUB are required to also be registered with Archery GB (AGB), the Southern Counties
 		Archery Society (SCAS) and the Cambridgeshire Archery Association (CAA). As we are only allowed
 		to carry out this registration on behalf of students, non-student members will have to manage
-		these affiliations on their own. Note that this process needs to be repeated every year as well
-		during membership renewal.
+		these affiliations on their own. Note that this process needs to be repeated every year for
+		membership renewal.
 	</p>
 
 	<p>
-		<b>For AGB affiliation,</b> you can manage everything onlin via the <Link
+		<b>For AGB affiliation,</b> you can manage everything online via the <Link
 			href={links.agb_sport80.url}
 			external
 			label="AGB Sport 80 platform"
@@ -42,8 +41,8 @@
 		/> for assistance on this and send back your forms as soon as you can.
 	</p>
 	<p>
-		Note that your membership with both of these require a fee. The specific numbers (last updated
-		September 2025) are as follows:
+		Note that your membership with both of these require a fee. For reference, the specific numbers
+		as of September 2025 are as follows:
 	</p>
 	<List
 		items={[
@@ -70,12 +69,12 @@
 	</p>
 	<p>
 		Nevertheless, there are competitions happening throughout the year that are open to everyone,
-		usually hosted by local clubs and often attract a lot more mature archers that is quite
+		usually hosted by local clubs that often attract a lot more mature archers, making it quite
 		different from our majority student demographic! So be assured that there are plenty of
 		opportunities for you even if we talk about it less in the club.
 	</p>
 	<p>
-		If you can interested in competing, but not sure how to start or what competitions there are
+		If you are interested in competing, but not sure how to start or what competitions there are
 		near us, feel free to reach out to our <Link
 			href={`mailto:${links.tournaments_email.url}`}
 			label="Tournaments Officer"

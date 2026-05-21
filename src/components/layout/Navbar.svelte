@@ -4,7 +4,7 @@
 	import { colorTransitionClasses, generateClassString } from '$lib/util';
 	import { ChevronDown } from '@lucide/svelte';
 	import { page } from '$app/state';
-	import { navItems } from '$data/navigation.svelte';
+	import { navItems } from '$data/navigation';
 	import { onMount } from 'svelte';
 	import logo from '$lib/assets/img/logo.png';
 

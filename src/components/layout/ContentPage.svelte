@@ -5,7 +5,7 @@
 	import { generateClassString } from '$lib/util';
 	import { Map, TableOfContents } from '@lucide/svelte';
 	import { type Snippet } from 'svelte';
-	import type { Section } from '$data/navigation.svelte.js';
+	import type { Section } from '$data/navigation.js';
 	import Container from './Container.svelte';
 	import { sideNavItemBaseClasses } from '$data/general';
 
