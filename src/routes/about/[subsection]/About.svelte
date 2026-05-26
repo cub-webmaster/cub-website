@@ -8,7 +8,7 @@
 
 <PageSection>
 	<p>
-		Cambridge University Bowmen has been the univeresity's archery club for well over 70 years. We
+		Cambridge University Bowmen has been the university's archery club for well over 70 years. We
 		are open to all members of the University of Cambridge (both students and staff), beginners and
 		experienced archers alike! Most of the club shoots Olympic Recurve, and that is what are able to
 		provide the most support for, but we welcome any bowstyle, from longbow to compound to

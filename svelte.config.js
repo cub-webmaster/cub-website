@@ -3,10 +3,13 @@ import adapter from '@sveltejs/adapter-auto';
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	onwarn: (warning, handler) => {
-		if (warning.filename.includes("node_modules")) return;
+		if (warning.filename.includes('node_modules')) return;
 		handler(warning);
 	},
 	compilerOptions: {
+		experimental: {
+			async: true
+		},
 		// Force runes mode for the project, except for libraries. Can be removed in svelte 6.
 		runes: ({ filename }) => (filename.split(/[/\\]/).includes('node_modules') ? undefined : true)
 	},
@@ -16,10 +19,10 @@ const config = {
 		// See https://svelte.dev/docs/kit/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			"$lib": "src/lib",
-			"$lib/*": "src/lib/*",
-			"$components/*": "src/components/*",
-			"$data/*": "src/data/*"
+			$lib: 'src/lib',
+			'$lib/*': 'src/lib/*',
+			'$components/*': 'src/components/*',
+			'$data/*': 'src/data/*'
 		}
 	}
 };

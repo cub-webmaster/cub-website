@@ -7,10 +7,6 @@
 
 	let { children } = $props();
 	let footerHeight = $state(0);
-
-	$effect(() => {
-		console.log(footerHeight);
-	});
 </script>
 
 <svelte:head>
