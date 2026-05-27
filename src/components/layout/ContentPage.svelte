@@ -70,22 +70,24 @@
 			pageLabel={pageData.label}
 		/>
 
-		<div class="collapse collapse-arrow md:hidden sticky top-24 z-10">
+		<div class="collapse collapse-arrow md:hidden sticky top-24 z-10 pl-1">
 			<input type="checkbox" class="peer" />
 			<div
-				class="collapse-title btn btn-info mt-2 drawer-button w-fit shadow-none peer-checked:rounded-b-none border-0"
+				class="collapse-title btn btn-info mt-2 drawer-button w-fit shadow-none peer-checked:rounded-b-none peer-checked:border-b-0 border border-base-200"
 				bind:clientWidth={floatingNavBtnWidth}
 			>
 				<TableOfContents size="1rem" />
 				Table of Contents
 			</div>
 			<div class="collapse-content p-0">
-				<ul
-					class="menu bg-base-200 h-fit p-4 [&_li>*]:rounded-none rounded-b-md border border-info"
-					style:width={`${floatingNavBtnWidth}px`}
-				>
-					{@render tableOfContents()}
-				</ul>
+				<div class="border border-t-0 border-base-200 rounded-b-md w-fit">
+					<ul
+						class="menu bg-base-200 h-fit p-4 [&_li>*]:rounded-none rounded-b-md border border-t-0 border-info"
+						style:width={`${floatingNavBtnWidth}px`}
+					>
+						{@render tableOfContents()}
+					</ul>
+				</div>
 			</div>
 		</div>
 
