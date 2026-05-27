@@ -46,7 +46,7 @@
 	>
 </PageSection>
 
-<PageSection headingText="Taster Sessions" headingId="taster">
+<PageSection headingText="Taster Sessions" id="taster">
 	<p>
 		Each year at the beginning of Michaelmas term, we run a have-a-go session for all those who are
 		interested in the beginners course but want to try out archery before signing up.
@@ -57,7 +57,7 @@
 	</p>
 </PageSection>
 
-<PageSection headingText="Beginners' Courses" headingId="course">
+<PageSection headingText="Beginners' Courses" id="course">
 	<p>
 		The beginners' course will take place over four Sunday mornings in Michaelmas term, starting on
 		the 19th of October in 2025, and contains all the coaching necessary to allow you to shoot
@@ -98,7 +98,7 @@
 	</p>
 </PageSection>
 
-<PageSection headingText="Novice Squad" headingId="novice">
+<PageSection headingText="Novice Squad" id="novice">
 	<p>
 		A novice in archery is anyone who is within their first 12 months of learning the sport, and the
 		Novice Squad refers to our team of competitive beginner archers. Members of the Novice Squad are

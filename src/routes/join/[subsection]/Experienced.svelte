@@ -29,7 +29,7 @@
 	</p>
 </PageSection>
 
-<PageSection headingId="fees" headingText="Club fees">
+<PageSection id="fees" headingText="Club fees">
 	<p>
 		As CUB is a non-profit entity, all club fees go directly into the running of the club. For
 		example, these funds are used to maintain our equipment, cover competition entry fees, insure
@@ -62,7 +62,7 @@
 	<div class="pb-2"></div>
 </PageSection>
 
-<PageSection headingId="agb" headingText="AGB Affiliation">
+<PageSection id="agb" headingText="AGB Affiliation">
 	<p>
 		If you have shot with another UK-based club before, it is likely that you are already registered
 		with AGB. In this case, you will have to manually change your club in your AGB account. Detailed

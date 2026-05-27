@@ -24,7 +24,7 @@
 	}
 </script>
 
-<PageSection headingId="core" headingText="Core Documents">
+<PageSection id="core" headingText="Core Documents">
 	<p>
 		Here are some of the important documents regarding the functioning of the club as well as the
 		safety and welfare of our members. These documents are reviewed on a regular basis in line with
@@ -33,7 +33,7 @@
 	<List items={convertDocListToListItems(documents.core)} />
 </PageSection>
 
-<PageSection headingId="shooting" headingText="Shooting Related">
+<PageSection id="shooting" headingText="Shooting Related">
 	<p>
 		All members are expected to display good etiquette, act as good sportspeople, and conduct
 		themselves in an appropriate manner as set out in the code of conduct. It is also expected that
@@ -44,7 +44,7 @@
 	<List items={convertDocListToListItems(documents.shooting)} />
 </PageSection>
 
-<PageSection headingId="data" headingText="Data Protection">
+<PageSection id="data" headingText="Data Protection">
 	<p>
 		Below are documents relating to the electronic aspects of the club. The club keeps records of
 		it's members each year in accordance with our data protection policy. Social media presence or

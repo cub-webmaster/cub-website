@@ -11,7 +11,7 @@
 	experienced archers page (whichever applies) for other relevant instructions to joining our club.
 </PageSection>
 
-<PageSection headingText="External Affiliations" headingId="affiliations">
+<PageSection headingText="External Affiliations" id="affiliations">
 	<p>
 		Members of CUB are required to also be registered with Archery GB (AGB), the Southern Counties
 		Archery Society (SCAS) and the Cambridgeshire Archery Association (CAA). As we are only allowed
@@ -60,7 +60,7 @@
 	/>
 </PageSection>
 
-<PageSection headingText="Competitions" headingId="comps">
+<PageSection headingText="Competitions" id="comps">
 	<p>
 		We encourage all of our members to participate in competitions, as it is a very rewarding part
 		of the sport. However, a significant part of the competitions we routinely send our archers to,

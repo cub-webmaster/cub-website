@@ -15,7 +15,7 @@
 	</p>
 </PageSection>
 
-<PageSection headingText="AGB Affiliation" headingId="registration">
+<PageSection headingText="AGB Affiliation" id="registration">
 	<p>
 		Archery GB (AGB) is our national governing body, and all archers are required to be registered
 		with them in order to shoot at any UK-based club. Currently, AGB requires us to specify 'male'
@@ -47,7 +47,7 @@
 	</Alert>
 </PageSection>
 
-<PageSection headingText="Competitions" headingId="comps">
+<PageSection headingText="Competitions" id="comps">
 	<p>
 		At competitions, archery is historically divided into male and female categories, and this
 		remains true of most university competitions. If you wish to compete for the club, you will

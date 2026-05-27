@@ -33,7 +33,9 @@ const links: Record<string, Link> = {
 	safety_email: { url: 'safety@cubowmen.com', label: 'Safety Officer Email' },
 	novice_email: { url: 'novice@cubowmen.com', label: 'Novice Officer Email' },
 	welfare_email: { url: 'welfare@cubowmen.com', label: 'Welfare Officer Email' },
+	equipment_email: { url: 'equipment@cubowmen.com', label: 'Equipment Officer Email' },
 	committee_email: { url: 'committee@cubowmen.com', label: 'Committee Email' },
+	social_email: { url: 'social@cubowmen.com', label: 'Social Secretary Email' },
 	agb_sport80: { url: 'https://agb.sport80.com', label: 'AGB Sport 80 Platform' },
 	agb_guide: { url: '#', label: 'AGB Membership guide' },
 	history_1950s: {

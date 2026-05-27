@@ -27,7 +27,7 @@
 	</p>
 </PageSection>
 
-<PageSection headingId="record" headingText="Track Record">
+<PageSection id="record" headingText="Track Record">
 	<p>
 		CUB regularly competes in local and national competitions, including the British Universities
 		and Colleges Sport (BUCS), the annual Cambridge vs Oxford Varsity Match, and the TOUCAN league.
@@ -43,7 +43,7 @@
 	</p>
 </PageSection>
 
-<PageSection headingId="history" headingText="History">
+<PageSection id="history" headingText="History">
 	<Alert>
 		This section details the club's historical records that we're currently aware of. If you know of
 		something we could add, please <Link

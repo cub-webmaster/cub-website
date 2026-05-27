@@ -21,7 +21,7 @@
 		schedule, venue and other details regarding our training sessions.
 	</p>
 </PageSection>
-<PageSection headingText="Training schedule" headingId="schedule">
+<PageSection headingText="Training schedule" id="schedule">
 	<p>
 		During indoor season (late September onwards), we train on the <b
 			>mornings of Mondays, Wednesdays and Sundays</b
@@ -65,7 +65,7 @@
 	</div>
 </PageSection>
 
-<PageSection headingId="venue" headingText="Venues">
+<PageSection id="venue" headingText="Venues">
 	<p>
 		We train at the <b>Universtiy Sports Centre</b> during indoor season and the
 		<b>Churchill College Playing Fields</b> during outdoor season, a map view detailing the location of
@@ -97,7 +97,7 @@
 	</div>
 </PageSection>
 
-<PageSection headingId="signup" headingText="Session Signups">
+<PageSection id="signup" headingText="Session Signups">
 	<p>
 		We run our sessions on a sign-up basis to prevent overcrowding and keep track of club equipment
 		usage. Members are allowed to sign up to as many sessions as they want throughout the year,
@@ -114,7 +114,7 @@
 	</Alert>
 </PageSection>
 
-<PageSection headingId="coaching" headingText="Certified Coaching">
+<PageSection id="coaching" headingText="Certified Coaching">
 	<p>
 		At CUB, we try our best to ensure that everyone gets access to opportunities to develop their
 		skills. As part of that, we offer pay-per-session coaching with an AGB certified coach at the

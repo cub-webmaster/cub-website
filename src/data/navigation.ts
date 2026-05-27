@@ -113,6 +113,12 @@ export const membersSection: Section = {
 			icon: Dumbbell
 		},
 		{
+			slug: 'equipment',
+			label: 'Equipment',
+			desc: "Equipment is extremely crucial in the sport of archery. We've compiled some important information regarding equipments for our members here.",
+			icon: BowArrow
+		},
+		{
 			slug: 'awards',
 			label: 'Awards',
 			desc: "Badges and awards help mark the progress in an archer's journey of continuous practice and self-improvement. See what you might be eligible for here!",
@@ -120,7 +126,7 @@ export const membersSection: Section = {
 		},
 		{
 			slug: 'tournaments',
-			label: 'Regular Tournaments',
+			label: 'Competitions',
 			desc: "CUB takes part in many competitions regularly throughout the year. Start here if you're interested in competing and want to know more.",
 			icon: Flag
 		},
