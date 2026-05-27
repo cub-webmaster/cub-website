@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
+	import HistoricalScansCarousel from '$components/about/HistoricalScansCarousel.svelte';
 	import Alert from '$components/common/Alert.svelte';
 	import Link from '$components/common/Link.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
+	import { rules1828Scans } from '$data/about/history';
 	import links from '$data/links';
 </script>
 
@@ -52,9 +54,15 @@
 	</Alert>
 
 	<p>
-		Cambridge University Bowmen has existed since at least the 1950s. There is evidence of a 'Cam
-		Archery Club' existing as far back as 1862, though it's unclear if this Victorian-era club is a
-		direct ancestor of the current club.
+		Cambridge University Bowmen has existed since <Link
+			label="at least the 1950s"
+			href={links.history_1950s.url}
+			external
+		/>. There is evidence of a 'Cam Archery Club' existing <Link
+			label="as far back as 1862"
+			href={links.history_1862.url}
+			external
+		/>, though it's unclear if this Victorian-era club is a direct ancestor of the current club.
 	</p>
 
 	<p>
@@ -63,4 +71,6 @@
 		imagine the club must have made a fair amount of money fining their members for minor
 		transgressions. The scans of the relevant pages are attached below.
 	</p>
+
+	<HistoricalScansCarousel images={rules1828Scans} />
 </PageSection>
