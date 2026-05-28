@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import HistoricalScansCarousel from '$components/about/HistoricalScansCarousel.svelte';
 	import Alert from '$components/common/Alert.svelte';
+	import Carousel from '$components/common/Carousel.svelte';
 	import Link from '$components/common/Link.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
 	import { rules1828Scans } from '$data/about/history';
@@ -72,5 +72,5 @@
 		transgressions. The scans of the relevant pages are attached below.
 	</p>
 
-	<HistoricalScansCarousel images={rules1828Scans} />
+	<Carousel images={rules1828Scans} ratio={0.75} />
 </PageSection>

@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Accordian from '$components/common/Accordian.svelte';
 	import Link from '$components/common/Link.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
 	import links from '$data/links';
@@ -25,22 +26,14 @@
 		Regular events that happen at a specific time each year. Most of these are club traditions that
 		have been going on for a while.
 	</p>
-	<div class="flex flex-col gap-2 pb-4">
-		{#each annualEvents as event, i (i)}
-			<div class="collapse collapse-plus bg-base-200 border border-primary">
-				<input type="radio" name="socials-annual" checked={i == 0} />
-				<div class="collapse-title font-semibold flex gap-2 items-center">
-					<event.icon class="shrink-0 text-secondary" />
-					<span class="text-neutral">{event.name}</span>
-				</div>
-				<div class="collapse-content">
-					<p class="text-neutral/80">
-						{event.desc}
-					</p>
-				</div>
-			</div>
-		{/each}
-	</div>
+	<Accordian
+		radioName="socials-annual"
+		items={annualEvents.map(({ name, desc, icon }) => ({
+			title: name,
+			icon,
+			content: desc
+		}))}
+	/>
 </PageSection>
 
 <PageSection headingText="Miscellaneous Socials" id="misc">
@@ -48,20 +41,12 @@
 		These are more spontaneous events that happen occaionally and largely depend on members' demand
 		as well as committee capacity.
 	</p>
-	<div class="flex flex-col gap-2">
-		{#each miscEvents as event, i (i)}
-			<div class="collapse collapse-plus bg-base-200 border border-primary">
-				<input type="radio" name="socials-misc" checked={i == 0} />
-				<div class="collapse-title font-semibold flex gap-2 items-center">
-					<event.icon class="shrink-0 text-secondary" />
-					<span class="text-neutral">{event.name}</span>
-				</div>
-				<div class="collapse-content">
-					<p class="text-neutral/80">
-						{event.desc}
-					</p>
-				</div>
-			</div>
-		{/each}
-	</div>
+	<Accordian
+		radioName="socials-misc"
+		items={miscEvents.map(({ name, desc, icon }) => ({
+			title: name,
+			icon,
+			content: desc
+		}))}
+	/>
 </PageSection>

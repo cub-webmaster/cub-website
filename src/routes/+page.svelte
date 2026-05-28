@@ -1,10 +1,6 @@
 <script lang="ts">
-	import { homeImages } from '$data/home/carouselImages';
-	import Carousel from '$components/common/Carousel.svelte';
 	import '../app.css';
 	import Header from '$components/layout/Header.svelte';
-	import Title from '$components/common/Title.svelte';
-	import logo from '$lib/assets/img/logo.png';
 	import ResponsiveAlert from '$components/common/ResponsiveAlert.svelte';
 	import Link from '$components/common/Link.svelte';
 	import { beginnerRecruitmentOngoing, containerMaxWidth } from '$data/general';
@@ -17,24 +13,15 @@
 	import Ticker from '$components/common/Ticker.svelte';
 	import Container from '$components/layout/Container.svelte';
 	import links from '$data/links';
+	import Accordian from '$components/common/Accordian.svelte';
+	import FaqContent from '$components/home/FaqContent.svelte';
+	import LandingCarousel from '$components/home/LandingCarousel.svelte';
 </script>
 
 <Header title="Home" showBrand={false}>
 	{#snippet override()}
 		<section class="hero">
-			<Carousel images={homeImages}>
-				{#snippet overlay()}
-					<div
-						class="absolute h-full w-full top-0 bg-linear-to-b from-secondary/95 via-15% sm:via-secondary/80 via-secondary/70 to-35% to-transparent left-0 bottom-0 right-0 z-2 flex justify-center items-center pointer-events-none"
-					>
-						<img src={logo} alt="CUB logo" class="w-1/5 opacity-90" />
-						<Title
-							text="Cambridge University Bowmen"
-							sizes={['lg:text-5xl', 'sm:text-3xl', 'text-xl']}
-						/>
-					</div>
-				{/snippet}
-			</Carousel>
+			<LandingCarousel />
 		</section>
 	{/snippet}
 </Header>
@@ -131,30 +118,13 @@
 <Container verticalPadding>
 	<PageHeading text="Frequently Asked Questions" id="faq" icon={MessageCircleQuestionMark} />
 
-	<div class="flex flex-col gap-2">
-		{#each landingPageFaqs as faq, i (i)}
-			<div class="collapse collapse-plus bg-base-200 border border-primary">
-				<input type="radio" name="landing-faq" checked={i == 0} />
-				<div class="collapse-title font-semibold">{faq.question}</div>
-				<div class="collapse-content">
-					<p class="text-neutral/80">
-						{faq.answer}
-					</p>
-					{#if faq.related}
-						<div class="pt-8 flex flex-wrap gap-y-2 gap-x-8">
-							{#each faq.related as { link, label }, i (i)}
-								<div class="flex gap-2 items-center">
-									<div class="bg-primary font-semibold py-1 px-2 shrink-0">Related link</div>
-									<CircleChevronRight size="1rem" class="text-secondary" />
-									<a href={link} class="link link-info link-hover font-semibold">{label}</a>
-								</div>
-							{/each}
-						</div>
-					{/if}
-				</div>
-			</div>
-		{/each}
-	</div>
+	<Accordian
+		radioName="landing-faq"
+		items={landingPageFaqs.map(({ related, question, answer }) => ({
+			title: question,
+			content: (internals) => FaqContent(internals, { answer, related })
+		}))}
+	/>
 </Container>
 
 <style>
