@@ -1,42 +1,27 @@
-# sv
+# Cambridge University Bowmen official website
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+Currently in the works, for replacing the current website. Built on SvelteKit and TypeScript.
 
-## Creating a project
+## Useful resources
 
-If you're seeing this, you've probably already done this step. Congrats!
+The website was created from scratch using:
 
-```sh
-# create a new project
-npx sv create my-app
+- [Typescript](https://www.typescriptlang.org/) - language
+  - [Node.js Wikipedia](https://en.wikipedia.org/wiki/Node.js) - first paragraph
+  - [What is npm?](https://www.youtube.com/watch?v=ZNbFagCBlwo) - Yarn is an alternative to the npm command line tool
+  - [What are package.json and yarn.lock files?](https://stackoverflow.com/questions/51203500/difference-between-package-json-package-lock-json-and-yarn-lock-files)
+  - [Typescript in 100 Seconds](https://www.youtube.com/watch?v=zQnBQ4tB3ZA)
+  - [Typescript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [Svelte](https://svelte.dev/) - a radical way of writing user interfaces, which fluidly mixes scripting, layout, and styling
+  - [Rethinking Reactivity](https://www.youtube.com/watch?v=AdNJ3fydeao)
+  - [Svelte Interactive Tutorial](https://learn.svelte.dev/tutorial/welcome-to-svelte) - all of Part 1, and then "Classes and styles", "Component composition", and "Special elements" from Part 2
+- [SvelteKit](https://kit.svelte.dev/) - framework, handles building of site
+  - [Sveltekit Interactive Tutorial](https://learn.svelte.dev/tutorial/introducing-sveltekit) - "Introduction", "Routing", and "Stores > page"
+  - [Adapter Static](https://kit.svelte.dev/docs/adapter-static)
+
+## Quickstart
+
+```bash
+yarn install
+yarn dev
 ```
-
-To recreate this project with the same configuration:
-
-```sh
-# recreate this project
-npx sv@0.15.2 create --template minimal --types ts --add prettier eslint --install yarn .
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```sh
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```sh
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
