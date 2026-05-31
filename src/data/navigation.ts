@@ -120,12 +120,6 @@ export const membersSection: Section = {
 			icon: BowArrow
 		},
 		{
-			slug: 'awards',
-			label: 'Awards',
-			desc: "Badges and awards help mark the progress in an archer's journey of continuous practice and self-improvement. See what you might be eligible for here!",
-			icon: Award
-		},
-		{
 			slug: 'tournaments',
 			label: 'Competitions',
 			desc: "CUB takes part in many competitions regularly throughout the year. Start here if you're interested in competing and want to know more.",
@@ -137,7 +131,12 @@ export const membersSection: Section = {
 			desc: 'AGB classifications are used across the UK to help benchmark the skills and progress of archers across different rounds and backgrounds. Read more about the scheme here.',
 			icon: FileBadge
 		},
-
+		{
+			slug: 'awards',
+			label: 'Awards',
+			desc: "Badges and awards help mark the progress in an archer's journey of continuous practice and self-improvement. See what you might be eligible for here!",
+			icon: Award
+		},
 		{
 			slug: 'socials',
 			label: 'Social Events',
