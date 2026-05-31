@@ -119,7 +119,7 @@
 	<PageHeading text="Frequently Asked Questions" id="faq" icon={MessageCircleQuestionMark} />
 
 	<Accordian
-		radioName="landing-faq"
+		name="landing-faq"
 		items={landingPageFaqs.map(({ related, question, answer }) => ({
 			title: question,
 			content: (internals) => FaqContent(internals, { answer, related })

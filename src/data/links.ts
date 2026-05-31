@@ -45,6 +45,26 @@ const links: Record<string, Link> = {
 	history_1862: {
 		url: 'https://archivesearch.lib.cam.ac.uk/repositories/2/archival_objects/11289',
 		label: 'Proof of Archery Club in 1862'
+	},
+	cc_attribution_sharealike: {
+		url: 'https://creativecommons.org/licenses/by-sa/4.0/',
+		label: 'Attribution-ShareAlike 4.0 International'
+	},
+	wa_arrow_awards_manual: {
+		url: 'https://documents.worldarchery.sport/?doc=825',
+		label: 'WA Arrow Awards Manual'
+	},
+	wa_arrow_awards_curriculum: {
+		url: 'https://extranet.worldarchery.org/documents/index.php/documents/?doc=4658',
+		label: 'WA Arrow Awards Curriculum'
+	},
+	english_crosses_form: {
+		url: 'https://archeryengland.org/wp-content/uploads/2024/07/Senior-Cross-application2024.pdf',
+		label: 'English Crosses Form'
+	},
+	english_crosses_email: {
+		url: 'crosses@archeryengland.org',
+		label: 'Archer England email for English Crosses'
 	}
 };
 

@@ -12,7 +12,8 @@ import {
 	PartyPopper,
 	Award,
 	Flag,
-	Transgender
+	Transgender,
+	FileBadge
 } from '@lucide/svelte';
 import links from './links';
 
@@ -130,6 +131,13 @@ export const membersSection: Section = {
 			desc: "CUB takes part in many competitions regularly throughout the year. Start here if you're interested in competing and want to know more.",
 			icon: Flag
 		},
+		{
+			slug: 'classifications',
+			label: 'Classifications & Handicaps',
+			desc: 'AGB classifications are used across the UK to help benchmark the skills and progress of archers across different rounds and backgrounds. Read more about the scheme here.',
+			icon: FileBadge
+		},
+
 		{
 			slug: 'socials',
 			label: 'Social Events',

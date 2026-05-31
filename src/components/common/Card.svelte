@@ -20,7 +20,7 @@
 		class={`bg-base-300 card shadow-sm main h-full ${generateClassString(...colorTransitionClasses)}`}
 	>
 		<div class="card-body">
-			<div class="flex justify-between">
+			<div class="flex justify-between gap-2">
 				<div class="flex flex-col gap-3">
 					<div class="card-title w-full">
 						<CardIcon class="text-accent/80 red-text" />{title}

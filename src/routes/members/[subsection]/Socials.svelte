@@ -27,7 +27,7 @@
 		have been going on for a while.
 	</p>
 	<Accordian
-		radioName="socials-annual"
+		name="socials-annual"
 		items={annualEvents.map(({ name, desc, icon }) => ({
 			title: name,
 			icon,
@@ -42,7 +42,7 @@
 		as well as committee capacity.
 	</p>
 	<Accordian
-		radioName="socials-misc"
+		name="socials-misc"
 		items={miscEvents.map(({ name, desc, icon }) => ({
 			title: name,
 			icon,
