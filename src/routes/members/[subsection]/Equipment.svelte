@@ -50,9 +50,12 @@
 		CUB has a selection of recurve bows and accessories that can be fitted to you, and we usually
 		rent them out on a termly basis. During the rental period, you are allowed to bring the kit with
 		you to shoot in other clubs and competitions, which we usually do not allow for our wooden bows.
+	</p>
+
+	<p>
 		Further, you will get the opportunity to familiarise yourself more with a personalised set of
 		equipments, which can be helpful in improving performance and learning more about your
-		preference before investing in your own kit.
+		preferences before investing in your own kit.
 	</p>
 	<p>
 		If this interests you, please contact the <Link
@@ -60,12 +63,12 @@
 			external
 			label="Equipment Officer"
 		/> for more details. Note that we prioritise novice squad members when renting out equipment, so there
-		is no guarantee that we can accommodate everyone interesting in renting, though we will try our best.
+		is no guarantee that we can accommodate everyone interested in renting, though we will try our best.
 	</p>
 	<p>
-		As of the 2025/26 academic year, bow rental costs £{fees.rental} per term, and requires a £{fees[
-			'rental-deposit'
-		]} refundable deposit at the start of each rental period.
+		As of the 2025/26 academic year, bow rental costs <b
+			>£{fees.rental} per term, and requires a £{fees['rental-deposit']} refundable deposit</b
+		> at the start of each rental period.
 	</p>
 </PageSection>
 
@@ -86,9 +89,9 @@
 
 <PageSection headingText="Storage" id="storage">
 	<p>
-		Please note that the club is unable to provide storage for archers' personal equipment. This is
-		due to lack of space in our venues, and because we can only cover club-owned equipment under our
-		insurance policies in the event of damage or theft.
+		Please note that <b>the club is unable to provide storage for archers' personal equipment</b>.
+		This is due to lack of space in our venues, and because we can only cover club-owned equipment
+		under our insurance policies in the event of damage or theft.
 	</p>
 	<p>
 		Archers with their own equipment should store it at home, and bring it to training sessions with
@@ -111,10 +114,12 @@
 <PageSection headingText="Maintenance" id="maintenance">
 	<p>
 		It is each archer's personal responsibility to ensure that your equipment is safe and
-		well-maintained, including anyone using club equipment. If there are safety issues around your
-		equipment, committee members will ask you to stop using it at sessions. Be aware that if it has
-		been a while since you last shot, especially if you are returning to the sport after several
-		years, you may want a detailed check of your bow (e.g., at an archery shop).
+		well-maintained, including anyone using club equipment. <b
+			>If there are safety issues around your equipment, committee members will ask you to stop
+			using it at sessions</b
+		>. Be aware that if it has been a while since you last shot, especially if you are returning to
+		the sport after several years, you may want a detailed check of your bow (e.g., at an archery
+		shop).
 	</p>
 	<p>
 		Some parts of the bow will need replacing semi-regularly (e.g., plastic arrow rest, bowstring,
@@ -124,7 +129,7 @@
 	</p>
 	<p>
 		In addition, the club owns a number of maintenance tools that can be borrowed by members,
-		including fletching jigs, bracing height gauges, string wax and multitools. Feel free to use
-		them at any point during a session, and no need to worry about buying your own.
+		including <b>fletching jigs, bracing height gauges, string wax and multitools</b>. Feel free to
+		use them at any point during a session, and no need to worry about buying your own.
 	</p>
 </PageSection>

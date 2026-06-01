@@ -49,9 +49,9 @@
 
 <PageSection headingText="Competitions" id="comps">
 	<p>
-		At competitions, archery is historically divided into male and female categories, and this
-		remains true of most university competitions. If you wish to compete for the club, you will
-		compete in the gender category under which you're registered with AGB.
+		Archer competitions are historically divided into male and female categories, and this remains
+		true of most university competitions. If you wish to compete for the club, you will compete in
+		the gender category under which you're registered with AGB.
 	</p>
 	<p>
 		Based on the recent Supreme Court decision and guidance from the UK Sports Councils' Equality

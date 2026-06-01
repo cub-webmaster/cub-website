@@ -184,6 +184,8 @@
 		/> if you need help finding information on a specific award.
 	</p>
 
+		<div class="flex flex-col gap-2 my-4">
+
 	<BadgeAccordianItem badgeInfo={badgesToucan}>
 		{#snippet beforeTable()}
 			<p>
@@ -287,6 +289,7 @@
 			</Alert>
 		{/snippet}
 	</BadgeAccordianItem>
+	</div>
 </PageSection>
 
 <PageSection headingText="Blues" id="blues">

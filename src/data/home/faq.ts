@@ -33,7 +33,7 @@ export const landingPageFaqs: Faq[] = [
 			},
 			{
 				label: 'Rental scheme',
-				link: resolve('/members/equipment#rental-scheme')
+				link: resolve('/members/equipment#rental')
 			}
 		]
 	},

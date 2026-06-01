@@ -23,7 +23,7 @@
 			<div class="flex justify-between gap-2">
 				<div class="flex flex-col gap-3">
 					<div class="card-title w-full">
-						<CardIcon class="text-accent/80 red-text" />{title}
+						<CardIcon class="text-accent/80 red-text shrink-0" />{title}
 					</div>
 					<div class="h-1 bg-accent/80 w-12 red"></div>
 				</div>

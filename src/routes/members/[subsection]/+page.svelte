@@ -2,6 +2,7 @@
 	import ContentPage from '$components/layout/ContentPage.svelte';
 	import { membersSection } from '$data/navigation.js';
 	import Awards from './Awards.svelte';
+	import Classifications from './Classifications.svelte';
 	import Equipment from './Equipment.svelte';
 	import Socials from './Socials.svelte';
 	import Training from './Training.svelte';
@@ -18,5 +19,7 @@
 		<Socials />
 	{:else if data.subsection === 'awards'}
 		<Awards />
+	{:else if data.subsection === 'classifications'}
+		<Classifications />
 	{/if}
 </ContentPage>
