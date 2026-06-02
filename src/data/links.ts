@@ -64,7 +64,19 @@ const links: Record<string, Link> = {
 	},
 	english_crosses_email: {
 		url: 'crosses@archeryengland.org',
-		label: 'Archer England email for English Crosses'
+		label: 'Archery England email for English Crosses'
+	},
+	agb_indoor_classifications: {
+		url: 'https://archerygb.org/resources/indoor-classifications-and-handicaps',
+		label: 'AGB guidance on Indoor Classifications and Handicaps'
+	},
+	agb_outdoor_classifications: {
+		url: 'https://archerygb.org/resources/outdoor-classifications-and-handicaps',
+		label: 'AGB guidance on Indoor Classifications and Handicaps'
+	},
+	archery_calculator: {
+		url: 'https://www.archerycalculator.co.uk/',
+		label: 'Archery calculator'
 	}
 };
 

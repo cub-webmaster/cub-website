@@ -184,111 +184,113 @@
 		/> if you need help finding information on a specific award.
 	</p>
 
-		<div class="flex flex-col gap-2 my-4">
-
-	<BadgeAccordianItem badgeInfo={badgesToucan}>
-		{#snippet beforeTable()}
-			<p>
-				These can be claimed from the League organiser following any TOUCAN or BUCS event. They cost
-				£2 each and can be back claimed, but you should first claim for the score level achieved.
-				The scores required for the TOUCAN badges indoors on a Portsmouth Round are as follows:
-			</p>
-		{/snippet}
-		<!-- TODO update pic and info when TOUCAN website is back alive -->
-		{#snippet afterTable()}
-			<p>
-				TOUCAN Badges can also be claimed outdoors. The appropriate scores, gents shooting a St.
-				George, ladies shooting an Albion, or the appropriate WA1440 round can be found on the
-				TOUCAN League official website.
-			</p>
-			<p>
-				There is also a purple TOUCAN badge. These are awarded for exceptional contributions to
-				student archery, TOUCAN, or a club, and are presented at the TOUCAN ball each year.
-			</p>
-		{/snippet}
-	</BadgeAccordianItem>
-	<BadgeAccordianItem badgeInfo={badgesWaStar}>
-		{#snippet beforeTable()}
-			<p>
-				The WA Star awards are run by World Archery. WA Stars can be claimed at any WA 1440 round of
-				World Record Status for <b>Recurve and Compound</b> archers. To do so, complete a form at the
-				end of the tournament. The scores for the WA Star awards are as follows:
-			</p>
-			<Alert>
-				WA awards must be claimed for the score shot and connot be back-claimed! For example, if you
-				shot a blue scoring round, you may not apply for an award lower than blue.
-			</Alert>
-		{/snippet}
-	</BadgeAccordianItem>
-	<BadgeAccordianItem badgeInfo={badgesWaTarget}>
-		{#snippet beforeTable()}
-			<p>
-				The WA Target awards are run by World Archery and awarded for rounds other than the WA 1440.
-			</p>
-			<p>
-				WA Target Awards can be claimed at any WA round of World Record Status. To do so, complete a
-				form at the end of the tournament. The scores for the WA Target awards are the same for both
-				recurve and compound and are as follows:
-			</p>
-			<Alert>
-				WA awards must be claimed for the score shot and connot be back-claimed! For example, if you
-				shot a blue scoring round, you may not apply for an award lower than blue.
-			</Alert>
-		{/snippet}
-	</BadgeAccordianItem>
-	<BadgeAccordianItem badgeInfo={badgesEafCross}>
-		{#snippet beforeTable()}
-			<p>
-				The English Crosses are run by Archery England (formerly EAF or English Archery Federation).
-			</p>
-			<p>
-				English Crosses can be claimed at any WA 1440 round of UK or World Record Status shot in
-				England. To do so complete the form found <Link
-					href={links.english_crosses_form.url}
-					external
-					label="here"
-				/> and send it to Archery England at <Link
-					external
-					label="crosses@archeryengland.org"
-					href={links.english_crosses_email.url}
-				/>. The scores for the English Crosses are as follows:
-			</p>
-		{/snippet}
-	</BadgeAccordianItem>
-	<BadgeAccordianItem badgeInfo={badgesRose}>
-		{#snippet beforeTable()}
-			<p>
-				Rose awards are run by Archery GB. In 1844, the first Grand National Meeting was held at
-				York, where they shot a 12 dozen round now known as the York Round. The award given was the
-				White Rose of Yorkshire, which is where the Rose awards come from.
-			</p>
-			<p>
-				Rose awards can be claimed at any York, Hereford or Bristols I-V tournament has both UK
-				Record status and Rose Award status. Claims can be made at the event by filling out a form
-				at the end of the competition. Awards are made for gentlemen shooting the York round, and
-				ladies the Hereford. The scores for the Rose awards are as follows.
-			</p>
-			<p>
-				Rose awards cannot be back-claimed, but if you achieve a score for a particular colour Rose
-				that you have already claimed, you can choose to use that score for one of the lower Roses
-				that you haven't claimed instead.
-			</p>
-		{/snippet}
-	</BadgeAccordianItem>
-	<BadgeAccordianItem badgeInfo={badgesWaArrowhead}>
-		{#snippet beforeTable()}
-			<p>
-				WA Arrowhead Badges can be claimed by recurve, barebow and compound archers shooting the WA
-				Arrowhead field archery round at tournaments with a WA Award Status by filling out a form at
-				the end of the competition. The scores required for the badge at a 24 target round are as
-				follows:
-			</p>
-			<Alert>
-				WA awards must be claimed for the score shot and connot be back-claimed! For example, if you
-				shot a blue scoring round, you may not apply for an award lower than blue.
-			</Alert>
-		{/snippet}
-	</BadgeAccordianItem>
+	<div class="flex flex-col gap-2 my-4">
+		<BadgeAccordianItem badgeInfo={badgesToucan}>
+			{#snippet beforeTable()}
+				<p>
+					These can be claimed from the League organiser following any TOUCAN or BUCS event. They
+					cost £2 each and can be back claimed, but you should first claim for the score level
+					achieved. The scores required for the TOUCAN badges indoors on a Portsmouth Round are as
+					follows:
+				</p>
+			{/snippet}
+			<!-- TODO update pic and info when TOUCAN website is back alive -->
+			{#snippet afterTable()}
+				<p>
+					TOUCAN Badges can also be claimed outdoors. The appropriate scores, gents shooting a St.
+					George, ladies shooting an Albion, or the appropriate WA1440 round can be found on the
+					TOUCAN League official website.
+				</p>
+				<p>
+					There is also a purple TOUCAN badge. These are awarded for exceptional contributions to
+					student archery, TOUCAN, or a club, and are presented at the TOUCAN ball each year.
+				</p>
+			{/snippet}
+		</BadgeAccordianItem>
+		<BadgeAccordianItem badgeInfo={badgesWaStar}>
+			{#snippet beforeTable()}
+				<p>
+					The WA Star awards are run by World Archery. WA Stars can be claimed at any WA 1440 round
+					of World Record Status for <b>Recurve and Compound</b> archers. To do so, complete a form at
+					the end of the tournament. The scores for the WA Star awards are as follows:
+				</p>
+				<Alert>
+					WA awards must be claimed for the score shot and connot be back-claimed! For example, if
+					you shot a blue scoring round, you may not apply for an award lower than blue.
+				</Alert>
+			{/snippet}
+		</BadgeAccordianItem>
+		<BadgeAccordianItem badgeInfo={badgesWaTarget}>
+			{#snippet beforeTable()}
+				<p>
+					The WA Target awards are run by World Archery and awarded for rounds other than the WA
+					1440.
+				</p>
+				<p>
+					WA Target Awards can be claimed at any WA round of World Record Status. To do so, complete
+					a form at the end of the tournament. The scores for the WA Target awards are the same for
+					both recurve and compound and are as follows:
+				</p>
+				<Alert>
+					WA awards must be claimed for the score shot and connot be back-claimed! For example, if
+					you shot a blue scoring round, you may not apply for an award lower than blue.
+				</Alert>
+			{/snippet}
+		</BadgeAccordianItem>
+		<BadgeAccordianItem badgeInfo={badgesEafCross}>
+			{#snippet beforeTable()}
+				<p>
+					The English Crosses are run by Archery England (formerly EAF or English Archery
+					Federation).
+				</p>
+				<p>
+					English Crosses can be claimed at any WA 1440 round of UK or World Record Status shot in
+					England. To do so complete the form found <Link
+						href={links.english_crosses_form.url}
+						external
+						label="here"
+					/> and send it to Archery England at <Link
+						external
+						label="crosses@archeryengland.org"
+						href={links.english_crosses_email.url}
+					/>. The scores for the English Crosses are as follows:
+				</p>
+			{/snippet}
+		</BadgeAccordianItem>
+		<BadgeAccordianItem badgeInfo={badgesRose}>
+			{#snippet beforeTable()}
+				<p>
+					Rose awards are run by Archery GB. In 1844, the first Grand National Meeting was held at
+					York, where they shot a 12 dozen round now known as the York Round. The award given was
+					the White Rose of Yorkshire, which is where the Rose awards come from.
+				</p>
+				<p>
+					Rose awards can be claimed at any York, Hereford or Bristols I-V tournament has both UK
+					Record status and Rose Award status. Claims can be made at the event by filling out a form
+					at the end of the competition. Awards are made for gentlemen shooting the York round, and
+					ladies the Hereford. The scores for the Rose awards are as follows.
+				</p>
+				<p>
+					Rose awards cannot be back-claimed, but if you achieve a score for a particular colour
+					Rose that you have already claimed, you can choose to use that score for one of the lower
+					Roses that you haven't claimed instead.
+				</p>
+			{/snippet}
+		</BadgeAccordianItem>
+		<BadgeAccordianItem badgeInfo={badgesWaArrowhead}>
+			{#snippet beforeTable()}
+				<p>
+					WA Arrowhead Badges can be claimed by recurve, barebow and compound archers shooting the
+					WA Arrowhead field archery round at tournaments with a WA Award Status by filling out a
+					form at the end of the competition. The scores required for the badge at a 24 target round
+					are as follows:
+				</p>
+				<Alert>
+					WA awards must be claimed for the score shot and connot be back-claimed! For example, if
+					you shot a blue scoring round, you may not apply for an award lower than blue.
+				</Alert>
+			{/snippet}
+		</BadgeAccordianItem>
 	</div>
 </PageSection>
 
@@ -332,11 +334,11 @@
 		<Criterion
 			items={[
 				'Scores in the top 20% of their cateogry at BUCS (indoor or outdoor)',
-				'Achieves a B3 classification (or higher)'
+				'Achieves a B3 (Bowman 3rd Class) classification (or higher)'
 			]}
 			num={1}
 		/>
-		<Criterion items={['Achieves an A1 score at the Varsity match']} num={2} />
+		<Criterion items={['Achieves an A1 (Archer 1st Class) score at the Varsity match']} num={2} />
 		<Criterion
 			items={[
 				'Represents CUB in at least 5 competitions per academic year and trains an equivalent to 50% of club sessions.'
@@ -358,7 +360,7 @@
 		<Criterion
 			items={[
 				'Scores in the top 10% of their category at BUCS (indoor or outdoor)',
-				'Achieves a B2 classification (or higher)'
+				'Achieves a B2 (Bowman 2nd Class) classification (or higher)'
 			]}
 			num={4}
 		/>

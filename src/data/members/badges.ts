@@ -672,7 +672,7 @@ export const badgesCUB: GenderedBowStyleBadgeInfo<LadieesRounds | GentsRounds, C
 					}
 				},
 				gents: {
-					Portsmouth: {
+					'Portsmouth (3-spot)': {
 						White: 408,
 						Black: 504,
 						Blue: 542,
@@ -1317,6 +1317,87 @@ export const badgesWaArrowhead: GenderedBadgeInfo<
 					White: 294,
 					Silver: 316,
 					Gold: 335
+				}
+			}
+		}
+	}
+};
+
+export const badgesIndoorClassifications: GenderedBadgeInfo<
+	BowStyle,
+	'H (A3)' | 'G (A2)' | 'F (A1)' | 'E (B3)' | 'D (B2)' | 'C (B1)' | 'B (MB)' | 'A (GMB)'
+> = {
+	id: 'indoor_classifications',
+	name: 'AGB Indoor Classifications',
+	icon: BowArrow,
+	scoreTable: {
+		gendered: true,
+		rowLabelsTitle: 'Bowstyle',
+		rowsOrder: bowstyles,
+		columnsOrder: ['H (A3)', 'G (A2)', 'F (A1)', 'E (B3)', 'D (B2)', 'C (B1)', 'B (MB)', 'A (GMB)'],
+		content: {
+			ladies: {
+				Recurve: {
+					'H (A3)': 331,
+					'G (A2)': 399,
+					'F (A1)': 454,
+					'E (B3)': 496,
+					'D (B2)': 528,
+					'C (B1)': 553,
+					'B (MB)': 572,
+					'A (GMB)': 586
+				},
+				Barebow: {
+					'H (A3)': 276,
+					'G (A2)': 336,
+					'F (A1)': 391,
+					'E (B3)': 437,
+					'D (B2)': 475,
+					'C (B1)': 505,
+					'B (MB)': 530,
+					'A (GMB)': 550
+				},
+				Compound: {
+					'H (A3)': 449,
+					'G (A2)': 491,
+					'F (A1)': 521,
+					'E (B3)': 541,
+					'D (B2)': 555,
+					'C (B1)': 566,
+					'B (MB)': 577,
+					'A (GMB)': 589
+				}
+			},
+			gents: {
+				Recurve: {
+					'H (A3)': 378,
+					'G (A2)': 437,
+					'F (A1)': 483,
+					'E (B3)': 518,
+					'D (B2)': 546,
+					'C (B1)': 566,
+					'B (MB)': 582,
+					'A (GMB)': 593
+				},
+				Barebow: {
+					'H (A3)': 331,
+					'G (A2)': 387,
+					'F (A1)': 433,
+					'E (B3)': 472,
+					'D (B2)': 503,
+					'C (B1)': 528,
+					'B (MB)': 549,
+					'A (GMB)': 565
+				},
+				Compound: {
+					'H (A3)': 472,
+					'G (A2)': 508,
+					'F (A1)': 532,
+					'E (B3)': 549,
+					'D (B2)': 560,
+					'C (B1)': 571,
+					'B (MB)': 583,
+					'A (GMB)': 594
 				}
 			}
 		}

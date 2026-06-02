@@ -18,7 +18,7 @@
 	const { children, extraClasses }: { children: Snippet; extraClasses?: string } = $props();
 </script>
 
-<div class="relative">
+<div class="relative grid">
 	<div
 		class={generateClassString('w-full overflow-scroll', extraClasses ?? '')}
 		bind:clientWidth={wrapperWidth}
