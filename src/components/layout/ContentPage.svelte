@@ -3,7 +3,8 @@
 	import Breadcrumb from '../common/Breadcrumb.svelte';
 	import Header from '$components/layout/Header.svelte';
 	import { generateClassString } from '$lib/util';
-	import { Map, TableOfContents } from '@lucide/svelte';
+	import Map from '@iconify-svelte/lucide/map';
+	import TableOfContents from '@iconify-svelte/lucide/table-of-contents';
 	import { type Snippet } from 'svelte';
 	import type { Section } from '$data/navigation.js';
 	import Container from './Container.svelte';
@@ -76,7 +77,7 @@
 				class="collapse-title btn btn-info mt-2 drawer-button w-fit shadow-none peer-checked:rounded-b-none peer-checked:border-b-0 border border-base-200"
 				bind:clientWidth={floatingNavBtnWidth}
 			>
-				<TableOfContents size="1rem" />
+				<TableOfContents height="1rem" />
 				Table of Contents
 			</div>
 			<div class="collapse-content p-0">
@@ -94,7 +95,7 @@
 		<div class="grid md:grid-cols-[16rem_auto] gap-4 mt-4">
 			<div class="sticky top-24 hidden md:block shadow pb-4 h-fit">
 				<div class="p-4 bg-info text-base-300 font-semibold mb-4 flex gap-2">
-					<Map />Section Navigation
+					<Map height="1.5rem" />Section Navigation
 				</div>
 				<div>
 					<ul class="menu menu-sm bg-base-100 w-full p-0 [&_li>*]:rounded-none pr-4">

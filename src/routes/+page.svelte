@@ -7,7 +7,9 @@
 	import { resolve } from '$app/paths';
 	import Card from '$components/common/Card.svelte';
 	import landingCardsContent from '$data/home/jtcCards';
-	import { CircleChevronRight, Hand, MessageCircleQuestionMark } from '@lucide/svelte';
+	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
+	import Hand from '@iconify-svelte/lucide/hand';
+	import MessageCircleQuestionMark from '@iconify-svelte/lucide/message-circle-question-mark';
 	import PageHeading from '$components/layout/PageHeading.svelte';
 	import { landingPageFaqs } from '$data/home/faq';
 	import Ticker from '$components/common/Ticker.svelte';
@@ -94,7 +96,7 @@
 								>
 									<a class="text-base p-0 hover:bg-transparent" href={item.href}
 										><CircleChevronRight
-											size="1rem"
+											height="1rem"
 											class="text-accent/80 red-text"
 										/>{item.text}</a
 									>

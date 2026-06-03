@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Minus, Plus } from '@lucide/svelte';
+	import Minus from '@iconify-svelte/lucide/minus';
+	import Plus from '@iconify-svelte/lucide/plus';
 	import { type Component, type Snippet } from 'svelte';
 
 	const {
@@ -46,14 +47,14 @@
 >
 	<summary class="collapse-title font-semibold flex justify-between items-center pr-4 gap-4" {id}>
 		<div class="flex items-center gap-2">
-			<Icon class="shrink-0 text-secondary" />
+			<Icon height="1.5rem" class="shrink-0 text-secondary" />
 			<span class="text-neutral">{title}</span>
 		</div>
 
 		{#if opened}
-			<Minus size="1rem" class="shrink-0" />
+			<Minus height="1rem" class="shrink-0" />
 		{:else}
-			<Plus size="1rem" class="shrink-0" />
+			<Plus height="1rem" class="shrink-0" />
 		{/if}
 	</summary>
 	<div class="collapse-content">

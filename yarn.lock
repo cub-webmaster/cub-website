@@ -433,6 +433,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iconify-svelte/lucide@npm:^1.0.43":
+  version: 1.0.43
+  resolution: "@iconify-svelte/lucide@npm:1.0.43"
+  dependencies:
+    "@iconify/css-svelte": "npm:^1.0.0"
+  checksum: 10c0/f8075ec92523bf7d89a6fd7db8266abd1d299b2fd542cccaa0438085c8a9ed6ee4a7e56ab08cb62048f769b3ea6a59cf2fc5438eaecc6746991be0e6ea2188df
+  languageName: node
+  linkType: hard
+
+"@iconify/css-svelte@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "@iconify/css-svelte@npm:1.0.1"
+  dependencies:
+    "@iconify/types": "npm:^2.0.0"
+  peerDependencies:
+    svelte: ">4.0.0"
+  checksum: 10c0/f0edeb87a8d4afd218395bf5afb917ad04aec242f999a4e7900d0ee4c334cd909fc2fb226aee3ca31cd15f5505c56f803958b58b94d102086cc2f5ddf0d73cde
+  languageName: node
+  linkType: hard
+
+"@iconify/types@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@iconify/types@npm:2.0.0"
+  checksum: 10c0/65a3be43500c7ccacf360e136d00e1717f050b7b91da644e94370256ac66f582d59212bdb30d00788aab4fc078262e91c95b805d1808d654b72f6d2072a7e4b2
+  languageName: node
+  linkType: hard
+
 "@img/colour@npm:^1.0.0":
   version: 1.1.0
   resolution: "@img/colour@npm:1.1.0"
@@ -720,15 +747,6 @@ __metadata:
     "@jridgewell/resolve-uri": "npm:^3.1.0"
     "@jridgewell/sourcemap-codec": "npm:^1.4.14"
   checksum: 10c0/4b30ec8cd56c5fd9a661f088230af01e0c1a3888d11ffb6b47639700f71225be21d1f7e168048d6d4f9449207b978a235c07c8f15c07705685d16dc06280e9d9
-  languageName: node
-  linkType: hard
-
-"@lucide/svelte@npm:^1.3.0":
-  version: 1.3.0
-  resolution: "@lucide/svelte@npm:1.3.0"
-  peerDependencies:
-    svelte: ^5
-  checksum: 10c0/2785ed5a4acbdfb50afe1011edd488dcc4afc9fd3cd1fcd4ee95aca28910defdf70b92f96bce92bcd18589dee8a033918f1f87aabb7295f2bb3a1eb2e6b75580
   languageName: node
   linkType: hard
 
@@ -1690,7 +1708,7 @@ __metadata:
     "@eslint/compat": "npm:^2.0.4"
     "@eslint/js": "npm:^10.0.1"
     "@googleapis/calendar": "npm:^14.3.0"
-    "@lucide/svelte": "npm:^1.3.0"
+    "@iconify-svelte/lucide": "npm:^1.0.43"
     "@sveltejs/adapter-auto": "npm:^7.0.1"
     "@sveltejs/adapter-cloudflare": "npm:^7.2.8"
     "@sveltejs/kit": "npm:^2.57.0"

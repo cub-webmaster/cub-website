@@ -1,21 +1,19 @@
 import { resolve } from '$app/paths';
 import type { ResolvedPathname } from '$app/types';
-import type { Component } from 'svelte';
-import {
-	Sparkle,
-	BicepsFlexed,
-	GraduationCap,
-	BookMarked,
-	BowArrow,
-	UsersRound,
-	Dumbbell,
-	PartyPopper,
-	Award,
-	Flag,
-	Transgender,
-	FileBadge
-} from '@lucide/svelte';
+import Sparkle from '@iconify-svelte/lucide/sparkle';
+import BowArrow from '@iconify-svelte/lucide/bow-arrow';
+import Dumbbell from '@iconify-svelte/lucide/dumbbell';
+import BicepsFlexed from '@iconify-svelte/lucide/biceps-flexed';
+import GraduationCap from '@iconify-svelte/lucide/graduation-cap';
+import BookMarked from '@iconify-svelte/lucide/book-marked';
+import UsersRound from '@iconify-svelte/lucide/users-round';
+import PartyPopper from '@iconify-svelte/lucide/party-popper';
+import Award from '@iconify-svelte/lucide/award';
+import Flag from '@iconify-svelte/lucide/flag';
+import Transgender from '@iconify-svelte/lucide/transgender';
+import FileBadge from '@iconify-svelte/lucide/file-badge';
 import links from './links';
+import type { Icon } from '$lib/util';
 
 export interface InternalNav {
 	route: ResolvedPathname;
@@ -36,7 +34,7 @@ export interface Subsection {
 	slug: string;
 	label: string;
 	desc: string;
-	icon: Component;
+	icon: Icon;
 }
 
 export interface Section {

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import genericImage from '$lib/assets/img/generic.jpg';
-	import { CircleChevronRight } from '@lucide/svelte';
+	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
 
 	let height = $state(0);
 	const {
@@ -31,7 +31,7 @@
 		<div class="p-4 flex flex-col gap-4">
 			<div>
 				<div class="flex gap-2 items-center text-neutral">
-					<CircleChevronRight size="1rem" class="text-accent/80" />{name}
+					<CircleChevronRight height="1rem" width="1rem" class="text-accent/80" />{name}
 				</div>
 				<div class="text-sm text-neutral/70 text-left">College: {college}</div>
 			</div>

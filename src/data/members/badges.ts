@@ -1,15 +1,12 @@
-import {
-	Bird,
-	BowArrow,
-	Earth,
-	LandPlot,
-	Star,
-	Rose,
-	Cross,
-	Target,
-	MousePointer2
-} from '@lucide/svelte';
-import type { Component } from 'svelte';
+import Bird from '@iconify-svelte/lucide/bird';
+import BowArrow from '@iconify-svelte/lucide/bow-arrow';
+import Earth from '@iconify-svelte/lucide/earth';
+import LandPlot from '@iconify-svelte/lucide/land-plot';
+import Star from '@iconify-svelte/lucide/star';
+import Rose from '@iconify-svelte/lucide/rose';
+import Cross from '@iconify-svelte/lucide/cross';
+import Target from '@iconify-svelte/lucide/target';
+import MousePointer2 from '@iconify-svelte/lucide/mouse-pointer-2';
 import cubBadges from '$lib/assets/img/badges/CUB_badges.png';
 import toucanBadges from '$lib/assets/img/badges/TOUCAN_badges.png';
 import twoFiveTwoBadges from '$lib/assets/img/badges/252_badges.jpg';
@@ -24,15 +21,16 @@ import arrowsScoresheetBlack from '$lib/assets/docs/arrow_awards/arrow_award_bla
 import arrowsScoresheetBlue from '$lib/assets/docs/arrow_awards/arrow_award_blue_sheet.pdf';
 import arrowsScoresheetRed from '$lib/assets/docs/arrow_awards/arrow_award_red_sheet.pdf';
 import arrowsScoresheetGold from '$lib/assets/docs/arrow_awards/arrow_award_gold_sheet.pdf';
+import type { Icon } from '$lib/util';
 
 interface BadgeInfoBase<RowLabel extends string, ColumnLabel extends string> {
 	id: string;
 	name: string;
-	icon: Component;
+	icon: Icon;
 	image?: string;
 	scoreTable?: unknown;
-	columnDecoration?: Record<ColumnLabel, Component | string>;
-	rowDecoration?: Record<RowLabel, Component | string>;
+	columnDecoration?: Record<ColumnLabel, Icon | string>;
+	rowDecoration?: Record<RowLabel, Icon | string>;
 }
 
 interface GenderedBadgeInfo<

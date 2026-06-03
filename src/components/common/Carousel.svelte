@@ -3,7 +3,9 @@
 	import type { EmblaOptionsType } from 'embla-carousel';
 	import useEmblaCarousel from 'embla-carousel-svelte';
 	import { carouselMaxCount } from '../../data/general';
-	import { ChevronLeft, ChevronRight, Slash } from '@lucide/svelte';
+	import ChevronRight from '@iconify-svelte/lucide/chevron-right';
+	import ChevronLeft from '@iconify-svelte/lucide/chevron-left';
+	import Slash from '@iconify-svelte/lucide/slash';
 	import type { EmblaCarouselType } from 'embla-carousel';
 
 	const {
@@ -69,7 +71,7 @@
 	</div>
 	<div class="flex gap-2 items-center">
 		<button class="btn btn-circle btn-outline btn-info mr-4 btn-sm shrink-0" onclick={scrollPrev}>
-			<ChevronLeft size="1.2rem" />
+			<ChevronLeft height="1.2rem" />
 		</button>
 
 		{#if availableWidth - 112 > 50 * scrollSnaps.length}
@@ -92,13 +94,13 @@
 					min="1"
 					max={images.length}
 				/>
-				<Slash size="1.3rem" class="shrink-0 -rotate-20" />
+				<Slash height="1.3rem" class="shrink-0 -rotate-20" />
 				<span>{images.length}</span>
 			</div>
 		{/if}
 
 		<button class="btn btn-circle btn-outline btn-info ml-4 btn-sm shrink-0" onclick={scrollNext}>
-			<ChevronRight size="1.2rem" />
+			<ChevronRight height="1.2rem" />
 		</button>
 	</div>
 </div>

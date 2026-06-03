@@ -1,11 +1,11 @@
-import { Beer, BottleWine, Dessert, Flag, TreePine, Trophy, Utensils } from '@lucide/svelte';
-import type { Component } from 'svelte';
-
-interface SocialEvent {
-	name: string;
-	desc: string;
-	icon: Component;
-}
+import Beer from '@iconify-svelte/lucide/beer';
+import BottleWine from '@iconify-svelte/lucide/bottle-wine';
+import Dessert from '@iconify-svelte/lucide/dessert';
+import TreePine from '@iconify-svelte/lucide/tree-pine';
+import Trophy from '@iconify-svelte/lucide/trophy';
+import Flag from '@iconify-svelte/lucide/flag';
+import Utensils from '@iconify-svelte/lucide/utensils';
+import type { SocialEvent } from './types';
 
 export const annualEvents: SocialEvent[] = [
 	{

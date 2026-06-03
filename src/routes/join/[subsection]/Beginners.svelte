@@ -6,7 +6,9 @@
 	import PageSection from '$components/layout/PageSection.svelte';
 	import { fees } from '$data/join/fees';
 	import links from '$data/links';
-	import { CircleChevronRight, CircleStar, Dumbbell } from '@lucide/svelte';
+	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
+	import CircleStar from '@iconify-svelte/lucide/circle-star';
+	import Dumbbell from '@iconify-svelte/lucide/dumbbell';
 
 	const noviceCommitments = [
 		'Attend coaching session every Wednesday morning',
@@ -26,7 +28,7 @@
 {#snippet cardListItem(text: string)}
 	<li class="py-1 md:py-2 px-2">
 		<div class="text-base p-0 flex gap-2 text-left">
-			<CircleChevronRight size="1rem" class="text-accent/80 shrink-0 mt-1" />{text}
+			<CircleChevronRight height="1rem" class="text-accent/80 shrink-0 mt-1" />{text}
 		</div>
 	</li>
 {/snippet}

@@ -1,5 +1,6 @@
 import type { Section } from '$data/navigation';
 import { error } from '@sveltejs/kit';
+import Star from '@iconify-svelte/lucide/star';
 import type { EntryGenerator } from '../routes/about/[subsection]/$types';
 
 export function generateClassString(...classes: string[]) {
@@ -22,3 +23,5 @@ export function subsectionPageLoadFunction(section: Section, subsection: string)
 export function subsectionEntryGenerator(section: Section): EntryGenerator {
 	return () => section.children.map(({ slug }) => ({ subsection: slug }));
 }
+
+export type Icon = typeof Star;

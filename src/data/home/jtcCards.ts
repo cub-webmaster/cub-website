@@ -1,11 +1,13 @@
 import { resolve } from '$app/paths';
 import type { ResolvedPathname } from '$app/types';
-import { Sparkle, Dumbbell, BowArrow } from '@lucide/svelte';
-import type { Component } from 'svelte';
+import Sparkle from '@iconify-svelte/lucide/sparkle';
+import BowArrow from '@iconify-svelte/lucide/bow-arrow';
+import Dumbbell from '@iconify-svelte/lucide/dumbbell';
+import type { Icon } from '$lib/util';
 
 const landingCardsContent: {
 	title: string;
-	icon: Component;
+	icon: Icon;
 	items: { text: string; href: ResolvedPathname }[];
 }[] = [
 	{

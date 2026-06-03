@@ -1,33 +1,33 @@
-import type { ResolvedPathname } from "$app/types";
-import type { Component } from "svelte";
+import type { ResolvedPathname } from '$app/types';
+import type { Icon } from '$lib/util';
 
 interface ResourceItemBase {
-    title: string,
-    url: string,
-    external: boolean,
-    info?: string[]
+	title: string;
+	url: string;
+	external: boolean;
+	info?: string[];
 }
 
 interface InternalResourceItem extends ResourceItemBase {
-    external: false,
-    url: ResolvedPathname
+	external: false;
+	url: ResolvedPathname;
 }
 
 interface ExternalResourceItem extends ResourceItemBase {
-    external: true
+	external: true;
 }
 
-export type ResourceItem = InternalResourceItem | ExternalResourceItem
+export type ResourceItem = InternalResourceItem | ExternalResourceItem;
 
 export interface ResourceSection {
-    title: string;
-    items: ResourceItem[];
-    id: string
+	title: string;
+	items: ResourceItem[];
+	id: string;
 }
 
 export interface ResourceCategory {
-    title: string;
-    id: string;
-    sections: ResourceSection[];
-    icon: Component
+	title: string;
+	id: string;
+	sections: ResourceSection[];
+	icon: Icon;
 }

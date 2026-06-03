@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { Download, ExternalLink } from '@lucide/svelte';
+	import Download from '@iconify-svelte/lucide/download';
+	import ExternalLink from '@iconify-svelte/lucide/external-link';
 
 	const { href, download, docName }: { href: string; download: boolean; docName: string } =
 		$props();
@@ -13,7 +14,7 @@
 		aria-label={`Download ${docName}`}
 		download
 	>
-		<Download />
+		<Download height="1.3rem" />
 	</a>
 {:else}
 	<a
@@ -21,6 +22,6 @@
 		{href}
 		rel="external"
 		target="_blank"
-		aria-label={`Go to ${docName}`}><ExternalLink /></a
+		aria-label={`Go to ${docName}`}><ExternalLink height="1.3rem" /></a
 	>
 {/if}

@@ -2,8 +2,7 @@
 	import SocialIcon from '../common/SocialIcon.svelte';
 	import links from '$data/links';
 	import quickLinks from '$data/quickLinks';
-	import { CircleChevronRight } from '@lucide/svelte';
-
+	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
 	let { height = $bindable(0) }: { height: number } = $props();
 	const year = new Date().getFullYear();
 </script>
@@ -17,8 +16,8 @@
 					href={link}
 					rel="external"
 					target="_blank"
-					class="flex sm:gap-2 gap-1 items-center link-hover link-info font-semibold sm:text-base text-sm"
-					><CircleChevronRight size="1rem" class="text-accent/80" />{label}</a
+					class="flex gap-2 items-center link-hover link-info font-semibold sm:text-base text-sm"
+					><CircleChevronRight height="1rem" class="text-accent/80" />{label}</a
 				>
 			{/each}
 		</div>

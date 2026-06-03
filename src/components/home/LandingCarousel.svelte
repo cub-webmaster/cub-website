@@ -2,7 +2,6 @@
 	import type { EmblaOptionsType } from 'embla-carousel';
 	import useEmblaCarousel from 'embla-carousel-svelte';
 	import { carouselMaxCount } from '../../data/general';
-	import { Circle } from '@lucide/svelte';
 	import type { EmblaCarouselType } from 'embla-carousel';
 	import Autoplay from 'embla-carousel-autoplay';
 	import logo from '$lib/assets/img/logo.png';
@@ -67,20 +66,16 @@
 	</div>
 
 	<div
-		class="absolute left-1/2 flex xl:p-1 p-0.75 xl:bottom-8 md:bottom-4 bottom-2 rounded-full -translate-x-1/2 xl:gap-2 gap-1.5 bg-neutral/60"
+		class="absolute left-1/2 flex xl:p-1 p-0.75 xl:bottom-8 md:bottom-4 bottom-2 rounded-full -translate-x-1/2 gap-2 bg-neutral/60"
 	>
 		{#each scrollSnaps as snap, index (snap)}
 			<button
 				class="inline-flex border-none opacity-50 bg-transparent justify-center items-center"
 				class:opacity-100={index === selectedSnap}
 				onclick={() => scrollTo(index)}
+				aria-label={`Go to photo ${index + 1}`}
 			>
-				<Circle
-					size={w > iconsBreakpoint ? '0.8rem' : '0.5rem'}
-					fill="white"
-					class="circle-icon"
-					strokeWidth={0}
-				/>
+				<div class={`rounded-full bg-white ${w > iconsBreakpoint ? 'h-3 w-3' : 'h-2 w-2'}`}></div>
 			</button>
 		{/each}
 	</div>

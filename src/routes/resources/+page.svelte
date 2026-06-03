@@ -4,7 +4,7 @@
 	import Header from '$components/layout/Header.svelte';
 
 	import { resources } from '$data/resources/resources';
-	import { Search } from '@lucide/svelte';
+	import Search from '@iconify-svelte/lucide/search';
 	import PageHeading from '$components/layout/PageHeading.svelte';
 	import type { ResourceCategory } from '$data/resources/types';
 	import ResourceCard from '$components/resources/ResourceCard.svelte';
@@ -47,7 +47,7 @@
 	<label
 		class="input border-info [&:has(>:focus)]:outline-0 [&:has(>:focus)]:border-secondary hover:bg-neutral/5 [&:has(>:focus)]:[&_.search-icon]:text-secondary"
 	>
-		<Search class="search-icon text-info" />
+		<Search height="1.2rem" class="search-icon text-info" />
 		<input type="text" placeholder="Search" bind:value={searchString} />
 	</label>
 {/snippet}

@@ -1,7 +1,7 @@
 <script lang="ts">
-	import type { Component } from 'svelte';
+	import type { Icon } from '$lib/util';
 
-	let { text, icon: HeadingIcon, id }: { text: string; icon?: Component; id: string } = $props();
+	let { text, icon: HeadingIcon, id }: { text: string; icon?: Icon; id: string } = $props();
 </script>
 
 <h2
@@ -9,7 +9,7 @@
 	{id}
 >
 	{#if HeadingIcon}
-		<HeadingIcon size="1.5rem" class="shrink-0" />
+		<HeadingIcon height="1.5rem" class="shrink-0" />
 	{/if}
 	{text}
 </h2>

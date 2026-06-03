@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount, type Snippet } from 'svelte';
-	import { Info } from '@lucide/svelte';
+	import Info from '@iconify-svelte/lucide/info';
 	import type { ResolvedPathname } from '$app/types';
 
 	let smallAlertOpen = $state(false);
@@ -26,7 +26,7 @@
 {/snippet}
 
 <div role="alert" class="alert alert-horizontal hidden sm:grid">
-	<Info class="text-info" />
+	<Info height="1.5rem" class="text-info" />
 	<div>
 		<h3 class="font-bold lg:text-lg text-base">{title}</h3>
 		<div class="text-sm text-justify lg:text-base">
@@ -39,7 +39,7 @@
 <div role="alert" class="collapse bg-base-200 sm:hidden collapse-arrow shadow">
 	<input type="checkbox" bind:checked={smallAlertOpen} />
 	<div class="flex items-center gap-2 collapse-title">
-		<Info class="text-info" />
+		<Info height="1.3rem" class="text-info" />
 		<h3 class="font-bold">{title}</h3>
 	</div>
 

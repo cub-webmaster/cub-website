@@ -2,7 +2,7 @@
 	import type { ResolvedPathname } from '$app/types';
 	import { resolve } from '$app/paths';
 	import { colorTransitionClasses, generateClassString } from '$lib/util';
-	import { ChevronDown } from '@lucide/svelte';
+	import ChevronDown from '@iconify-svelte/lucide/chevron-down';
 	import { page } from '$app/state';
 	import { navItems } from '$data/navigation';
 	import { onMount } from 'svelte';
@@ -107,7 +107,7 @@
 										onfocus={() => (activeDropdown = i)}
 										onblur={() => (activeDropdown = null)}
 									>
-										<ChevronDown size="1rem" strokeWidth={2} />
+										<ChevronDown height="1rem" />
 									</div>
 									<ul
 										tabindex="-1"

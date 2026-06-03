@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { CircleChevronRight } from '@lucide/svelte';
+	import type { Icon } from '$lib/util';
+	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
 	import type { Component } from 'svelte';
 
 	const {
@@ -10,7 +11,7 @@
 			title: string;
 			subtitle?: string;
 			end: Component | string;
-			decoration?: Component | string;
+			decoration?: Icon | string;
 		}[];
 		bottomMargin?: boolean;
 	} = $props();
@@ -21,11 +22,11 @@
 		<li class="list-row hover:bg-neutral/10">
 			<div class="flex items-center text-secondary">
 				{#if !item.decoration}
-					<CircleChevronRight />
+					<CircleChevronRight height="1.2rem" class="shrink-0" />
 				{:else if typeof item.decoration === 'string'}
 					<div class={`${item.decoration} h-4 w-4 border border-neutral/50`}></div>
 				{:else}
-					<item.decoration />
+					<item.decoration height="1.2rem" />
 				{/if}
 			</div>
 			<div>

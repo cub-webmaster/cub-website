@@ -5,7 +5,7 @@
 	import PageSection from '$components/layout/PageSection.svelte';
 	import TrainingSchedule from '$components/members/TrainingSchedule.svelte';
 	import links from '$data/links';
-	import { CalendarX } from '@lucide/svelte';
+	import CalendarX from '@iconify-svelte/lucide/calendar-x';
 
 	const { schedule } = $props();
 </script>

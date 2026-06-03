@@ -1,7 +1,13 @@
 <script lang="ts">
-	import { generateClassString } from '$lib/util';
-	import { BowArrow, CalendarX, Dumbbell, Flag, PartyPopper } from '@lucide/svelte';
-	import type { Component } from 'svelte';
+	import { generateClassString, type Icon } from '$lib/util';
+	import BowArrow from '@iconify-svelte/lucide/bow-arrow';
+
+	import CalendarX from '@iconify-svelte/lucide/calendar-x';
+
+	import Dumbbell from '@iconify-svelte/lucide/dumbbell';
+
+	import Flag from '@iconify-svelte/lucide/flag';
+	import PartyPopper from '@iconify-svelte/lucide/party-popper';
 	import { SvelteDate } from 'svelte/reactivity';
 
 	type Event = {
@@ -17,7 +23,7 @@
 		start: Date;
 		end: Date;
 		color: string;
-		icon: Component;
+		icon: Icon;
 	};
 
 	const months = [
@@ -43,7 +49,7 @@
 		comp: 'border-secondary'
 	};
 
-	const eventTypeIcon: Record<EventType, Component> = {
+	const eventTypeIcon: Record<EventType, Icon> = {
 		training: BowArrow,
 		snc: Dumbbell,
 		social: PartyPopper,
@@ -132,7 +138,7 @@
 					>
 						<div class="flex flex-col">
 							<span class="font-semibold flex gap-2 items-center"
-								><event.icon size="1rem" />{event.title}</span
+								><event.icon height="1rem" />{event.title}</span
 							>
 							<span class="opacity-90"
 								>{`${event.start.getHours()}:${event.start.getMinutes()} - ${event.end.getHours()}:${event.end.getMinutes()}`}</span
@@ -143,7 +149,9 @@
 				{#if !events.length}
 					<div class="h-full flex items-center ml-4">
 						<div class="flex text-sm gap-2 items-center">
-							<CalendarX /> No sessions
+							<CalendarX height="1.5rem" class="shrink-0" /><span class="text-nowrap"
+								>No sessions</span
+							>
 						</div>
 					</div>
 				{/if}

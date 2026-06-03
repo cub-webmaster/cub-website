@@ -1,15 +1,15 @@
 <script lang="ts">
 	import type { ResolvedPathname } from '$app/types';
-	import { colorTransitionClasses, generateClassString } from '$lib/util';
-	import { CircleChevronRight } from '@lucide/svelte';
-	import type { Component, Snippet } from 'svelte';
+	import { colorTransitionClasses, generateClassString, type Icon } from '$lib/util';
+	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
+	import type { Snippet } from 'svelte';
 
 	const {
 		href,
 		icon: CardIcon,
 		children,
 		title
-	}: { href?: ResolvedPathname; icon: Component; title: string; children: Snippet } = $props();
+	}: { href?: ResolvedPathname; icon: Icon; title: string; children: Snippet } = $props();
 
 	const hoverClasses =
 		'hover:[&_.card]:bg-accent/80 hover:[&_.red]:bg-primary hover:[&_.red-text]:text-primary hover:text-base-200';
@@ -23,11 +23,14 @@
 			<div class="flex justify-between gap-2">
 				<div class="flex flex-col gap-3">
 					<div class="card-title w-full">
-						<CardIcon class="text-accent/80 red-text shrink-0" />{title}
+						<CardIcon height="1.5rem" class="text-accent/80 red-text shrink-0" />{title}
 					</div>
 					<div class="h-1 bg-accent/80 w-12 red"></div>
 				</div>
-				{#if href}<CircleChevronRight class="text-accent/80 mt-2 mr-1 red-text" />{/if}
+				{#if href}<CircleChevronRight
+						height="1.3rem"
+						class="text-accent/80 mt-2 mr-1 red-text shrink-0"
+					/>{/if}
 			</div>
 
 			<div class="mt-2 text-base">{@render children()}</div>

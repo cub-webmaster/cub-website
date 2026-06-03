@@ -21,7 +21,7 @@
 		badgesWaArrowsScoresheetsLastUpdate
 	} from '$data/members/badges';
 	import { generateClassString } from '$lib/util';
-	import { CircleChevronRight } from '@lucide/svelte';
+	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
 	import List from '$components/common/List.svelte';
 	import GoToDocButton from '$components/about/GoToDocButton.svelte';
 	import { resolve } from '$app/paths';
@@ -314,7 +314,7 @@
 	<ul class="ml-4">
 		{#each bluesCriteria as criteria (criteria)}
 			<li class="flex items-center gap-2 py-1">
-				<CircleChevronRight size="1rem" class="shrink-0 text-secondary" />
+				<CircleChevronRight height="1rem" class="shrink-0 text-secondary" />
 				<span class="text-info">{criteria}</span>
 			</li>
 		{/each}
