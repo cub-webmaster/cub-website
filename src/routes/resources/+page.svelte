@@ -10,8 +10,9 @@
 	import ResourceCard from '$components/resources/ResourceCard.svelte';
 	import SideMenuDropdown from '$components/resources/SideMenuDropdown.svelte';
 	import { page } from '$app/state';
+	import { browser } from '$app/environment';
 
-	let searchString = $state(page.url.searchParams.get('search') ?? '');
+	let searchString = $state(browser ? (page.url.searchParams.get('search') ?? '') : '');
 
 	function searchResource(searchString: string, resources: ResourceCategory[]): ResourceCategory[] {
 		const search = searchString.toLowerCase();

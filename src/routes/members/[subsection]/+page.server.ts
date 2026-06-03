@@ -1,8 +1,11 @@
-import { subsectionPageLoadFunction } from '$lib/util';
+import { subsectionPageLoadFunction, subsectionEntryGenerator } from '$lib/util';
 import { membersSection } from '$data/navigation';
 import type { PageServerLoad } from './$types';
 import { calendar } from '@googleapis/calendar';
 import { GOOGLE_API_KEY } from '$env/static/private';
+
+export const prerender = 'auto';
+export const entries = subsectionEntryGenerator(membersSection);
 
 export const load: PageServerLoad = async ({ params }) => {
 	if (params.subsection === 'training') {

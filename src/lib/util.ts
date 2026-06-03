@@ -1,5 +1,6 @@
 import type { Section } from '$data/navigation';
 import { error } from '@sveltejs/kit';
+import type { EntryGenerator } from '../routes/about/[subsection]/$types';
 
 export function generateClassString(...classes: string[]) {
 	return classes.join(' ');
@@ -16,4 +17,8 @@ export function subsectionPageLoadFunction(section: Section, subsection: string)
 		label: sub.label,
 		subsection: subsection
 	};
+}
+
+export function subsectionEntryGenerator(section: Section): EntryGenerator {
+	return () => section.children.map(({ slug }) => ({ subsection: slug }));
 }
