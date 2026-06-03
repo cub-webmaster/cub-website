@@ -20,8 +20,11 @@ export function subsectionPageLoadFunction(section: Section, subsection: string)
 	};
 }
 
-export function subsectionEntryGenerator(section: Section): EntryGenerator {
-	return () => section.children.map(({ slug }) => ({ subsection: slug }));
+export function subsectionEntryGenerator(section: Section, exclude: string[] = []): EntryGenerator {
+	return () =>
+		section.children
+			.map(({ slug }) => ({ subsection: slug }))
+			.filter(({ subsection }) => !exclude.includes(subsection));
 }
 
 export type Icon = typeof Star;

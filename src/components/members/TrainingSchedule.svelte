@@ -123,7 +123,7 @@
 				<div class="md:text-xl text-lg font-bold">{date}</div>
 				<div class="uppercase text-xs opacity-70">{monthYear}</div>
 			</div>
-			<div class="grow p-2">
+			<div class="grow p-2 flex flex-col gap-2">
 				{#each events as event, j (j)}
 					<div
 						class={generateClassString(

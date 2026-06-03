@@ -5,7 +5,7 @@ import { calendar } from '@googleapis/calendar';
 import { GOOGLE_API_KEY } from '$env/static/private';
 
 export const prerender = 'auto';
-export const entries = subsectionEntryGenerator(membersSection);
+export const entries = subsectionEntryGenerator(membersSection, ['training']);
 
 export const load: PageServerLoad = async ({ params }) => {
 	if (params.subsection === 'training') {
@@ -22,7 +22,8 @@ export const load: PageServerLoad = async ({ params }) => {
 			calendarId: 'edr0lhgt9qmlb1jve90r8siop8@group.calendar.google.com',
 			timeMin: today.toISOString(),
 			timeMax: nextWeek.toISOString(),
-			singleEvents: true
+			singleEvents: true,
+			orderBy: 'startTime'
 		});
 
 		return {

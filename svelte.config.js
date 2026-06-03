@@ -16,6 +16,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		prerender: {
+			crawl: false,
 			handleMissingId: 'warn'
 		},
 		alias: {
