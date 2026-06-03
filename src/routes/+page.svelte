@@ -1,5 +1,4 @@
 <script lang="ts">
-	import '../app.css';
 	import Header from '$components/layout/Header.svelte';
 	import ResponsiveAlert from '$components/common/ResponsiveAlert.svelte';
 	import Link from '$components/common/Link.svelte';

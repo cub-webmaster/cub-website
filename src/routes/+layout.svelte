@@ -1,4 +1,6 @@
 <script lang="ts">
+	import '../app.css';
+
 	import Footer from '$components/layout/Footer.svelte';
 	import favicon from '$lib/assets/icons/logo.ico';
 	import icon16 from '$lib/assets/icons/logo16x16.png';
