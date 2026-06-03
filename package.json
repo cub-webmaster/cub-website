@@ -3,6 +3,7 @@
 	"private": true,
 	"version": "0.0.1",
 	"type": "module",
+	"engineStrict": true,
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -44,5 +45,6 @@
 		"embla-carousel-autoplay": "^8.6.0",
 		"embla-carousel-svelte": "^8.6.0",
 		"tailwindcss": "^4.3.0"
-	}
+	},
+	"packageManager": "yarn@4.16.0"
 }
