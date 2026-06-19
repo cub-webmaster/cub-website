@@ -3,9 +3,9 @@ import type { Icon } from '$lib/util';
 
 interface ResourceItemBase {
 	title: string;
-	url: string;
-	external: boolean;
 	info?: string[];
+	external?: boolean;
+	url?: string;
 }
 
 interface InternalResourceItem extends ResourceItemBase {
@@ -15,9 +15,15 @@ interface InternalResourceItem extends ResourceItemBase {
 
 interface ExternalResourceItem extends ResourceItemBase {
 	external: true;
+	url: string;
 }
 
-export type ResourceItem = InternalResourceItem | ExternalResourceItem;
+interface NonLinkResourceItem extends ResourceItemBase {
+	external?: undefined;
+	url?: undefined;
+}
+
+export type ResourceItem = InternalResourceItem | ExternalResourceItem | NonLinkResourceItem;
 
 export interface ResourceSection {
 	title: string;

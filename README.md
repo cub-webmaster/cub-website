@@ -18,6 +18,8 @@ The website was created from scratch using:
 - [SvelteKit](https://kit.svelte.dev/) - framework, handles building of site
   - [Sveltekit Interactive Tutorial](https://learn.svelte.dev/tutorial/introducing-sveltekit) - "Introduction", "Routing", and "Stores > page"
   - [Adapter Static](https://kit.svelte.dev/docs/adapter-static)
+- [Tailwind CSS](https://tailwindcss.com) - css framework that allows for simpler inline styling via classes
+- [DaisyUI](https://daisyui.com/) - simple plugin for tailwind to make designing the interface less tedious
 
 ## Quickstart
 

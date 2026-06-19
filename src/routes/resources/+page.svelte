@@ -81,7 +81,7 @@
 				</div>
 				{#each filteredResources as category, i (i)}
 					<PageHeading text={category.title} id={category.id} icon={category.icon} />
-					<div class="grid lg:grid-cols-2 xl:grid-cols-3 gap-4 mb-8">
+					<div class="grid lg:grid-cols-2 gap-4 mb-8">
 						{#each category.sections as section, j (j)}
 							<ResourceCard {section} parentId={category.id} />
 						{/each}

@@ -33,7 +33,7 @@
 		...colorTransitionClasses
 	];
 
-	const dropdownItem = ['py-2', 'px-4', 'w-full'];
+	const dropdownItem = ['py-2', 'px-4', 'w-full', 'text-sm'];
 
 	const colors = (route?: ResolvedPathname, dropdown: boolean = false, main: boolean = false) => {
 		if (dropdown)
@@ -56,7 +56,7 @@
 			navItems
 				.filter((item) => !item.external)
 				.filter((item) => item.children?.length)
-				.map(({ route }) => [route, true])
+				.map(({ route }) => [route, false])
 		)
 	);
 </script>

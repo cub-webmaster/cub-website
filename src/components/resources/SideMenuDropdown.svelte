@@ -38,11 +38,12 @@
 					'flex',
 					'items-center',
 					'gap-2',
-					'hover:bg-neutral/10'
+					'hover:bg-neutral/10',
+					'flex-wrap'
 				)}
 			>
 				{section.title}
-				<div class="text-neutral/70">({section.items.length})</div>
+				<div class="text-neutral/70 inline">({section.items.length})</div>
 			</a>
 		{/each}
 	</ul>
