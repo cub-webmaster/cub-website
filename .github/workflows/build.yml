@@ -11,6 +11,15 @@ jobs:
       - name: Checkout 🛎️
         uses: actions/checkout@v3
 
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Use Node.js 26.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '26.x'
+          cache: 'yarn'
+
       - name: Install and Build 🔧 # use the lockfile for reproducibility, run typechecking, then output to build folder
         run: |
           yarn install

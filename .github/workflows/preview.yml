@@ -1,4 +1,4 @@
-name: GitHub Flow (Deploy Preview)
+name: Deploy Preview Site
 
 on:
   pull_request:
@@ -16,6 +16,15 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Use Node.js 26.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '26.x'
+          cache: 'yarn'
 
       # All-in-one deployment with automatic PR commenting
       - name: Deploy to Preview
