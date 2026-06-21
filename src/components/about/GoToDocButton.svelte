@@ -10,6 +10,7 @@
 	<a
 		// eslint-disable-next-line svelte/no-navigation-without-resolve
 		{href}
+		rel="external"
 		class="btn btn-circle btn-info btn-outline"
 		aria-label={`Download ${docName}`}
 		download

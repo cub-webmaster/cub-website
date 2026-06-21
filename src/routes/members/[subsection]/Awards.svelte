@@ -111,7 +111,8 @@
 					print, and fill in the <a
 						class="link-hover text-accent/80 font-semibold"
 						download
-						href={scoresheet252}>scorecard</a
+						href={scoresheet252}
+						rel="external">scorecard</a
 					>
 					and show it, signed and witnessed, to the Tournaments and Records Officer at a shooting session
 					or email it to the Records Officer <Link
