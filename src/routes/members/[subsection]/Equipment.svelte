@@ -17,9 +17,10 @@
 		Note that while CUB welcomes archers of any bowstyle, there are a few types of equipments that
 		we <b>do not allow</b> on our range under any circumstances for safety and regulatory reasons.
 		Mainly, these are
-		<b>crossbows, any compound bow above 60lb drawing weight, and carbon fibre arrows</b>. Please
-		refer to our safety documentations or talk to our Safety Officer if you wish to know more about
-		related policies.
+		<b
+			>crossbows, any compound bow above 60lb drawing weight, and carbon fibre arrows (ok indoors)</b
+		>. Please refer to our safety documentations or talk to our Safety Officer if you wish to know
+		more about related policies.
 	</p>
 	<Alert>
 		Please be advised that anyone using equipment that are determined to be safety hazards at our

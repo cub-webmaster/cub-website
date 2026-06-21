@@ -2,7 +2,7 @@
 	import { resolve } from '$app/paths';
 	import Alert from '$components/common/Alert.svelte';
 	import Link from '$components/common/Link.svelte';
-	import List from '$components/common/List.svelte';
+	import BoxList from '$components/common/BoxList.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
 	import { fees } from '$data/join/fees';
 	import links from '$data/links';
@@ -36,7 +36,7 @@
 		the club, and pay for venue hire.
 	</p>
 	<p>As of the 2025/2026 academic year, our fees are as follows:</p>
-	<List
+	<BoxList
 		items={[
 			{
 				title: 'Students',

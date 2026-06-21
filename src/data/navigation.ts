@@ -118,7 +118,7 @@ export const membersSection: Section = {
 			icon: BowArrow
 		},
 		{
-			slug: 'tournaments',
+			slug: 'competitions',
 			label: 'Competitions',
 			desc: "CUB takes part in many competitions regularly throughout the year. Start here if you're interested in competing and want to know more.",
 			icon: Flag

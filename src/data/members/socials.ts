@@ -25,8 +25,8 @@ export const annualEvents: SocialEvent[] = [
 	},
 	{
 		icon: Trophy,
-		name: 'Cuppers Barbeque',
-		desc: 'In May Week each year, once exams are all over, we have the annual intercollegiate Cuppers tournament which is then followed by a barbeque. This is always great fun, and a nice way to end the year or take little relaxation during the excitement of May Week.'
+		name: 'Cuppers Social',
+		desc: 'In May Week each year, once exams are all over, we have the annual intercollegiate Cuppers tournament which is then followed by a big social (often along the lines of a barbeque). This is always great fun, and a nice way to end the year or take little relaxation during the excitement of May Week.'
 	}
 ];
 

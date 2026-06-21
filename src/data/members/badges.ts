@@ -1,3 +1,4 @@
+// icons
 import Bird from '@iconify-svelte/lucide/bird';
 import BowArrow from '@iconify-svelte/lucide/bow-arrow';
 import Earth from '@iconify-svelte/lucide/earth';
@@ -7,6 +8,8 @@ import Rose from '@iconify-svelte/lucide/rose';
 import Cross from '@iconify-svelte/lucide/cross';
 import Target from '@iconify-svelte/lucide/target';
 import MousePointer2 from '@iconify-svelte/lucide/mouse-pointer-2';
+
+// images
 import cubBadges from '$lib/assets/img/badges/CUB_badges.png';
 import toucanBadges from '$lib/assets/img/badges/TOUCAN_badges.png';
 import twoFiveTwoBadges from '$lib/assets/img/badges/252_badges.jpg';
@@ -16,11 +19,15 @@ import waTarget from '$lib/assets/img/badges/fitatarget.jpg';
 import eafCrosses from '$lib/assets/img/badges/EAFcross.png';
 import roseAwards from '$lib/assets/img/badges/RoseAwards.png';
 import waArrowheads from '$lib/assets/img/badges/arrowhead.jpg';
+
+// documents
 import arrowsScoresheetWhite from '$lib/assets/docs/arrow_awards/arrow_award_white_sheet.pdf';
 import arrowsScoresheetBlack from '$lib/assets/docs/arrow_awards/arrow_award_black_sheet.pdf';
 import arrowsScoresheetBlue from '$lib/assets/docs/arrow_awards/arrow_award_blue_sheet.pdf';
 import arrowsScoresheetRed from '$lib/assets/docs/arrow_awards/arrow_award_red_sheet.pdf';
 import arrowsScoresheetGold from '$lib/assets/docs/arrow_awards/arrow_award_gold_sheet.pdf';
+
+// other imports
 import type { Icon } from '$lib/util';
 
 interface BadgeInfoBase<RowLabel extends string, ColumnLabel extends string> {
@@ -831,62 +838,62 @@ export const badgesToucan: BadgeInfo<BowStyle, Color> = {
 		content: {
 			ladies: {
 				Recurve: {
-					White: 331,
-					Black: 399,
-					Blue: 454,
-					Red: 496,
-					Gold: 553
+					White: 330,
+					Black: 422,
+					Blue: 487,
+					Red: 533,
+					Gold: 564
 				},
 				Barebow: {
-					White: 276,
-					Black: 336,
-					Blue: 391,
-					Red: 437,
-					Gold: 505
+					White: 274,
+					Black: 359,
+					Blue: 428,
+					Red: 479,
+					Gold: 518
 				},
 				Compound: {
-					White: 449,
-					Black: 491,
-					Blue: 521,
-					Red: 541,
-					Gold: 566
+					White: 465,
+					Black: 507,
+					Blue: 535,
+					Red: 555,
+					Gold: 572
 				},
 				Longbow: {
-					White: 84,
-					Black: 123,
-					Blue: 174,
-					Red: 235,
-					Gold: 364
+					White: 83,
+					Black: 142,
+					Blue: 221,
+					Red: 311,
+					Gold: 393
 				}
 			},
 			open: {
 				Recurve: {
 					White: 378,
-					Black: 437,
-					Blue: 483,
-					Red: 518,
-					Gold: 566
+					Black: 456,
+					Blue: 511,
+					Red: 549,
+					Gold: 575
 				},
 				Barebow: {
-					White: 331,
-					Black: 387,
-					Blue: 433,
-					Red: 472,
-					Gold: 528
+					White: 329,
+					Black: 406,
+					Blue: 464,
+					Red: 508,
+					Gold: 539
 				},
 				Compound: {
-					White: 472,
-					Black: 508,
-					Blue: 532,
-					Red: 549,
-					Gold: 571
+					White: 501,
+					Black: 526,
+					Blue: 544,
+					Red: 558,
+					Gold: 576
 				},
 				Longbow: {
-					White: 127,
-					Black: 178,
-					Blue: 240,
-					Red: 306,
-					Gold: 423
+					White: 126,
+					Black: 202,
+					Blue: 292,
+					Red: 378,
+					Gold: 445
 				}
 			}
 		}

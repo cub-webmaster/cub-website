@@ -3,6 +3,7 @@
 	import { membersSection } from '$data/navigation.js';
 	import Awards from './Awards.svelte';
 	import Classifications from './Classifications.svelte';
+	import Competition from './Competitions.svelte';
 	import Equipment from './Equipment.svelte';
 	import Socials from './Socials.svelte';
 	import Training from './Training.svelte';
@@ -21,5 +22,7 @@
 		<Awards />
 	{:else if data.subsection === 'classifications'}
 		<Classifications />
+	{:else if data.subsection === 'competitions'}
+		<Competition />
 	{/if}
 </ContentPage>

@@ -1,6 +1,6 @@
 <script>
 	import Link from '$components/common/Link.svelte';
-	import List from '$components/common/List.svelte';
+	import BoxList from '$components/common/BoxList.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
 	import links from '$data/links';
 </script>
@@ -44,7 +44,7 @@
 		Note that your membership with both of these require a fee. For reference, the specific numbers
 		as of September 2025 are as follows:
 	</p>
-	<List
+	<BoxList
 		items={[
 			{
 				title: 'AGB membership',

@@ -63,7 +63,8 @@
 			href="https://archerygb.org/about/equality-diversity-and-inclusivity"
 			external
 			label="AGB website"
-		/>.
+		/>. As of the 2025/2026 academic year, this was only enforced in BUCS, among our main recurring
+		competitions.
 	</p>
 	<p>
 		We understand and regret that this may hinder our gender non-conforming members from competing.

@@ -1,19 +1,20 @@
 <script lang="ts">
+	import type { Icon } from '$lib/util';
 	import Minus from '@iconify-svelte/lucide/minus';
 	import Plus from '@iconify-svelte/lucide/plus';
-	import { type Component, type Snippet } from 'svelte';
+	import { type Snippet } from 'svelte';
 
 	const {
 		id,
 		name,
-		icon: Icon,
+		icon: TitleIcon,
 		title,
 		defaultOpen = false,
 		children
 	}: {
 		id: string;
 		name: string;
-		icon?: Component;
+		icon?: Icon;
 		title: string;
 		defaultOpen?: boolean;
 		children: Snippet;
@@ -47,7 +48,7 @@
 >
 	<summary class="collapse-title font-semibold flex justify-between items-center pr-4 gap-4" {id}>
 		<div class="flex items-center gap-2">
-			<Icon height="1.5rem" class="shrink-0 text-secondary" />
+			<TitleIcon height="1.5rem" class="shrink-0 text-secondary" />
 			<span class="text-neutral">{title}</span>
 		</div>
 

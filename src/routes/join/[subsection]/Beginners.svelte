@@ -2,36 +2,16 @@
 	import Alert from '$components/common/Alert.svelte';
 	import Card from '$components/common/Card.svelte';
 	import Link from '$components/common/Link.svelte';
-	import List from '$components/common/List.svelte';
+	import BoxList from '$components/common/BoxList.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
 	import { fees } from '$data/join/fees';
 	import links from '$data/links';
-	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
+	import { squadCommitments, squadPerks } from '$data/members/competitions';
 	import CircleStar from '@iconify-svelte/lucide/circle-star';
 	import Dumbbell from '@iconify-svelte/lucide/dumbbell';
-
-	const noviceCommitments = [
-		'Attend coaching session every Wednesday morning',
-		'Strength and Conditioning sessions every Thursday morning',
-		'At least one more treaining session each week',
-		'Compete in at least 4 competitions (including Varsity) throughout the year'
-	];
-
-	const novicePerks = [
-		'Priority spots for competitions and subsidies for related travels',
-		'Additional exclusive coaching to help you improve quickly',
-		'Priority and reduced fee for bow rental',
-		'Greater social opportunities - exclusive training with other competitive members and meeting archers from across the country during competitions!'
-	];
+	import List from '$components/common/List.svelte';
 </script>
 
-{#snippet cardListItem(text: string)}
-	<li class="py-1 md:py-2 px-2">
-		<div class="text-base p-0 flex gap-2 text-left">
-			<CircleChevronRight height="1rem" class="text-accent/80 shrink-0 mt-1" />{text}
-		</div>
-	</li>
-{/snippet}
 <PageSection>
 	<p>
 		The club is open to all students and staff of the University of Cambridge, and we run a
@@ -77,7 +57,7 @@
 		The 2025 beginners' course costs £{fees.beginner} to attend, on top of the club's annual membership
 		fees, which are as follows:
 	</p>
-	<List
+	<BoxList
 		items={[
 			{
 				title: 'Students',
@@ -135,16 +115,24 @@
 	<div class="grid lg:grid-cols-2 gap-4">
 		<Card icon={Dumbbell} title="Commitments">
 			<ul>
-				{#each noviceCommitments as text, i (i)}
-					{@render cardListItem(text)}
-				{/each}
+				<List
+					iconColor="text-accent/80"
+					textColor="text-neutral/80"
+					items={squadCommitments}
+					indent={false}
+					extraClasses="md:py-2 px-2"
+				/>
 			</ul>
 		</Card>
 		<Card icon={CircleStar} title="Perks">
 			<ul>
-				{#each novicePerks as text, i (i)}
-					{@render cardListItem(text)}
-				{/each}
+				<List
+					iconColor="text-accent/80"
+					textColor="text-neutral/80"
+					items={squadPerks}
+					indent={false}
+					extraClasses="md:py-2 px-2"
+				/>
 			</ul>
 		</Card>
 	</div>

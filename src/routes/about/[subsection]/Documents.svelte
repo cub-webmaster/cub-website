@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { documents, type Doc } from '$data/about/documents';
 	import PageSection from '$components/layout/PageSection.svelte';
-	import List from '$components/common/List.svelte';
+	import BoxList from '$components/common/BoxList.svelte';
 	import GoToDocButton from '$components/about/GoToDocButton.svelte';
 	import type { ComponentInternals } from 'svelte';
 
@@ -30,7 +30,7 @@
 		safety and welfare of our members. These documents are reviewed on a regular basis in line with
 		Archery GB and the Cambridge University Sports Centre's recommendations.
 	</p>
-	<List items={convertDocListToListItems(documents.core)} />
+	<BoxList items={convertDocListToListItems(documents.core)} />
 </PageSection>
 
 <PageSection id="shooting" headingText="Shooting Related">
@@ -41,7 +41,7 @@
 		governing body, and World Archery. The full documents are attached here for the reference of our
 		members at any point.
 	</p>
-	<List items={convertDocListToListItems(documents.shooting)} />
+	<BoxList items={convertDocListToListItems(documents.shooting)} />
 </PageSection>
 
 <PageSection id="data" headingText="Data Protection">
@@ -50,5 +50,5 @@
 		it's members each year in accordance with our data protection policy. Social media presence or
 		website appearance of members should also always adhere to our social media policy.
 	</p>
-	<List items={convertDocListToListItems(documents.data)} />
+	<BoxList items={convertDocListToListItems(documents.data)} />
 </PageSection>

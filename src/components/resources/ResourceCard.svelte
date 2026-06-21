@@ -1,51 +1,11 @@
 <script lang="ts">
 	import Link from '$components/common/Link.svelte';
+	import RichText from '$components/common/RichText.svelte';
 	import type { ResourceSection } from '$data/resources/types';
 	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
 	import Dot from '@iconify-svelte/lucide/dot';
 
 	const { section, parentId }: { section: ResourceSection; parentId: string } = $props();
-
-	type infoPart =
-		| { type: 'text'; content: string }
-		| { type: 'link'; label: string; link: string }
-		| { type: 'bold'; content: string };
-
-	function processInfoText(str: string): infoPart[] {
-		const links: { label: string; link: string }[] = [];
-		const bolds: string[] = [];
-		const parsed = str
-			.replaceAll(/\[([^()[\]]+)\]\(([^()[\]]+)\)/gm, (match, label, link) => {
-				const newIndex = links.length;
-				links.push({ link, label });
-				return `$<LINK>:${newIndex}$`;
-			})
-			.replaceAll(/\*\*([^()[\]]+)\*\*/gm, (match, bolded) => {
-				const newIndex = bolds.length;
-				bolds.push(bolded);
-				return `$<BOLD>:${newIndex}$`;
-			});
-
-		return parsed.split('$').map((part) => {
-			const match = part.match(/^<(?<type>LINK|BOLD)>:(?<index>\d+)/);
-			if (match?.groups?.type === 'LINK') {
-				return {
-					type: 'link',
-					...links[Number(match.groups.index)]
-				};
-			} else if (match?.groups?.type === 'BOLD') {
-				return {
-					type: 'bold',
-					content: bolds[Number(match.groups.index)]
-				};
-			} else {
-				return {
-					type: 'text',
-					content: part
-				};
-			}
-		});
-	}
 </script>
 
 <div class="shadow h-full bg-base-200 border-primary border" id={`${parentId}-${section.id}`}>
@@ -72,15 +32,7 @@
 						<li class="text-neutral/80 flex gap-2 items-start">
 							<Dot height="1.8rem" class="shrink-0" />
 							<div>
-								{#each processInfoText(point) as part, j (j)}
-									{#if part.type === 'link'}
-										<Link label={part.label} href={part.link} external />
-									{:else if part.type === 'bold'}
-										<b>{part.content}</b>
-									{:else}
-										{part.content}
-									{/if}
-								{/each}
+								<RichText raw={point} />
 							</div>
 						</li>
 					{/each}
