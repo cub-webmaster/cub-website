@@ -1,47 +1,26 @@
 <script lang="ts">
-	import type { Icon } from '$lib/util';
 	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
-	import type { Component } from 'svelte';
-
+	import RichText from './RichText.svelte';
 	const {
 		items,
-		bottomMargin = true
+		indent = true,
+		iconColor = 'text-secondary',
+		textColor = 'text-info',
+		extraClasses
 	}: {
-		items: {
-			title: string;
-			subtitle?: string;
-			end: Component | string;
-			decoration?: Icon | string;
-		}[];
-		bottomMargin?: boolean;
+		items: string[];
+		indent?: boolean;
+		textColor?: string;
+		iconColor?: string;
+		extraClasses?: string;
 	} = $props();
 </script>
 
-<ul class="list bg-base-200 border border-primary shadow-md" class:mb-6={bottomMargin}>
-	{#each items as item, i (i)}
-		<li class="list-row hover:bg-neutral/10">
-			<div class="flex items-center text-secondary">
-				{#if !item.decoration}
-					<CircleChevronRight height="1.2rem" class="shrink-0" />
-				{:else if typeof item.decoration === 'string'}
-					<div class={`${item.decoration} h-4 w-4 border border-neutral/50`}></div>
-				{:else}
-					<item.decoration height="1.2rem" />
-				{/if}
-			</div>
-			<div>
-				<div class="text-neutral text-base">{item.title}</div>
-				{#if item.subtitle}
-					<div class="text-xs uppercase font-semibold opacity-60 text-left">
-						{item.subtitle}
-					</div>
-				{/if}
-			</div>
-			{#if typeof item.end === 'string'}
-				<div class="flex items-center text-base font-semibold">{item.end}</div>
-			{:else}
-				<item.end />
-			{/if}
+<ul class:ml-4={indent} class={`${extraClasses ?? ''}`}>
+	{#each items as item (item)}
+		<li class="flex gap-2 py-1 text-left text-base">
+			<div class="mt-1"><CircleChevronRight height="1rem" class={`shrink-0 ${iconColor}`} /></div>
+			<span class={`${textColor}`}><RichText raw={item} /></span>
 		</li>
 	{/each}
 </ul>

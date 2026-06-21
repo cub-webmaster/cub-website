@@ -1,0 +1,30 @@
+name: Build Test
+
+on:
+  pull_request:
+    branches: [main, live]
+jobs:
+  build:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Use Node.js 26.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '26.x'
+          cache: 'yarn'
+
+      - name: Install and Build 🔧 # use the lockfile for reproducibility, run typechecking, then output to build folder
+        env:
+          GOOGLE_API_KEY: ${{ env.GOOGLE_API_KEY }}
+        run: |
+          yarn install
+          yarn run check
+          yarn lint
+          yarn build

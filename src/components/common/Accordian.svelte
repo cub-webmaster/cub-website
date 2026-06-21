@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { Component } from 'svelte';
 	import AccordianItem from './AccordianItem.svelte';
+	import type { Icon } from '$lib/util';
 
 	interface Item {
-		icon?: Component;
+		icon?: Icon;
 		content: Component | string;
 		title: string;
 	}

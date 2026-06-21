@@ -11,6 +11,9 @@ import safetyDoc from '$lib/assets/docs/Safety Statement.pdf';
 import rulesDoc from '$lib/assets/docs/AGB_rules_of_shooting_0125.pdf';
 import { fees } from '$data/join/fees';
 import { resolve } from '$app/paths';
+import waRounds from '$lib/assets/docs/wa-rounds.pdf';
+import indoorRounds from '$lib/assets/docs/indoor-rounds-explained.pdf';
+import outdoorRounds from '$lib/assets/docs/outdoor-rounds-guide.pdf';
 
 export const resources: ResourceCategory[] = [
 	{
@@ -41,51 +44,8 @@ export const resources: ResourceCategory[] = [
 						info: [
 							`Students: £${fees.student}`,
 							`Non-students: £${fees['non-student']}`,
-							`Beginners' course: £${fees.beginner}`
+							`Beginners' course: £${fees.beginner} (+ membership)`
 						]
-					}
-				]
-			},
-			{
-				id: 'equipment',
-				title: 'Equipment',
-				items: [
-					{
-						title: 'Rental Scheme',
-						url: resolve('/members/equipment#rental'),
-						external: false
-					},
-					{
-						title: 'Care Resources'
-					},
-					{
-						title: 'Clickers Archery',
-						url: links.clickers.url,
-						external: true,
-						info: [
-							'Archery equipment shop at Norwich with a long-time relationship with CUB',
-							'Recommended for in-person shopping and bow fitting'
-						]
-					},
-					{
-						title: 'Merlin Archery',
-						url: links.merlin.url,
-						external: true,
-						info: ['Archery equipment shop with a great online catalogue']
-					}
-				]
-			},
-			{
-				id: 'training',
-				title: 'Training aids',
-				items: [
-					{
-						title: 'Warm-ups',
-						url: '',
-						external: true
-					},
-					{
-						title: 'Exercises'
 					}
 				]
 			},
@@ -119,6 +79,61 @@ export const resources: ResourceCategory[] = [
 						external: true
 					}
 				]
+			},
+			{
+				id: 'equipment',
+				title: 'Equipment',
+				items: [
+					{
+						title: 'Rental Scheme',
+						url: resolve('/members/equipment#rental'),
+						external: false
+					},
+					{
+						title: 'Care Resources',
+						info: [
+							`Bingham Archers has a very comprehensive guide on equipment care and tuning [here](${links.maintenance_bingham.url})`,
+							`Maintenance tools like a fletching jig or string wax can be borrowed from the club, feel free to contact the [Equipment Officer](${links.equipment_email.url}) if you have specific inquiries`
+						]
+					},
+					{
+						title: 'Clickers Archery',
+						url: links.clickers.url,
+						external: true,
+						info: [
+							'Archery equipment shop at Norwich with a long-time relationship with CUB',
+							'Recommended for in-person shopping and bow fitting'
+						]
+					},
+					{
+						title: 'Merlin Archery',
+						url: links.merlin.url,
+						external: true,
+						info: ['Archery equipment shop with a great online catalogue']
+					}
+				]
+			},
+			{
+				id: 'training',
+				title: 'Training aids',
+				items: [
+					{
+						title: 'Warm-ups',
+						info: [
+							`The main warm-ups recommended by AGB is listed [here](${links.agb_warmup.url})`,
+							`A guide with descriptions on how to do the above exercises can be found [here](${links.cub_warmup.url})`
+						]
+					},
+					{
+						title: 'Drills & Specific Physical Training (SPT)',
+						info: [
+							`SPTs are used by archers around the world for improving their skills outside actual shoots`,
+							`A summary of the drills can be found [here](${links.spt_written.url})`,
+							`There are also a couple video guides recommended by our members ([vid 1](${links.spt_nusensei.url}), [vid 2](${links.spt_kaminski.url}))`,
+							`We also recommended getting a stretchy band or similar tools to safely do drills with ([examples](${links.shop_training_aids.url}))`
+						]
+					}
+				]
 			}
 		]
 	},
@@ -150,13 +165,6 @@ export const resources: ResourceCategory[] = [
 							'Indoor season consists of 3 league legs across Michaelmas and Lent, with **Leg 3 usually hosted by CUB**, followed by the Indoor Championship (and a Ball afterwards!)',
 							'There is usually also an Outdoor Championship in summer'
 						]
-					},
-					{
-						title: 'Varsity',
-						info: [
-							'The **annual match against Oxford** is a highlight of the outdoor season',
-							'Our main team usually consists of 8 members (4 novices and 4 experienced archers), but other members are welcomed to participate anyway. All it means is your score won\'t count towards our final result against "the other place"'
-						]
 					}
 				]
 			},
@@ -165,13 +173,25 @@ export const resources: ResourceCategory[] = [
 				id: 'rounds-records',
 				items: [
 					{
-						title: 'Rounds',
-						info: []
+						title: 'Round Specifications',
+						info: [
+							`There are a lot of different rounds under the World Archery umbrella, you can find an excerpt of the WA rulebooks on the rounds pertaining to target archery [here](${waRounds})`,
+							`NCAS also made a very useful, comprehensive chart of most common outdoor rounds in table form which you can reference [here](${outdoorRounds})`,
+							`If you're looking for more information on indoor rounds beyond the most common Portsmouth Round, see this explainer from Experience Archery [here](${indoorRounds})`
+						]
+					},
+					{
+						title: 'Scoring',
+						info: [
+							`Imperial Scoring, AKA 5-zone scoring, is scored only by each of the colour zones i.e. 9 for gold, 7 for red, 5 for blue and so on`,
+							`Metric Scoring, AKA 10-zone scoring, on the other hand uses all 10 rings on the target facee and are scored from 1 to 10`
+						]
 					},
 					{
 						title: 'Club records',
 						external: true,
-						url: links.records_sheet.url
+						url: links.records_sheet.url,
+						info: ['We maintain club records of the highest scorers for each round/category here ']
 					}
 				]
 			}

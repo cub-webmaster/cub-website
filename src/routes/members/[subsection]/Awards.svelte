@@ -4,6 +4,10 @@
 	import PageSection from '$components/layout/PageSection.svelte';
 	import BadgeAccordianItem from '$components/members/BadgeAccordianItem.svelte';
 	import Criterion from '$components/members/Criterion.svelte';
+	import List from '$components/common/List.svelte';
+	import BoxList from '$components/common/BoxList.svelte';
+	import GoToDocButton from '$components/about/GoToDocButton.svelte';
+
 	import links from '$data/links';
 	import scoresheet252 from '$lib/assets/docs/252_scoresheets_CUB.pdf';
 	import {
@@ -20,10 +24,8 @@
 		badgesWaArrowsScoresheets,
 		badgesWaArrowsScoresheetsLastUpdate
 	} from '$data/members/badges';
+
 	import { generateClassString } from '$lib/util';
-	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
-	import List from '$components/common/List.svelte';
-	import GoToDocButton from '$components/about/GoToDocButton.svelte';
 	import { resolve } from '$app/paths';
 
 	const bluesCriteria = [
@@ -109,7 +111,8 @@
 					print, and fill in the <a
 						class="link-hover text-accent/80 font-semibold"
 						download
-						href={scoresheet252}>scorecard</a
+						href={scoresheet252}
+						rel="external">scorecard</a
 					>
 					and show it, signed and witnessed, to the Tournaments and Records Officer at a shooting session
 					or email it to the Records Officer <Link
@@ -153,7 +156,7 @@
 					/>, while the scoresheets for each level are available below.
 				</p>
 
-				<List
+				<BoxList
 					items={badgesWaArrowsScoresheets.map(({ name, color, doc }) => ({
 						title: `${name} Arrow Award`,
 						subtitle: `Last updated: ${badgesWaArrowsScoresheetsLastUpdate}`,
@@ -311,14 +314,7 @@
 		In addition to performance the captain will also take in to account the Six Blues’ Criteria as
 		set out by the Blues Committees. These are the athlete’s:
 	</p>
-	<ul class="ml-4">
-		{#each bluesCriteria as criteria (criteria)}
-			<li class="flex items-center gap-2 py-1">
-				<CircleChevronRight height="1rem" class="shrink-0 text-secondary" />
-				<span class="text-info">{criteria}</span>
-			</li>
-		{/each}
-	</ul>
+	<List items={bluesCriteria} />
 
 	<p>
 		In more concrete terms, an archer can be awarded a <b>Half Blue</b> if they fulfill

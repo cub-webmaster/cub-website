@@ -1,0 +1,34 @@
+---
+name: Preview Deployment Cleanup
+
+# Automatically delete worker when PR is closed
+on:
+  pull_request:
+    types: [closed]
+
+permissions:
+  contents: read
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Delete PR worker
+        id: cleanup
+        uses: harunonsystem/cf-workers-actions/cleanup@v1.2.1
+        with:
+          # Delete worker matching PR number
+          # Example: PR #123 -> deletes "myapp-pr-123"
+          worker-names: 'cub-website-preview-${{ github.event.pull_request.number }}'
+
+          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+
+          # Set to 'false' to actually delete (default is 'true' for safety)
+          dry-run: 'false'
+
+      - name: Show result
+        run: |
+          echo "✅ Deleted: ${{ steps.cleanup.outputs.deleted-count }} worker(s)"
+          echo "Workers: ${{ steps.cleanup.outputs.deleted-workers }}"

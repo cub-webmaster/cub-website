@@ -145,6 +145,34 @@ const links: Record<string, Link> = {
 	purple_badge_record: {
 		url: 'https://docs.google.com/spreadsheets/d/1MpzvFMy6MacXIvmM0XZR3GKMDCi_2HZOAstI3i2N_78',
 		label: 'Full Record of CUB Purple Badge Holders'
+	},
+	agb_warmup: {
+		url: 'https://drive.google.com/file/d/1WhO7TJb8-vw7jVqh9o0tzi6UkLbxWHdd/view',
+		label: 'AGB Recommended Warm-ups'
+	},
+	cub_warmup: {
+		url: 'https://docs.google.com/document/d/1NVHERsgQVVqfSmbtSSx4wtTlK-w--5gIoXgiqbbOalA',
+		label: 'CUB Warm-ups Guide (based on AGB recommendations)'
+	},
+	spt_written: {
+		url: 'https://www.kslinternationalarchery.com/Training/SPTs/SPTs.html',
+		label: 'SPT Written Guide'
+	},
+	spt_nusensei: {
+		url: 'https://www.youtube.com/watch?v=gETKrdFH4Xk',
+		label: 'SPT by NUSensei on Youtube'
+	},
+	spt_kaminski: {
+		url: 'https://www.youtube.com/watch?v=-mX1qu94DRI',
+		label: 'SPT by Jake Kaminski on Youtube'
+	},
+	shop_training_aids: {
+		url: 'https://www.merlinarchery.co.uk/accessories-for-the-archer/other-accessories/exercise-bands.html?p=2',
+		label: 'Merlin Archery page on training aids'
+	},
+	maintenance_bingham: {
+		url: 'https://binghamarchery.co.uk/maintenance',
+		label: 'Bingham Archers guide on Equipment Maintenance'
 	}
 };
 

@@ -1,0 +1,43 @@
+name: Deploy Preview Site
+
+on:
+  pull_request:
+    branches: [live]
+    types: [opened, synchronize, reopened]
+
+jobs:
+  # Preview deployment for Pull Requests
+  preview:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+
+      - name: Enable Corepack
+        run: corepack enable
+
+      - name: Use Node.js 26.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '26.x'
+          cache: 'yarn'
+
+      - name: Install and Build 🔧 # use the lockfile for reproducibility, run typechecking, then output to build folder
+        env:
+          GOOGLE_API_KEY: ${{ env.GOOGLE_API_KEY }}
+        run: |
+          yarn install
+          yarn build
+
+      # All-in-one deployment with automatic PR commenting
+      - name: Deploy to Preview
+        uses: harunonsystem/cf-workers-actions/preview-deploy@v1.2.1
+        with:
+          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          worker-name: 'cub-website-preview-${{ github.event.pull_request.number }}'
+          domain: 'dry-meadow-02d4.workers.dev'
