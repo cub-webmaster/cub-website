@@ -23,6 +23,8 @@ jobs:
           cache: 'yarn'
 
       - name: Install and Build 🔧 # use the lockfile for reproducibility, run typechecking, then output to build folder
+        env:
+          GOOGLE_API_KEY: ${{ env.GOOGLE_API_KEY }}
         run: |
           yarn install
           yarn run check
