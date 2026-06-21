@@ -32,5 +32,5 @@ jobs:
         with:
           cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          worker-name: 'cub-website-preview-{pr-number}'
-          domain: '{pr-number}.dry-meadow-02d4.workers.dev'
+          worker-name: 'cub-website-preview-${{ github.event.pull_request.number }}'
+          domain: 'dry-meadow-02d4.workers.dev'
