@@ -1,7 +1,8 @@
 <script lang="ts">
 	import type { EmblaOptionsType } from 'embla-carousel';
 	import useEmblaCarousel from 'embla-carousel-svelte';
-	import { carouselMaxCount } from '../../data/general';
+	import Captions from '@iconify-svelte/lucide/captions';
+	import { carouselMaxCount } from '$data/general';
 	import type { EmblaCarouselType } from 'embla-carousel';
 	import Autoplay from 'embla-carousel-autoplay';
 	import logo from '$lib/assets/img/logo.png';
@@ -17,6 +18,7 @@
 	let scrollSnaps: number[] = $state([]);
 	let selectedSnap = $state(0);
 	let w = $state(0);
+	const caption = $derived(images[selectedSnap].alt);
 
 	const scrollTo = (index: number) => emblaApi?.scrollTo(index);
 	const setupSnaps = (emblaApi: EmblaCarouselType) => (scrollSnaps = emblaApi.scrollSnapList());
@@ -45,6 +47,14 @@
 	>
 		<img src={logo} alt="CUB logo" class="w-1/5 opacity-90" />
 		<Title text="Cambridge University Bowmen" sizes={['lg:text-5xl', 'sm:text-3xl', 'text-xl']} />
+	</div>
+	<div
+		class="tooltip before:content-[attr(data-tip)] before:translate-x-[calc(50%-2rem)] z-3 absolute xl:bottom-8 md:bottom-4 bottom-2 lg:left-8 left-4"
+		data-tip={caption}
+	>
+		<button class="btn btn-circle bg-neutral/60 border-0 hover:bg-neutral/90 shadow-none"
+			><Captions class="text-base-100" height="1.3rem" /></button
+		>
 	</div>
 	<div class="embla top-0 bottom-0 right-0 left-0 absolute">
 		<div

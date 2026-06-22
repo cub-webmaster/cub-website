@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
 	import Alert from '$components/common/Alert.svelte';
+	import CaptionedImage from '$components/common/CaptionedImage.svelte';
 	import Carousel from '$components/common/Carousel.svelte';
 	import Link from '$components/common/Link.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
@@ -38,12 +39,16 @@
 		to keep it that way!
 	</p>
 	<p>
-		Archery at Cambridge is also a Half Blue sport. This is usually awarded to members for high
-		performance in the annual Varsity match. Further, members at other competitions may earn Team
-		Colors, with exceptional performances on a national standard potentially earning a Full Blue.
+		Archery at Cambridge is also a Full Blue sport. This is usually awarded to high achieving
+		members who have shown both dedication to the sport as well as excellent performance in
+		competition settings.
 		<!-- TODO couple relatively recent high achievers -->
 	</p>
-	<img src={mascotImg} alt="Our mascot - a lion cub plush, at BUCS 2026" />
+	<CaptionedImage
+		src={mascotImg}
+		alt="Our mascot: a lion cub plush, at BUCS 2026"
+		credit="Malcolm Rees"
+	/>
 </PageSection>
 
 <PageSection id="history" headingText="History">

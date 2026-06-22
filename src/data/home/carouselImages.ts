@@ -21,7 +21,7 @@ export const homeImages: CarouselImage[] = [
 	},
 	{
 		path: image3,
-		alt: "Cameron Krulewski's Gold (Ladies Barebow) BUCS 2020"
+		alt: "Cameron Krulewski's Gold BUCS 2020"
 	},
 	{
 		path: image5,
