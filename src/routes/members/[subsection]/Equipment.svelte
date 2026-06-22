@@ -1,9 +1,11 @@
 <script lang="ts">
 	import Alert from '$components/common/Alert.svelte';
+	import CaptionedImage from '$components/common/CaptionedImage.svelte';
 	import Link from '$components/common/Link.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
 	import { fees } from '$data/join/fees';
 	import links from '$data/links';
+	import noviceToucanImg from '$lib/assets/img/TOUCAN_cam_2025.jpg';
 </script>
 
 <PageSection>
@@ -58,6 +60,12 @@
 		equipments, which can be helpful in improving performance and learning more about your
 		preferences before investing in your own kit.
 	</p>
+
+	<CaptionedImage
+		src={noviceToucanImg}
+		alt="CUB novice member shooting a metal club bow at TOUCAN 2025 Leg 3"
+		credit="Freddie Dyke"
+	/>
 	<p>
 		If this interests you, please contact the <Link
 			href={`mailto:${links.equipment_email.url}`}
