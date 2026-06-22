@@ -14,6 +14,7 @@
 	} from '$data/members/competitions';
 	import links from '$data/links';
 	import AccordianItem from '$components/common/AccordianItem.svelte';
+	import happyCompetitionImg from '$lib/assets/img/bucs2025_happy_xc.jpg';
 </script>
 
 <PageSection>
@@ -49,6 +50,10 @@
 		Further, competition season starts around the beginning of Lent term, i.e. during the indoor
 		season, so the first opportunities you would have to compete are generally indoors!
 	</p>
+	<img
+		src={happyCompetitionImg}
+		alt="CUB member doing a thumbs up and smiling during arrow collection"
+	/>
 	<p>
 		For those who would like to compete, the earliest competitions of the year are usually the
 		TOUCAN regional legs and BUCS qualifiers, with the former happening late Michaelmas. These two

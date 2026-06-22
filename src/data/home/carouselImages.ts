@@ -2,11 +2,18 @@ import type { CarouselImage } from '$lib/carousel';
 import image1 from '$lib/assets/img/2019Team.jpg';
 import image2 from '$lib/assets/img/BUTTSChamps2020.jpg';
 import image3 from '$lib/assets/img/CameronPodium.jpg';
+import image4 from '$lib/assets/img/cuppers2026.jpg';
+import image5 from '$lib/assets/img/bucs2025.jpg';
+import image6 from '$lib/assets/img/bucs2026.jpg';
 
 export const homeImages: CarouselImage[] = [
 	{
 		path: image1,
 		alt: 'Varsity 2019 team photo'
+	},
+	{
+		path: image4,
+		alt: 'Cuppers 2026'
 	},
 	{
 		path: image2,
@@ -15,5 +22,13 @@ export const homeImages: CarouselImage[] = [
 	{
 		path: image3,
 		alt: "Cameron Krulewski's Gold (Ladies Barebow) BUCS 2020"
+	},
+	{
+		path: image5,
+		alt: 'BUCS 2025 team photo'
+	},
+	{
+		path: image6,
+		alt: 'CUB member shooting at BUCS 2026'
 	}
 ];

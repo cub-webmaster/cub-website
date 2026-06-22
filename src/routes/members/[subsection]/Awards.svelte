@@ -197,7 +197,6 @@
 					follows:
 				</p>
 			{/snippet}
-			<!-- TODO update pic and info when TOUCAN website is back alive -->
 			{#snippet afterTable()}
 				<p>
 					TOUCAN Badges can also be claimed outdoors. The appropriate scores, gents shooting a St.

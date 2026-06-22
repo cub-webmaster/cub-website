@@ -6,6 +6,7 @@
 	import PageSection from '$components/layout/PageSection.svelte';
 	import { rules1828Scans } from '$data/about/history';
 	import links from '$data/links';
+	import mascotImg from '$lib/assets/img/bucs2026_ourmascot.png';
 </script>
 
 <PageSection>
@@ -31,9 +32,10 @@
 	<p>
 		CUB regularly competes in local and national competitions, including the British Universities
 		and Colleges Sport (BUCS), the annual Cambridge vs Oxford Varsity Match, and the TOUCAN league.
-		Our club has been highly successful in some of these competitions.
-
-		<!-- TODO recent highlights -->
+		Our club has been highly successful in some of these competitions. For the past decade, we've
+		consistently had members reach BUCS finals, competing with the best student archers in the
+		country. We also hold the higher total win count against Oxford in Varsity, and are working hard
+		to keep it that way!
 	</p>
 	<p>
 		Archery at Cambridge is also a Half Blue sport. This is usually awarded to members for high
@@ -41,6 +43,7 @@
 		Colors, with exceptional performances on a national standard potentially earning a Full Blue.
 		<!-- TODO couple relatively recent high achievers -->
 	</p>
+	<img src={mascotImg} alt="Our mascot - a lion cub plush, at BUCS 2026" />
 </PageSection>
 
 <PageSection id="history" headingText="History">
