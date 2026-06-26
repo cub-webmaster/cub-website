@@ -12,10 +12,10 @@
 		squadPerks,
 		teamSelectionCriteria
 	} from '$data/members/competitions';
-	import links from '$data/links';
 	import AccordianItem from '$components/common/AccordianItem.svelte';
 	import happyCompetitionImg from '$lib/assets/img/bucs2025_happy_xc.jpg';
 	import CaptionedImage from '$components/common/CaptionedImage.svelte';
+	import { committeePositions } from '$data/about/committee';
 </script>
 
 <PageSection>
@@ -158,7 +158,7 @@
 		can't find what you're looking for here, please look on the official organiser website for more
 		details on TOUCAN and BUCs, or contact the <Link
 			label="Tournaments Officer"
-			href={`mailto:${links.tournaments_email.url}`}
+			href={`mailto:${committeePositions.records.email}`}
 			external
 		/> to ask about other competitions happening around us.
 	</p>

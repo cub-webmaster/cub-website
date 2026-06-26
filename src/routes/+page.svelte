@@ -17,6 +17,7 @@
 	import Accordian from '$components/common/Accordian.svelte';
 	import FaqContent from '$components/home/FaqContent.svelte';
 	import LandingCarousel from '$components/home/LandingCarousel.svelte';
+	import { committeePositions } from '$data/about/committee';
 </script>
 
 <Header title="Home" showBrand={false}>
@@ -39,17 +40,17 @@
 		{#if beginnerRecruitmentOngoing}
 			The <b>Beginner's Course</b> is now OPEN! Click <b>Read More</b> for more details and how to
 			sign up. Please contact the
-			<Link href={`mailto:${links.secretary_email.url}`} label="Secretary" external />
+			<Link href={`mailto:${committeePositions.secretary.email}`} label="Secretary" external />
 			or the
-			<Link href={`mailto:${links.novice_email.url}`} label="Novice Officer" external />
+			<Link href={`mailto:${committeePositions.novice.email}`} label="Novice Officer" external />
 			for any inquiries about the course.
 		{:else}
 			The club has reached capacity for beginner archers this academic year, please stay tuned for
 			our beginner's course next year! <b>Experienced archers</b> can still join the club directly,
 			<b>click Read More</b> to see how. For other enquiries please contact the
-			<Link href={`mailto:${links.secretary_email.url}`} label="Secretary" external />
+			<Link href={`mailto:${committeePositions.secretary.email}`} label="Secretary" external />
 			or the
-			<Link href={`mailto:${links.novice_email.url}`} label="Novice Officer" external />
+			<Link href={`mailto:${committeePositions.novice.email}`} label="Novice Officer" external />
 			for anything related to beginners.
 		{/if}
 	{/snippet}

@@ -2,6 +2,7 @@
 	import Link from '$components/common/Link.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
 	import ScoreTable from '$components/members/ScoreTable.svelte';
+	import { committeePositions } from '$data/about/committee';
 	import links from '$data/links';
 	import { badgesIndoorClassifications } from '$data/members/badges';
 	import indoorBadges from '$lib/assets/img/badges/indoor_classifications.jpg';
@@ -69,7 +70,7 @@
 	<p>
 		Badges for indoor classifications can be claimed from the club for £3. If you'd like to claim
 		one, please contact the <Link
-			href={`mailto:${links.tournaments_email.url}`}
+			href={`mailto:${committeePositions.records.email}`}
 			external
 			label="Records Officer"
 		/> and provide evidence of the relevant scores (must be dated and co-signed).
@@ -92,7 +93,7 @@
 	<p>
 		The club is able to award outdoor classifications of the Archer and Bowman tiers. However,
 		outdoor classifications of Master Bowman tier can only be awarded by AGB. Please contact the <Link
-			href={`mailto:${links.tournaments_email.url}`}
+			href={`mailto:${committeePositions.records.email}`}
 			external
 			label="Records Officer"
 		/> with relevant evidence to claim a outdoor classification badge for £3.

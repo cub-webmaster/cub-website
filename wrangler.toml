@@ -8,4 +8,7 @@ compatibility_flags = ["nodejs_compat"]
 binding = "ASSETS"
 directory = ".svelte-kit/cloudflare"
 
+[secrets]
+required = [ "GOOGLE_API_KEY" ]
+
 [env.preview]

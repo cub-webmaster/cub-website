@@ -2,7 +2,7 @@
 	import Alert from '$components/common/Alert.svelte';
 	import Link from '$components/common/Link.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
-	import links from '$data/links';
+	import { committeePositions } from '$data/about/committee';
 </script>
 
 <PageSection>
@@ -40,7 +40,7 @@
 	<Alert>
 		We do not tolerate any form of bullying or discriminatory behaviour in our club. If you are
 		experiencing any abuse due to your gender expression, please contact our <Link
-			href={`mailto:${links.welfare_email.url}`}
+			href={`mailto:${committeePositions.welfare.email}`}
 			label="Welfare Officer"
 			external
 		/> immediately.
@@ -70,7 +70,7 @@
 		We understand and regret that this may hinder our gender non-conforming members from competing.
 		Regardless, CUB strives to remain welcoming to everyone - if you have any concerns regarding the
 		matter, or require any form of welfare support, please do not hesitate to contact our <Link
-			href={`mailto:${links.welfare_email.url}`}
+			href={`mailto:${committeePositions.welfare.email}`}
 			label="Welfare Officer"
 			external
 		/>.

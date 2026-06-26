@@ -5,6 +5,9 @@ name: Preview Deployment Cleanup
 on:
   pull_request:
     types: [closed]
+    paths-ignore:
+      - '.devcontainer/**'
+      - 'documentation/**'
 
 permissions:
   contents: read

@@ -3,6 +3,7 @@
 	import BoxList from '$components/common/BoxList.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
 	import links from '$data/links';
+	import { committeePositions } from '$data/about/committee';
 </script>
 
 <PageSection>
@@ -76,7 +77,7 @@
 	<p>
 		If you are interested in competing, but not sure how to start or what competitions there are
 		near us, feel free to reach out to our <Link
-			href={`mailto:${links.tournaments_email.url}`}
+			href={`mailto:${committeePositions.records.email}}`}
 			label="Tournaments Officer"
 			external
 		/> for help. We would love to help you get started with competing even if you aren't a student.

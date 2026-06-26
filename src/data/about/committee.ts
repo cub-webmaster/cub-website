@@ -1,13 +1,16 @@
-import links from '$data/links';
-
 export type CommitteeType = 'core' | 'welfare' | 'comms' | 'shooting';
+
+type Position = {
+	type: CommitteeType;
+	title: string;
+	email: string;
+};
 
 export interface CommitteeMember {
 	image?: string;
 	name: string;
-	email: string;
 	college: string;
-	position: string;
+	position: Position;
 }
 
 export const committeeTypeLabels: Record<CommitteeType, string> = {
@@ -17,77 +20,143 @@ export const committeeTypeLabels: Record<CommitteeType, string> = {
 	comms: 'Comms and Events'
 };
 
-export const committee: Record<CommitteeType, CommitteeMember[]> = {
-	core: [
-		{
-			position: 'Captain',
-			email: links.captain_email.url,
-			name: 'Amber Holt',
-			college: "Queen's"
-		},
-		{
-			position: 'Secretary',
-			email: links.secretary_email.url,
-			name: 'Emily Naden',
-			college: 'Peterhouse'
-		},
-		{
-			position: 'Treasurer',
-			email: links.treasurer_email.url,
-			name: 'Luke Vogt',
-			college: "St. Edmund's"
-		}
-	],
-	welfare: [
-		{
-			position: 'Welfare Officer',
-			email: links.welfare_email.url,
-			name: 'Alex Germain',
-			college: 'Pembroke'
-		},
-		{
-			position: 'Safety Officer',
-			email: links.safety_email.url,
-			name: 'Diana Galvan Sosa',
-			college: 'N/A (staff)'
-		}
-		// women's
-	],
-	shooting: [
-		//equipment
-		{
-			position: 'Tournaments Officer',
-			email: links.tournaments_email.url,
-			name: 'Alex Mappleback',
-			college: 'Churchill'
-		},
-		{
-			position: 'Novice Officer',
-			email: links.novice_email.url,
-			name: 'Sriyashas Mohan-Kalluri',
-			college: "King's"
-		},
-		{
-			position: 'Development Officer',
-			email: links.development_email.url,
-			name: 'Pegah Abyaneh',
-			college: 'Gonville and Caius'
-		}
-	],
-	comms: [
-		// social secretary
-		//publicity
-		{
-			position: 'Alumni Officer',
-			email: links.alumni_email.url,
-			name: 'Rachel Tam',
-			college: "Christ's (alumni)"
-		},
-		{
-			position: 'Webmaster',
-			email: links.webmaster_email.url,
-			name: 'Rachel Tam',
-			college: "Christ's (alumni)"
-		}
-	]
+export const committeePositions: Record<string, Position> = {
+	captain: {
+		title: 'Co-Captain',
+		email: 'captain@cubowmen.com',
+		type: 'core'
+	},
+	secretary: {
+		title: 'Secretary',
+		email: 'secretary@cubowmen.com',
+		type: 'core'
+	},
+	treasurer: {
+		title: 'Treasurer',
+		email: 'treasurer@cubowmen.com',
+		type: 'core'
+	},
+	welfare: {
+		title: 'Welfare Officer',
+		email: 'welfare@cubowmen.com',
+		type: 'welfare'
+	},
+	safety: {
+		title: 'Safety Officer',
+		email: 'safety@cubowmen.com',
+		type: 'welfare'
+	},
+	womens: {
+		title: "Women's Officer",
+		email: 'womens@cubowmen.com',
+		type: 'welfare'
+	},
+	novice: {
+		title: 'Novice Officer',
+		email: 'novice@cubowmen.com',
+		type: 'shooting'
+	},
+	development: {
+		title: 'Development Officer',
+		email: 'development@cubowmen.com',
+		type: 'shooting'
+	},
+	records: {
+		title: 'Tournaments & Records Officer',
+		email: 'tournaments@cubowmen.com',
+		type: 'shooting'
+	},
+	equipment: {
+		title: 'Equipment Officer',
+		email: 'equipment@cubowmen.com',
+		type: 'shooting'
+	},
+	webmaster: {
+		title: 'Webmaster',
+		email: 'webmaster@cubowmen.com',
+		type: 'comms'
+	},
+	publicity: {
+		title: 'Publicity Officer',
+		email: 'publicity@cubowmen.com',
+		type: 'comms'
+	},
+	alumni: {
+		title: 'Alumni Officer',
+		email: 'alumni@cubowmen.com',
+		type: 'comms'
+	},
+	social: {
+		title: 'Social Secretary',
+		email: 'social@cubowmen.com',
+		type: 'comms'
+	}
 };
+
+export const committeeMembers: CommitteeMember[] = [
+	{
+		position: committeePositions.captain,
+		name: 'Amber Holt',
+		college: "Queens'"
+	},
+	{
+		position: committeePositions.captain,
+		name: 'Alex Mapplebeck',
+		college: 'Churchill'
+	},
+	{
+		position: committeePositions.secretary,
+		name: 'Emily Naden',
+		college: 'Peterhouse'
+	},
+	{
+		position: committeePositions.treasurer,
+		name: 'Sriyashas Mohan-Kalluri',
+		college: "King's"
+	},
+	{
+		position: committeePositions.welfare,
+		name: 'Lanyu Chen',
+		college: 'Jesus'
+	},
+	{
+		position: committeePositions.safety,
+		name: 'Diana Galvan Sosa',
+		college: 'N/A (staff)'
+	},
+	{
+		position: committeePositions.equipment,
+		name: 'Julia Wang',
+		college: 'Homerton'
+	},
+	{
+		position: committeePositions.novice,
+		name: 'Matthew Bradley',
+		college: 'Jesus'
+	},
+	{
+		position: committeePositions.novice,
+		name: 'Lanyu Chen',
+		college: 'Jesus'
+	},
+	{
+		position: committeePositions.development,
+		name: 'Matthew Bradley',
+		college: 'Jesus'
+	},
+	{
+		position: committeePositions.social,
+		name: 'Esther Tam',
+		college: 'Downing'
+	},
+	{
+		position: committeePositions.social,
+		name: 'Alastair Rial',
+		college: 'Lucy Cavendish'
+	},
+	{
+		position: committeePositions.publicity,
+		name: 'Esther Tam',
+		college: 'Downing'
+	}
+];

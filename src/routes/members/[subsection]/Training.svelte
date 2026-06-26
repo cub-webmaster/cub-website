@@ -4,6 +4,7 @@
 	import Link from '$components/common/Link.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
 	import TrainingSchedule from '$components/members/TrainingSchedule.svelte';
+	import { committeePositions } from '$data/about/committee';
 	import links from '$data/links';
 	import CalendarX from '@iconify-svelte/lucide/calendar-x';
 
@@ -127,7 +128,7 @@
 		Development Officer regarding signups for coaching. We have limited slots every term as our
 		coach only works with a couple archers at a time, so make sure to sign up quickly when the
 		chance arises! If you have more questions about coaching, feel free to email the <Link
-			href={`mailto:${links.development_email.url}`}
+			href={`mailto:${committeePositions.development.email}`}
 			label="Development Officer"
 			external
 		/> about it.
