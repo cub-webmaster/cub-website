@@ -1,3 +1,19 @@
 {
-	"build": { "dockerfile": "Dockerfile" }
+	"name": "cub-webmaster",
+	"image": "mcr.microsoft.com/devcontainers/typescript-node:24",
+	"postCreateCommand": "sudo corepack enable && echo 'y' | yarn install",
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+				"svelte.svelte-vscode",
+				"stringham.move-ts",
+				"pmneo.tsimporter",
+				"christian-kohler.path-intellisense",
+				"esbenp.prettier-vscode",
+				"formulahendry.auto-rename-tag"
+			]
+		}
+	}
 }
