@@ -3,6 +3,9 @@ name: Deploy Preview Site
 on:
   pull_request:
     branches: [live]
+    paths-ignore:
+      - '.devcontainer/**'
+      - 'documentation/**'
     types: [opened, synchronize, reopened]
 
 jobs:

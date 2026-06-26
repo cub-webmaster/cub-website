@@ -3,6 +3,9 @@ name: Build Test
 on:
   pull_request:
     branches: [main, live]
+    paths-ignore:
+      - '.devcontainer/**'
+      - 'documentation/**'
 jobs:
   build:
     concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
