@@ -130,6 +130,11 @@ export const committeeMembers: CommitteeMember[] = [
 		college: 'Homerton'
 	},
 	{
+		position: committeePositions.equipment,
+		name: 'Dhanya Swami',
+		college: 'Trinity'
+	},
+	{
 		position: committeePositions.novice,
 		name: 'Matthew Bradley',
 		college: 'Jesus'
