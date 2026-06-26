@@ -32,12 +32,31 @@ jobs:
         run: |
           yarn install
           yarn build
+          touch .env
+          echo ${{ env.GOOGLE_API_KEY }} >> .env
 
-      # All-in-one deployment with automatic PR commenting
-      - name: Deploy to Preview
-        uses: harunonsystem/cf-workers-actions/preview-deploy@v1.2.1
+      # Prepare preview deployment (generate URL and update wrangler.toml)
+      - name: Prepare Preview Deployment
+        id: prepare
+        uses: harunonsystem/cf-workers-actions/prepare-preview-deploy@v1.2.1
         with:
-          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          cloudflare-account-id: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           worker-name: 'cub-website-preview-${{ github.event.pull_request.number }}'
+          environment: 'preview'
           domain: 'dry-meadow-02d4.workers.dev'
+
+      - name: Deploy to Preview
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: deploy -e preview --secrets-file .env
+
+      # Comment on PR with deployment status
+      - name: Comment on PR
+        if: always()
+        uses: harunonsystem/cf-workers-actions/pr-comment@v1.2.1
+        with:
+          deployment-url: ${{ steps.prepare.outputs.deployment-url }}
+          deployment-success: ${{ steps.deploy.outcome == 'success' && 'true' || 'false' }}
+          deployment-name: ${{ steps.prepare.outputs.deployment-name }}
