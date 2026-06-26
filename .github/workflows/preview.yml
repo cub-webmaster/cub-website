@@ -33,7 +33,7 @@ jobs:
           yarn install
           yarn build
           touch .env
-          echo ${{ env.GOOGLE_API_KEY }} >> .env
+          echo 'GOOGLE_API_KEY=${{ env.GOOGLE_API_KEY }}' >> .env
 
       # Prepare preview deployment (generate URL and update wrangler.toml)
       - name: Prepare Preview Deployment
