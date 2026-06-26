@@ -27,6 +27,7 @@
 
 	import { generateClassString } from '$lib/util';
 	import { resolve } from '$app/paths';
+	import { committeePositions } from '$data/about/committee';
 
 	const bluesCriteria = [
 		'Ability',
@@ -61,7 +62,7 @@
 				</p>
 				<p>
 					They may be obtained from the club <Link
-						href={`mailto:${links.tournaments_email.url}`}
+						href={`mailto:${committeePositions.records.email}`}
 						label="Records Officer"
 						external
 					/> upon presentation of a qualifying score shot in competition or on an official club target
@@ -116,7 +117,7 @@
 					>
 					and show it, signed and witnessed, to the Tournaments and Records Officer at a shooting session
 					or email it to the Records Officer <Link
-						href={`mailto:${links.tournaments_email.url}`}
+						href={`mailto:${committeePositions.records.email}`}
 						label="here"
 						external
 					/>.
@@ -139,7 +140,7 @@
 				<p>
 					To claim a badge, print the corresponding scoresheet and get a committee member to sign
 					off each box as you achieve them. A badge can be claimed for £3 from the <Link
-						href={`mailto:${links.tournaments_email.url}`}
+						href={`mailto:${committeePositions.records.email}`}
 						label="Records Officer"
 						external
 					/>.
@@ -181,7 +182,7 @@
 	<p>
 		We've listed some that are likely to be relevant to our archers here, but there might be more
 		featured on each governing body's website. Feel free to reach out to the <Link
-			href={`mailto:${links.tournaments_email.url}`}
+			href={`mailto:${committeePositions.records.email}`}
 			label="Records Officer"
 			external
 		/> if you need help finding information on a specific award.
@@ -362,8 +363,8 @@
 	</div>
 	<p>
 		All Blues related criteria specified above are correct as of May 2026. Please contact the
-		<Link href={`mailto:${links.captain_email.url}`} label="Captain" external /> or <Link
-			href={`mailto:${links.tournaments_email.url}`}
+		<Link href={`mailto:${committeePositions.captain.email}`} label="Captain" external /> or <Link
+			href={`mailto:${committeePositions.records.email}`}
 			label="Records Officer"
 			external
 		/> if you suspect these are out of date.

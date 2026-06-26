@@ -5,11 +5,11 @@
 	import BoxList from '$components/common/BoxList.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
 	import { fees } from '$data/join/fees';
-	import links from '$data/links';
 	import { squadCommitments, squadPerks } from '$data/members/competitions';
 	import CircleStar from '@iconify-svelte/lucide/circle-star';
 	import Dumbbell from '@iconify-svelte/lucide/dumbbell';
 	import List from '$components/common/List.svelte';
+	import { committeePositions } from '$data/about/committee';
 </script>
 
 <PageSection>
@@ -108,8 +108,8 @@
 	<p>
 		See below for more details on the relevant commitments and perks of being on the Novice Squad.
 		Further questions can be directed to the
-		<Link href={`mailto:${links.novice_email.url}`} label="Novice Officer" external /> who is responsible
-		for making the squad selection and coaching the squad.
+		<Link href={`mailto:${committeePositions.novice.email}`} label="Novice Officer" external /> who is
+		responsible for making the squad selection and coaching the squad.
 	</p>
 
 	<div class="grid lg:grid-cols-2 gap-4">

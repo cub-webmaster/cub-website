@@ -3,8 +3,8 @@
 	import CaptionedImage from '$components/common/CaptionedImage.svelte';
 	import Link from '$components/common/Link.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
+	import { committeePositions } from '$data/about/committee';
 	import { fees } from '$data/join/fees';
-	import links from '$data/links';
 	import noviceToucanImg from '$lib/assets/img/TOUCAN_cam_2025.jpg';
 </script>
 
@@ -68,7 +68,7 @@
 	/>
 	<p>
 		If this interests you, please contact the <Link
-			href={`mailto:${links.equipment_email.url}`}
+			href={`mailto:${committeePositions.equipment.email}`}
 			external
 			label="Equipment Officer"
 		/> for more details. Note that we prioritise novice squad members when renting out equipment, so there

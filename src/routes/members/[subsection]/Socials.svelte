@@ -2,7 +2,7 @@
 	import Accordian from '$components/common/Accordian.svelte';
 	import Link from '$components/common/Link.svelte';
 	import PageSection from '$components/layout/PageSection.svelte';
-	import links from '$data/links';
+	import { committeePositions } from '$data/about/committee';
 	import { annualEvents, miscEvents } from '$data/members/socials';
 </script>
 
@@ -16,7 +16,7 @@
 		can get up to, do <Link
 			label="get in touch"
 			external
-			href={`mailto:${links.social_email.url}`}
+			href={`mailto:${committeePositions.social.email}`}
 		/> or better yet, join the committee as a Social Secretary!
 	</p>
 </PageSection>

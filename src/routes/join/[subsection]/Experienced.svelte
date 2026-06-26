@@ -6,6 +6,7 @@
 	import PageSection from '$components/layout/PageSection.svelte';
 	import { fees } from '$data/join/fees';
 	import links from '$data/links';
+	import { committeePositions } from '$data/about/committee';
 </script>
 
 <PageSection>
@@ -13,7 +14,7 @@
 		CUB is open to all students and staff of the University of Cambridge. If you're interested in
 		joining us as an experienced archer, i.e. anyone who is already capable of shooting
 		independently without the beginners' course, please get in touch with the <Link
-			href={`mailto:${links.captain_email.url}`}
+			href={`mailto:${committeePositions.captain.email}`}
 			label="Captain"
 			external
 		/>

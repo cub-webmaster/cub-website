@@ -14,6 +14,7 @@ import { resolve } from '$app/paths';
 import waRounds from '$lib/assets/docs/wa-rounds.pdf';
 import indoorRounds from '$lib/assets/docs/indoor-rounds-explained.pdf';
 import outdoorRounds from '$lib/assets/docs/outdoor-rounds-guide.pdf';
+import { committeePositions } from '$data/about/committee';
 
 export const resources: ResourceCategory[] = [
 	{
@@ -93,7 +94,7 @@ export const resources: ResourceCategory[] = [
 						title: 'Care Resources',
 						info: [
 							`Bingham Archers has a very comprehensive guide on equipment care and tuning [here](${links.maintenance_bingham.url})`,
-							`Maintenance tools like a fletching jig or string wax can be borrowed from the club, feel free to contact the [Equipment Officer](${links.equipment_email.url}) if you have specific inquiries`
+							`Maintenance tools like a fletching jig or string wax can be borrowed from the club, feel free to contact the [Equipment Officer](${committeePositions.equipment.email}) if you have specific inquiries`
 						]
 					},
 					{
@@ -214,9 +215,9 @@ export const resources: ResourceCategory[] = [
 					{
 						title: 'Useful contacts',
 						info: [
-							`Welfare Officer: [${links.welfare_email.url}](mailto:${links.welfare_email.url})`,
+							`Welfare Officer: [${committeePositions.welfare.email}](mailto:${committeePositions.welfare.email})`,
 							`Uni Sports Service Welfare: [${links.uni_sports_welfare.url}](mailto:${links.uni_sports_welfare.url})`,
-							`Safety Officer: [${links.safety_email.url}](mailto:${links.safety_email.url})`
+							`Safety Officer: [${committeePositions.safety.email}](mailto:${committeePositions.safety.email})`
 						]
 					}
 				]
