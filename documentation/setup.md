@@ -12,7 +12,7 @@ To access this, first ensure that you are logged into the cub-webmaster GitHub a
 
 <!-- TODO add pic here -->
 
-Now click the `Create codespace on main` button to set up the IDE. This has already been configured to install everything you would need for this codespace, so you can start making your edits right away. (For those interested, the relevant configuration for this is in the `.devcontainer` directory)
+Now click the `Create codespace on main` button to set up the IDE. It would take a few minutes to load, but this has already been configured to install everything you would need for this codespace, so you can start making your edits right away without thinking too much about downloading the right tools. (For those interested, the relevant configuration for this is in the `.devcontainer` directory)
 
 > [!CAUTION]
 > Note that free usage of codespaces is limited and the webmaster account will be charged if usage exceeds the limits detailed [here](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces#free-and-billed-use-by-personal-accounts). For major changes that will take a long time it is recommended to use a local setup instead.

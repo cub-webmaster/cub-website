@@ -5,6 +5,7 @@ import { calendar } from '@googleapis/calendar';
 import { GOOGLE_API_KEY } from '$env/static/private';
 
 export const prerender = 'auto';
+// don't prerender training page as calendar session is not static
 export const entries = subsectionEntryGenerator(membersSection, ['training']);
 
 export const load: PageServerLoad = async ({ params }) => {
