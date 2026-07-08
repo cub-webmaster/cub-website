@@ -1,3 +1,10 @@
 {
-	"recommendations": ["svelte.svelte-vscode", "esbenp.prettier-vscode", "dbaeumer.vscode-eslint"]
+	"recommendations": [
+		"svelte.svelte-vscode",
+		"esbenp.prettier-vscode",
+		"dbaeumer.vscode-eslint",
+		"stringham.move-ts",
+		"pmneo.tsimporter",
+		"christian-kohler.path-intellisense",
+	    "formulahendry.auto-rename-tag"]
 }
