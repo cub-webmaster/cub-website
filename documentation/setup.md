@@ -31,11 +31,12 @@ This will give you a preview of the website with the edits you've made. Make sur
 
 Once you've committed your changes to the main branch, you can open a pull request (PR) directly in the codespace by following the guidance [here](https://docs.github.com/en/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace#raising-a-pull-request). Remember that you have to open a PR and merge it into the live branch for your changes to reflect in the actual website.
 
-More on branch management and Git related best practices here, or move on to familiarising yourself with the basics of this codebase [here](basics.md).
+More on Git related best practices and the basics of this codebase [here](basics.md).
 
 <!-- TODO add link to git advice -->
 
 <a name="local" />
+
 ## :desktop_computer: Local Setup
 
 To set up development on a local environment, first make sure that you have ALL of the following installed on your machine:

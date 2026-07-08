@@ -1,6 +1,8 @@
 # Cambridge University Bowmen official website
 
-![Error loading logo](src/lib/assets/icons/logo.svg 'CUB logo')
+<div style="display:flex; justify-content:center">
+<img src="src/lib/assets/icons/logo.svg" alt="CUB logo" style="width:300px" />
+</div>
 
 Official website for Cambridge University Bowmen circa summer 2026. Please email webmaster@cubowmen.com for questions or issues.
 

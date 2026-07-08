@@ -28,6 +28,7 @@ If you are finding this daunting, there are some guidance of where you need to m
 This documentation is mostly written with assumption of basic Git knowledge i.e. you understand stuff like committing, pushing and pulling from remote repositories on GitHub. If you aren't comfortable with that I would recommend reading [this](https://cloud-and-devops.hashnode.dev/git101-abeginnersguideforgit) to start.
 
 Usually, all you would need are the following:
+
 ```bash
 # include file to next commit
 git add <filename>
@@ -61,6 +62,7 @@ Only merge the branch into `live` once the checks have passed you've double chec
 ## :artist: Key Design Elements
 
 ### Colours
+
 The main colour palette used on this website are as follows:
 
 - **Primary** - ![#cae3d2](https://placehold.co/15x15/cae3d2/cae3d2.png) `#cae3d2 (light cam blue)`
@@ -80,10 +82,13 @@ The main colour palette used on this website are as follows:
 These colours (other than the last 2) are already in the website theme specified in `src/app.css` and can be accessed via the relevant classes using their semantic name e.g. `bg-primary` for light cam blue backgrounds.
 
 ### Icons
+
 We use [lucide icons](https://lucide.dev/) for this website (but through [iconify](https://icon-sets.iconify.design/lucide/) for faster building), so look at their icons catalogue if you would like to add icons to any content while maintaining the same look and feel.
 
 ### Other Important Design Elements
+
 There are a few elements to work together to make the entire website look cohesive. Succinctly, they are
+
 - sharp corner on boxes
 - slightly darker background and light cam blue borders on most boxes
 - consistent section heading look (red thick partial underline)
@@ -107,8 +112,8 @@ Please monitor and prompt fellow committee members to keep these up to date (whe
 
 ## :memo: Common Maintenance Tasks
 
-- [Updating committee information](documentation/examples/committee.md)
-- [Adding new images/documents](documentation/examples/images_docs.md)
-- [Changing the wording of existing pages](documentation/examples/wording.md)
-- [Opening signup for Beginners' Course](documentation/examples/beginners.md)
-- [Editing resources page](documentation/examples/resources.md)
+- [Updating committee information](examples/committee.md)
+- [Adding new images/documents](examples/images_docs.md)
+- [Changing the wording of existing pages](examples/wording.md)
+- [Opening signup for Beginners' Course](examples/beginners.md)
+- [Editing resources page](examples/resources.md)
