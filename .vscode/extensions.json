@@ -6,5 +6,6 @@
 		"stringham.move-ts",
 		"pmneo.tsimporter",
 		"christian-kohler.path-intellisense",
-	    "formulahendry.auto-rename-tag"]
+		"formulahendry.auto-rename-tag"
+	]
 }
