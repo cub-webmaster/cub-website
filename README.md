@@ -1,4 +1,4 @@
-# Cambridge University Bowmen official website
+# :bow_and_arrow: Cambridge University Bowmen official website :bow_and_arrow:
 
 <div style="display:flex; justify-content:center">
 <img src="src/lib/assets/icons/logo.svg" alt="CUB logo" style="width:300px" />
@@ -9,14 +9,13 @@ Official website for Cambridge University Bowmen circa summer 2026. Please email
 > [!WARNING]
 > This codebase is still a work in progress, and doesn't reflect the content that is currently shown on our website.
 
-<a name="quick-start" />
-
 ## :zap: Quick start
 
 For new webmasters, please see [here](documentation/setup.md) to learn about the setup needed for maintaining the website and [here](documentation/basics.md) for some basic knowledge needed for working with this codebase. Some examples of common maintenance tasks needed are also documented and linked below:
 
 - [Updating committee information](documentation/examples/committee.md)
 - [Adding new images/documents](documentation/examples/images_docs.md)
+- [Changing the wording of existing pages](examples/wording.md)
 - [Opening signup for Beginners' Course](documentation/examples/beginners.md)
 - [Editing resources page](documentation/examples/resources.md)
 
@@ -45,4 +44,4 @@ The website was created from scratch using the following (key reading are noted 
 
 Note that it is understandable that sometimes club webmasters might not necessarily be familiar with coding and it is fine if you aren't able to grasp everything above. The only absolute must here is the Svelte and SvelteKit tutorials to help you understand the structure of the codebase, as well as some basic understanding of Git.
 
-All important maintenance tasks are documented in beginner friendly ways in other parts of the documentation. Feel free to browse the `documentation` folder or go back to the [Quick Start](#quick-start) section to find what you need.
+All important maintenance tasks are documented in beginner friendly ways in other parts of the documentation. Feel free to browse the `documentation` folder or go back to the [Quick Start](#-quick-start) section to find what you need.

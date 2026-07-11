@@ -1,5 +1,5 @@
 <script lang="ts">
-	import genericImage from '$lib/assets/img/generic.jpg';
+	import genericImage from '$lib/assets/img/committee/generic.jpg';
 	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
 
 	let height = $state(0);

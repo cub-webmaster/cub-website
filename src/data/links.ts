@@ -4,6 +4,8 @@ interface Link {
 }
 
 const links: Record<string, Link> = {
+	beginners_form: { url: '', label: "Beginners' Course Signup Form" },
+	tasters_form: { url: '', label: "Taster's Signup Form" },
 	instagram: { url: 'https://www.instagram.com/camuniarchery/', label: 'CUB instagram' },
 	facebook: { url: 'https://www.facebook.com/camuniarchery/', label: 'CUB facebook' },
 	twitter: { url: 'https://twitter.com/CamUniArchery', label: 'CUB twitter(X)' },

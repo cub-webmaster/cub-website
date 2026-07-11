@@ -1,15 +1,15 @@
 import constitution from '$lib/assets/docs/constitution.pdf';
-import privacy from '$lib/assets/docs/Privacy Notice Statement.pdf';
-import social from '$lib/assets/docs/Social_Media_Policy.pdf';
-import risk from '$lib/assets/docs/Risk Assessment.pdf';
-import safety from '$lib/assets/docs/Safety Statement.pdf';
-import welfare from '$lib/assets/docs/Welfare Policy.pdf';
-import safeguarding from '$lib/assets/docs/AGB_safeguarding_children_0125.pdf';
-import cubcode from '$lib/assets/docs/Code of Conduct 2024-25.pdf';
-import etiquette from '$lib/assets/docs/Etiquette Guidelines.pdf';
-import rules from '$lib/assets/docs/AGB_rules_of_shooting_0125.pdf';
-import agbcode from '$lib/assets/docs/AGB_code_of_conduct.pdf';
-import admin from '$lib/assets/docs/AGB_shooting_admin_procedures_0125.pdf';
+import privacy from '$lib/assets/docs/privacy-notice-statement.pdf';
+import social from '$lib/assets/docs/social-media-policy.pdf';
+import risk from '$lib/assets/docs/risk-assessment.pdf';
+import safety from '$lib/assets/docs/safety-statement.pdf';
+import welfare from '$lib/assets/docs/welfare-policy.pdf';
+import safeguarding from '$lib/assets/docs/agb-safeguarding-children.pdf';
+import cubcode from '$lib/assets/docs/code-of-conduct.pdf';
+import etiquette from '$lib/assets/docs/etiquette-guidelines.pdf';
+import rules from '$lib/assets/docs/agb-rule-of-shooting.pdf';
+import agbcode from '$lib/assets/docs/agb-code-of-conduct.pdf';
+import admin from '$lib/assets/docs/agb-shooting-admin-procedures.pdf';
 import links from '$data/links';
 
 type DocCategory = 'core' | 'shooting' | 'data';

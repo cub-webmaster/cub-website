@@ -1,8 +1,6 @@
 # Setting up
 
-For ease of use of those less comfortable with coding or might not want to set up their own IDE, see the section on the [GitHub Codespace](#codespace) to get started. For those who are more advanced and would like to develop locally use their own IDE, go [Local Setup](#local) instead.
-
-<a name="codespace"/>
+For ease of use of those less comfortable with coding or might not want to set up their own IDE, see the section on the [GitHub Codespace](#octocat-github-codespace) to get started. For those who are more advanced and would like to develop locally use their own IDE, go [Local Setup](#️-local-setup) instead.
 
 ## :octocat: GitHub Codespace
 
@@ -33,9 +31,7 @@ Once you've committed your changes to the main branch, you can open a pull reque
 
 More on Git related best practices and the basics of this codebase [here](basics.md).
 
-<!-- TODO add link to git advice -->
-
-<a name="local" />
+When you're done with the codespace, make sure to delete it so it doesn't take up space on the cloud for a long time, which can end up getting you charged (see warning above on free usage limits).
 
 ## :desktop_computer: Local Setup
 
