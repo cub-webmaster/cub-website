@@ -106,7 +106,7 @@ For the most basic, no-frills use cases, simply use the `img` tag as is. You can
 
 ### `CaptionedImage`
 
-<!-- todo add pic -->
+<image src="../images/captioned_image_example.png" alt="An example of a CaptionedImage component as used in the live website" />
 
 This is a simple image display component that comes with built in captioning and optional credits. This should be used for the majority of decorative image use cases and flows well with text blocks in `PageSection`. See below for an example:
 
@@ -128,7 +128,7 @@ This is a simple image display component that comes with built in captioning and
 
 ### `Carousel`
 
-<!-- todo add pic -->
+<image src="../images/carousel_example.png" alt="An example of a Carousel component as used in the live website" />
 
 We also have a useful carousel component for displaying multiple images in a row, with a separate design from the front page carousel to fit better with our standard content layouts. See below for an example use case:
 

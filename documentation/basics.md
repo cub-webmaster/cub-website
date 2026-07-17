@@ -15,13 +15,9 @@ This codebase is written with a relatively strict DRY (don't repeat yourself) ph
 
 Similarly, to ensure that when links need to change, we only need to change them at one place instead of repeatedly editing everywhere it's referenced, we also use a central links file (`src/data/links.ts`) to source all external links from.
 
-<!-- TODO add pic -->
-
 When trying to identify where an edit needs to be made, first look for the relevant page under `routes`. If you're looking to make changes to unique text content, then you can do it directly in the file.
 
 However, if you may find that the relevant data/component is in another file. In this case, you should identify the relevant parent section (e.g. Join or About) and find the folder of that name under either `components` or `data`. Future webmasters are also encouraged to keep this pattern of using the url routes structure in these to directories when creating new files. This will ensure that the codebase stays organised and that things are easy to find.
-
-<!-- TODO add pic -->
 
 If you are finding this daunting, there are some guidance of where you need to make edits for common tasks can be found in the [last section](#-common-maintenance-tasks). Use these are examples to familiarise yourself with the codebase before you make important edits.
 
@@ -46,9 +42,9 @@ git pull
 
 ```
 
-If you are using vscode, using the graphic interface provided might also be more comfortable than using the command line.
+If you are using vscode or the codespace›, using the graphic interface provided might also be more comfortable than using the command line.
 
-<!-- TODO add pic -->
+<img src="images/git_gui.png" alt="Git graphic interface on VS Code" />
 
 Beyond the general stuff, there is one basic rule that I need all webmasters to respect: **DO NOT commit or push directly into the `live` branch.**
 
