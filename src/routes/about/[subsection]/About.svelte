@@ -42,11 +42,10 @@
 		Archery at Cambridge is also a Full Blue sport. This is usually awarded to high achieving
 		members who have shown both dedication to the sport as well as excellent performance in
 		competition settings.
-		<!-- TODO couple relatively recent high achievers -->
 	</p>
 	<CaptionedImage
 		src={mascotImg}
-		alt="Our mascot: a lion cub plush, at BUCS 2026"
+		alt="Our mascot: Cubby the lion cub, at BUCS 2026"
 		credit="Malcolm Rees"
 	/>
 </PageSection>

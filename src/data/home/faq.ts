@@ -1,13 +1,23 @@
 import { resolve } from '$app/paths';
 import type { ResolvedPathname } from '$app/types';
+import links from '$data/links';
+
+export type RelatedLink =
+	| {
+			link: ResolvedPathname;
+			label: string;
+			external?: false;
+	  }
+	| {
+			link: string;
+			label: string;
+			external: true;
+	  };
 
 interface Faq {
 	question: string;
 	answer: string;
-	related?: {
-		link: ResolvedPathname;
-		label: string;
-	}[];
+	related?: RelatedLink[];
 }
 
 export const landingPageFaqs: Faq[] = [
@@ -53,7 +63,8 @@ export const landingPageFaqs: Faq[] = [
 			},
 			{
 				label: 'AGB membership guide',
-				link: resolve('/resources#agb-membership')
+				link: links.agb_guide.url,
+				external: true
 			}
 		]
 	},

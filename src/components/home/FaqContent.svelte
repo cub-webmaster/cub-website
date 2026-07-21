@@ -1,10 +1,7 @@
 <script lang="ts">
-	import type { ResolvedPathname } from '$app/types';
+	import type { RelatedLink } from '$data/home/faq';
 	import CircleChevronRight from '@iconify-svelte/lucide/circle-chevron-right';
-	const {
-		related,
-		answer
-	}: { answer: string; related?: { link: ResolvedPathname; label: string }[] } = $props();
+	const { related, answer }: { answer: string; related?: RelatedLink[] } = $props();
 </script>
 
 <p class="text-neutral/80">
@@ -12,11 +9,15 @@
 </p>
 {#if related}
 	<div class="pt-8 flex flex-wrap gap-y-2 gap-x-8">
-		{#each related as { link, label }, i (i)}
+		{#each related as { link, label, external }, i (i)}
 			<div class="flex gap-2 items-center">
 				<div class="bg-primary font-semibold py-1 px-2 shrink-0">Related link</div>
 				<CircleChevronRight height="1rem" class="text-secondary" />
-				<a href={link} class="link link-info link-hover font-semibold">{label}</a>
+				<a
+					href={link}
+					class="link link-info link-hover font-semibold"
+					rel={external ? 'external' : ''}>{label}</a
+				>
 			</div>
 		{/each}
 	</div>

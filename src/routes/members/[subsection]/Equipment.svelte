@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { resolve } from '$app/paths';
 	import Alert from '$components/common/Alert.svelte';
 	import CaptionedImage from '$components/common/CaptionedImage.svelte';
 	import Link from '$components/common/Link.svelte';
@@ -85,10 +86,9 @@
 	<p>
 		Buying your first personal set of equipment is an exciting milestone in every archer's journey,
 		but it can also be quite daunting! If you are in a position where you are not sure where to
-		start, here are some useful online resources that can help, and a few archery shops that our
-		archers would recommend.
+		start, <Link label="here" external={false} href={resolve('/resources#shooting-equipment')} /> are
+		some useful online resources that can help, and a few archery shops that our archers would recommend.
 	</p>
-	<!-- TODO -->
 	<p>
 		At the same time, feel free to talk to a committee member or a more experienced archer for
 		advice. We're always happy to support our fellow archers and share our experience with each

@@ -174,6 +174,12 @@ export const resources: ResourceCategory[] = [
 				id: 'rounds-records',
 				items: [
 					{
+						title: 'Club records',
+						external: true,
+						url: links.records_sheet.url,
+						info: ['We maintain club records of the highest scorers for each round/category here ']
+					},
+					{
 						title: 'Round Specifications',
 						info: [
 							`There are a lot of different rounds under the World Archery umbrella, you can find an excerpt of the WA rulebooks on the rounds pertaining to target archery [here](${waRounds})`,
@@ -187,12 +193,6 @@ export const resources: ResourceCategory[] = [
 							`Imperial Scoring, AKA 5-zone scoring, is scored only by each of the colour zones i.e. 9 for gold, 7 for red, 5 for blue and so on`,
 							`Metric Scoring, AKA 10-zone scoring, on the other hand uses all 10 rings on the target facee and are scored from 1 to 10`
 						]
-					},
-					{
-						title: 'Club records',
-						external: true,
-						url: links.records_sheet.url,
-						info: ['We maintain club records of the highest scorers for each round/category here ']
 					}
 				]
 			}

@@ -61,9 +61,8 @@
 		The beginners' course will take place over four Sunday mornings in Michaelmas term, starting on
 		the {beginnersCourseStartDate} in {recruitmentYear}, and contains all the coaching necessary to
 		allow you to shoot safely and independently, as well as introducing you to the wider sport of
-		archery. All required equipment will be provided by the club.<b
-			>All four sessions of the course are mandatory.</b
-		>
+		archery. All required equipment will be provided by the club.
+		<b>All four sessions of the course are mandatory.</b>
 	</p>
 
 	{#if beginnerRecruitmentOngoing}
