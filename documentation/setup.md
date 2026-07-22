@@ -1,8 +1,6 @@
 # Setting up
 
-For ease of use of those less comfortable with coding or might not want to set up their own IDE, see the section on the [GitHub Codespace](#codespace) to get started. For those who are more advanced and would like to develop locally use their own IDE, go [Local Setup](#local) instead.
-
-<a name="codespace"/>
+For ease of use of those less comfortable with coding or might not want to set up their own IDE, see the section on the [GitHub Codespace](#octocat-github-codespace) to get started. For those who are more advanced and would like to develop locally use their own IDE, go [Local Setup](#️-local-setup) instead.
 
 ## :octocat: GitHub Codespace
 
@@ -10,9 +8,9 @@ GitHub provides an online editor with everything you need to effectively make ed
 
 To access this, first ensure that you are logged into the cub-webmaster GitHub account (or any other GitHub account with access) navigate to the front page of this codebase. Click the `Code` button on the top right corner of the main section and choose the codespaces tab.
 
-<!-- TODO add pic here -->
+<img src="images/codespace_init.png" alt="Image of the GitHUb web interface where code button has been pressed and a dropdown has been triggered, where the option to open a new codespace is available"/>
 
-Now click the `Create codespace on main` button to set up the IDE. It would take a few minutes to load, but this has already been configured to install everything you would need for this codespace, so you can start making your edits right away without thinking too much about downloading the right tools. (For those interested, the relevant configuration for this is in the `.devcontainer` directory)
+Now click the `Create codespace on main` button to set up the IDE. It would open in a new tab and take a few minutes to load, but this has already been configured to install everything you would need for working with the code, so you can start making your edits right away without thinking too much about downloading the right tools. (For those interested, the relevant configuration for this is in the `.devcontainer` directory)
 
 > [!CAUTION]
 > Note that free usage of codespaces is limited and the webmaster account will be charged if usage exceeds the limits detailed [here](https://docs.github.com/en/billing/concepts/product-billing/github-codespaces#free-and-billed-use-by-personal-accounts). For major changes that will take a long time it is recommended to use a local setup instead.
@@ -25,18 +23,21 @@ Once you are satisfied with your edits, run the following command in the termina
     yarn dev
 ```
 
-<!--TODO add pic-->
+<img src="images/codespace_run_dev.png" alt="A screenshot of the codespace interface with the above command run in the terminal given as an example of a successful run. Notably, the success message gives the url to the preview website that can be followed for checking any edits made." />
 
-This will give you a preview of the website with the edits you've made. Make sure to check that everything looks as expected before committing your changes.
+This will give you a preview of the website with the edits you've made. Make sure to check that everything looks as expected before committing your changes. You can also press `q` then `enter` to quit the local server once you've done your checks.
+
+> [!NOTE]
+> For the sake of security, the Google API key that enables communication with Google Calendar (as well as other secrets) are not set up on codespaces, you will have to manually set up the .env file with the correct values if you need to access the training page locally (or any other pages that access secrets).
 
 Once you've committed your changes to the main branch, you can open a pull request (PR) directly in the codespace by following the guidance [here](https://docs.github.com/en/codespaces/developing-in-a-codespace/using-source-control-in-your-codespace#raising-a-pull-request). Remember that you have to open a PR and merge it into the live branch for your changes to reflect in the actual website.
 
 More on Git related best practices and the basics of this codebase [here](basics.md).
 
-<!-- TODO add link to git advice -->
+> [!CAUTION]
+> When you're done with the codespace, make sure to delete it (same place you started the codespace up from) so it doesn't take up space on the cloud for a long time, which can end up getting you charged (see warning above on free usage limits).
 
-<a name="local" />
-
+<img src="images/codespace_delete.png" alt="Demo of how to delete a codespace on the GitHub web interface. A dropdown is triggered by using the menu button on the active codespace item, at the bottom of which is the delete button." />
 ## :desktop_computer: Local Setup
 
 To set up development on a local environment, first make sure that you have ALL of the following installed on your machine:
@@ -68,6 +69,12 @@ git clone https://github.com/cub-webmaster/cub-website.git
 yarn install
 
 # STEP 3
+# make environment file
+touch .env
+# fill in the contents of this file with all necessary variables
+# you should be able to get a copy of the file from your predecessor
+
+# STEP 4
 # check that website runs fine locally
 yarn dev
 ```

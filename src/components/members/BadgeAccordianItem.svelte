@@ -1,6 +1,6 @@
 <script lang="ts">
 	import AccordianItem from '$components/common/AccordianItem.svelte';
-	import type { BadgeInfo } from '$data/members/badges';
+	import type { BadgeInfo } from '$data/members/types';
 	import type { Snippet } from 'svelte';
 	import ScoreTable from './ScoreTable.svelte';
 	const {

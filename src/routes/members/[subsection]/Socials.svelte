@@ -13,11 +13,11 @@
 	</p>
 	<p>
 		Below are some of the events we do more often, but if you have any ideas of other fun things we
-		can get up to, do <Link
-			label="get in touch"
+		can get up to, do get in touch with our <Link
+			label="Social Secretary"
 			external
 			href={`mailto:${committeePositions.social.email}`}
-		/> or better yet, join the committee as a Social Secretary!
+		/> and we'll see what we can do!
 	</p>
 </PageSection>
 

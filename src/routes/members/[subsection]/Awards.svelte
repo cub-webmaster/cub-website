@@ -9,7 +9,7 @@
 	import GoToDocButton from '$components/about/GoToDocButton.svelte';
 
 	import links from '$data/links';
-	import scoresheet252 from '$lib/assets/docs/252_scoresheets_CUB.pdf';
+	import scoresheet252 from '$lib/assets/docs/252-scoresheets-cub.pdf';
 	import {
 		badges252,
 		badges252Distance,

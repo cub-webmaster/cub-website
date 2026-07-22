@@ -10,6 +10,12 @@
 	import Dumbbell from '@iconify-svelte/lucide/dumbbell';
 	import List from '$components/common/List.svelte';
 	import { committeePositions } from '$data/about/committee';
+	import {
+		beginnerRecruitmentOngoing,
+		beginnersCourseStartDate,
+		recruitmentYear
+	} from '$data/general';
+	import links from '$data/links';
 </script>
 
 <PageSection>
@@ -33,29 +39,50 @@
 		Each year at the beginning of Michaelmas term, we run a have-a-go session for all those who are
 		interested in the beginners course but want to try out archery before signing up.
 	</p>
-	<p>
-		<b>Our main taster session in 2025 has passed.</b> Please follow our social media for other opportunities
-		to try out the sport.
-	</p>
+
+	{#if beginnerRecruitmentOngoing}
+		<p>
+			Our {recruitmentYear} taster session for is now open for sign up. Please fill in the form <Link
+				href={links.tasters_form.url}
+				label="here"
+				external
+			/> to show your interest.
+		</p>
+	{:else}
+		<p>
+			<b>Our main taster session in {recruitmentYear} has passed.</b> Please follow our social media for
+			other opportunities to try out the sport.
+		</p>
+	{/if}
 </PageSection>
 
 <PageSection headingText="Beginners' Courses" id="course">
 	<p>
 		The beginners' course will take place over four Sunday mornings in Michaelmas term, starting on
-		the 19th of October in 2025, and contains all the coaching necessary to allow you to shoot
-		safely and independently, as well as introducing you to the wider sport of archery. All required
-		equipment will be provided by the club.
+		the {beginnersCourseStartDate} in {recruitmentYear}, and contains all the coaching necessary to
+		allow you to shoot safely and independently, as well as introducing you to the wider sport of
+		archery. All required equipment will be provided by the club.
+		<b>All four sessions of the course are mandatory.</b>
 	</p>
 
-	<p><b>All four sessions of the course are mandatory.</b></p>
+	{#if beginnerRecruitmentOngoing}
+		<p>
+			The {recruitmentYear} beginners' course for is now open for sign up. Please fill in the form <Link
+				href={links.beginners_form.url}
+				label="here"
+				external
+			/>
+			to show your interest.
+		</p>
+	{/if}
 
 	<Alert>
 		Please note that the course is often over-subscribed, and we cannot guarantee a place for
 		everybody. In such cases the club will run a ballot to allocate spaces.
 	</Alert>
 	<p>
-		The 2025 beginners' course costs £{fees.beginner} to attend, on top of the club's annual membership
-		fees, which are as follows:
+		The {recruitmentYear} beginners' course costs £{fees.beginner} to attend, on top of the club's annual
+		membership fees, which are as follows:
 	</p>
 	<BoxList
 		items={[

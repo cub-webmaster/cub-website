@@ -25,3 +25,9 @@ Importantly, stuff like Google Docs are much easier to manage access rights with
 The GitHub codespace is currently setup such that in the case of a less experienced webmaster/absence of a webmaster, someone unfamiliar with coding/web dev can make simple edits easily with minimal setup.
 
 Currently, it is configured with automatic dependency installations as well as some useful extensions. If you have thoughts on other things that might make life easier for a newbie webmaster do add them in.
+
+## :key: Google Cloud Console and API Key
+
+We also have an account on Google Cloud Console which is where we set up the API key needed to access Google Calendar. This is set up with very minimal access rights, but it is still best practice to keep it secret. If at any point you need to access/change this key, please just log in via the webmaster google account.
+
+As of the time of writing, this can be found in the `APIs and services` page, under the `Credentials` section.

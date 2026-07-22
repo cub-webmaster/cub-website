@@ -38,7 +38,7 @@ const landingCardsContent: {
 			},
 			{
 				text: 'Training Resources',
-				href: resolve('/resources#training-aids')
+				href: resolve('/resources#shooting-training')
 			},
 			{
 				text: 'Equipment Help',
@@ -52,7 +52,7 @@ const landingCardsContent: {
 		items: [
 			{
 				text: 'Recurring Competitions',
-				href: resolve('/members/tournaments#recurring')
+				href: resolve('/members/competitions#recurring')
 			},
 			{
 				text: 'Awards and Badges',
@@ -60,7 +60,7 @@ const landingCardsContent: {
 			},
 			{
 				text: 'Club Records',
-				href: resolve('/resources#records')
+				href: resolve('/resources#comps-rounds-records')
 			}
 		]
 	}

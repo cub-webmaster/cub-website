@@ -16,6 +16,7 @@
 	import happyCompetitionImg from '$lib/assets/img/bucs2025_happy_xc.jpg';
 	import CaptionedImage from '$components/common/CaptionedImage.svelte';
 	import { committeePositions } from '$data/about/committee';
+	import { resolve } from '$app/paths';
 </script>
 
 <PageSection>
@@ -40,7 +41,7 @@
 		Note that as squad members have priority on the rental scheme, you might want to try for the
 		novice squad if you are a beginner keen on competing - more information on the squads <Link
 			label="below"
-			href="/members/tournaments#squads"
+			href="/members/competitions#squads"
 			external={false}
 		/>.
 	</Alert>
@@ -63,7 +64,7 @@
 		plenty of support for. If you're interested, read more about them in the <Link
 			label="recurring competitions"
 			external={false}
-			href="/members/tournaments#recurring"
+			href="/members/competitions#recurring"
 		/> section.
 	</p>
 	<p>
@@ -146,7 +147,7 @@
 		Other common outdoor rounds include Warwick, York, Hereford and World Archery(WA) rounds like
 		WA900. You can find more resources on the specifics of different archery rounds in our <Link
 			label="Resources"
-			href="/resources"
+			href={resolve('/resources#comps-rounds-records')}
 			external={false}
 		/> page.
 	</p>

@@ -13,15 +13,13 @@ The main code needed for day-to-day maintenance are found in `src`. Here, there 
 
 This codebase is written with a relatively strict DRY (don't repeat yourself) philosophy, so often times repeating elements live in the `components` directory, with their corresponding data in the `data` directory, instead of clogging the files in `routes` with too much repetition. This is also why we use the dynamic slugs for rendering subsections, as that would allow reuse of layout elements more effectively and reduce repetition.
 
-<!-- TODO add pic -->
+Similarly, to ensure that when links need to change, we only need to change them at one place instead of repeatedly editing everywhere it's referenced, we also use a central links file (`src/data/links.ts`) to source all external links from.
 
 When trying to identify where an edit needs to be made, first look for the relevant page under `routes`. If you're looking to make changes to unique text content, then you can do it directly in the file.
 
 However, if you may find that the relevant data/component is in another file. In this case, you should identify the relevant parent section (e.g. Join or About) and find the folder of that name under either `components` or `data`. Future webmasters are also encouraged to keep this pattern of using the url routes structure in these to directories when creating new files. This will ensure that the codebase stays organised and that things are easy to find.
 
-<!-- TODO add pic -->
-
-If you are finding this daunting, there are some guidance of where you need to make edits for common tasks can be found in the [last section](#common). Use these are examples to familiarise yourself with the codebase before you make important edits.
+If you are finding this daunting, there are some guidance of where you need to make edits for common tasks can be found in the [last section](#-common-maintenance-tasks). Use these are examples to familiarise yourself with the codebase before you make important edits.
 
 ## :octocat: Working with Git & GitHub
 
@@ -44,9 +42,9 @@ git pull
 
 ```
 
-If you are using vscode, using the graphic interface provided might also be more comfortable than using the command line.
+If you are using vscode or the codespace›, using the graphic interface provided might also be more comfortable than using the command line.
 
-<!-- TODO add pic -->
+<img src="images/git_gui.png" alt="Git graphic interface on VS Code" />
 
 Beyond the general stuff, there is one basic rule that I need all webmasters to respect: **DO NOT commit or push directly into the `live` branch.**
 
@@ -108,8 +106,6 @@ We have some data hosted off-site (mostly in the webmaster Google Drive) either 
 
 Please monitor and prompt fellow committee members to keep these up to date (when applicable) as part of your work.
 
-<a name="common" />
-
 ## :memo: Common Maintenance Tasks
 
 - [Updating committee information](examples/committee.md)
@@ -117,3 +113,17 @@ Please monitor and prompt fellow committee members to keep these up to date (whe
 - [Changing the wording of existing pages](examples/wording.md)
 - [Opening signup for Beginners' Course](examples/beginners.md)
 - [Editing resources page](examples/resources.md)
+
+## :stethoscope: Linting and Formatting
+
+We use ESLint and Prettier for Linting and Formatting in this codebase. If you don't know what that means, they are basically tools for ensuring that the code style is consistent throughout the repo and helping to clean up clutter. This is important as code needs to be readable to be maintainable. You can run the following commands to check for issues and to automatically apply style changes:
+
+```bash
+# check for style issues
+yarn lint
+
+# auto fix style issues found
+yarn format
+```
+
+Note that style checks are done automatically for PRs as well, so it is good practice to always run the foramtter everytime before making a pull request.
