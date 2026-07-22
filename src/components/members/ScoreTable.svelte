@@ -1,6 +1,6 @@
 <script lang="ts">
 	import FadingScrollBox from '$components/common/FadingScrollBox.svelte';
-	import type { BowStyle, Gender, BadgeInfo } from '$data/members/badges';
+	import type { BowStyle, Gender, BadgeInfo } from '$data/members/types';
 	import { colorTransitionClasses, generateClassString } from '$lib/util';
 
 	const {
