@@ -5,6 +5,6 @@ export const containerMaxWidth = 'max-w-250';
 export const sideNavItemBaseClasses = 'text-sm p-2';
 
 // beginners' course controls
-export const beginnerRecruitmentOngoing = false;
-export const recruitmentYear = 2025;
-export const beginnersCourseStartDate = '19th of October';
+export const beginnerRecruitmentOngoing = true;
+export const recruitmentYear = 2026;
+export const beginnersCourseStartDate = '18th of October';
