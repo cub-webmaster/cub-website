@@ -42,7 +42,7 @@ git pull
 
 ```
 
-If you are using vscode or the codespace›, using the graphic interface provided might also be more comfortable than using the command line.
+If you are using vscode or the codespace, using the graphic interface provided might also be more comfortable than using the command line.
 
 <img src="images/git_gui.png" alt="Git graphic interface on VS Code" />
 
