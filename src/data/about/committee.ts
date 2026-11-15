@@ -1,3 +1,15 @@
+import alastair from '$lib/assets/img/committee/Alastair.jpg';
+import alex from '$lib/assets/img/committee/Alex.jpg';
+import amber from '$lib/assets/img/committee/Amber.jpg';
+import diana from '$lib/assets/img/committee/Diana.jpg';
+import dhanya from '$lib/assets/img/committee/Dhanya.jpg';
+import emily from '$lib/assets/img/committee/Emily.jpg';
+import esther from '$lib/assets/img/committee/Esther.jpg';
+import julia from '$lib/assets/img/committee/Julia.jpg';
+import lanyu from '$lib/assets/img/committee/Lanyu.jpg';
+import matthew from '$lib/assets/img/committee/Matthew.jpg';
+import sriyashas from '$lib/assets/img/committee/Sriyashas.jpg';
+
 export type CommitteeType = 'core' | 'welfare' | 'comms' | 'shooting';
 
 type Position = {
@@ -97,71 +109,85 @@ export const committeeMembers: CommitteeMember[] = [
 	{
 		position: committeePositions.captain,
 		name: 'Amber Holt',
-		college: "Queens'"
+		college: "Queens'",
+		image: amber
 	},
 	{
 		position: committeePositions.captain,
 		name: 'Alex Mapplebeck',
-		college: 'Churchill'
+		college: 'Churchill',
+		image: alex
 	},
 	{
 		position: committeePositions.secretary,
 		name: 'Emily Naden',
-		college: 'Peterhouse'
+		college: 'Peterhouse',
+		image: emily
 	},
 	{
 		position: committeePositions.treasurer,
 		name: 'Sriyashas Mohan-Kalluri',
-		college: "King's"
+		college: "King's",
+		image: sriyashas
 	},
 	{
 		position: committeePositions.welfare,
 		name: 'Lanyu Chen',
-		college: 'Jesus'
+		college: 'Jesus',
+		image: lanyu
 	},
 	{
 		position: committeePositions.safety,
 		name: 'Diana Galvan Sosa',
-		college: 'N/A (staff)'
+		college: 'N/A (staff)',
+		image: diana
 	},
 	{
 		position: committeePositions.equipment,
 		name: 'Julia Wang',
-		college: 'Homerton'
+		college: 'Homerton',
+		image: julia
 	},
 	{
 		position: committeePositions.equipment,
 		name: 'Dhanya Swami',
-		college: 'Trinity'
+		college: 'Trinity',
+		image: dhanya
 	},
 	{
 		position: committeePositions.novice,
 		name: 'Matthew Bradley',
-		college: 'Jesus'
+		college: 'Jesus',
+		image: matthew
 	},
 	{
 		position: committeePositions.novice,
 		name: 'Lanyu Chen',
-		college: 'Jesus'
+		college: 'Jesus',
+		image: lanyu
 	},
 	{
 		position: committeePositions.development,
 		name: 'Matthew Bradley',
-		college: 'Jesus'
+		college: 'Jesus',
+		image: matthew
 	},
 	{
 		position: committeePositions.social,
 		name: 'Esther Tam',
-		college: 'Downing'
+		college: 'Downing',
+		image: esther
 	},
 	{
 		position: committeePositions.social,
 		name: 'Alastair Rial',
-		college: 'Lucy Cavendish'
+		college: 'Lucy Cavendish',
+		image: alastair
 	},
 	{
 		position: committeePositions.publicity,
 		name: 'Esther Tam',
-		college: 'Downing'
+		college: 'Downing',
+		image: esther
 	}
 ];
