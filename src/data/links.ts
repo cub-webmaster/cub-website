@@ -166,6 +166,10 @@ const links: Record<string, Link> = {
 	maintenance_bingham: {
 		url: 'https://binghamarchery.co.uk/maintenance',
 		label: 'Bingham Archers guide on Equipment Maintenance'
+	},
+	cub_basic_tuning_guide: {
+		url: 'https://docs.google.com/document/d/1KkMesUEH-M69YKXlArABfWtap1CcMw3DylhPKC3VOHU',
+		label: 'CUB Basic Tuning Guide by Julia Wang'
 	}
 };
 

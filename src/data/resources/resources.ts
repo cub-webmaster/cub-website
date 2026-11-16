@@ -94,6 +94,7 @@ export const resources: ResourceCategory[] = [
 						title: 'Care Resources',
 						info: [
 							`Bingham Archers has a very comprehensive guide on equipment care and tuning [here](${links.maintenance_bingham.url})`,
+							`[Tuning guide](${links.cub_basic_tuning_guide.url}) by Julia Wang (Co-Equipment Officer 2026)`,
 							`Maintenance tools like a fletching jig or string wax can be borrowed from the club, feel free to contact the [Equipment Officer](${committeePositions.equipment.email}) if you have specific inquiries`
 						]
 					},

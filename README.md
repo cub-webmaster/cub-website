@@ -6,9 +6,6 @@
 
 Official website for Cambridge University Bowmen circa summer 2026. Please email webmaster@cubowmen.com for questions or issues.
 
-> [!WARNING]
-> This codebase is still a work in progress, and doesn't reflect the content that is currently shown on our website.
-
 ## :zap: Quick start
 
 For new webmasters, please see [here](documentation/setup.md) to learn about the setup needed for maintaining the website and [here](documentation/basics.md) for some basic knowledge needed for working with this codebase. Some examples of common maintenance tasks needed are also documented and linked below:
